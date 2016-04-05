@@ -40,7 +40,7 @@
                                 <h2><?php echo $product['name']; ?></h2>
                                 <p>Код товара: <?php echo $product['code']; ?></p>
                                 <span>
-                                    <span>US $<?php echo $product['price']; ?></span>
+                                    <span><?php echo $product['price']; ?> р.</span>
                                     <a href="#" data-id="<?php echo $product['id']; ?>"
                                        class="btn btn-default add-to-cart">
                                         <i class="fa fa-shopping-cart"></i>В корзину
@@ -48,6 +48,12 @@
                                 </span>
                                 <p><b>Наличие:</b> <?php echo Product::getAvailabilityText($product['availability']); ?></p>
                                 <p><b>Производитель:</b> <?php echo $product['brand']; ?></p>
+                                <p><b>Частота процессора:</b> <?php echo $product['CPU']; ?> Мгц</p>
+                                <p><b>Объем ОП:</b> <?php echo $product['RAM']; ?> Гб</p>
+                                <p><b>Объем жесткого диска:</b> <?php echo $product['hard_disk']; ?> Гб</p>
+                                <!--<p><b>Производитель:</b> привод...</p>-->
+                                <p><b>Время автономной работы:</b> <?php echo $product['battery_life']; ?> ч</p>
+                                <p><b>Вес:</b> <?php echo $product['weight']; ?> кг</p>
                             </div><!--/product-information-->
                         </div>
                     </div>
