@@ -27,12 +27,12 @@
                     <h2 class="title text-center">Последние товары</h2>
                     
                     <?php foreach ($latestProducts as $product): ?>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4">admin
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                     <div class="productinfo text-center">
                                         <img src="<?php echo Product::getImage($product['id']); ?>" alt="" />
-                                        <h2>$<?php echo $product['price'];?></h2>
+                                        <h2><?php echo $product['price'];?>р.</h2>
                                         <p>
                                             <a href="/product/<?php echo $product['id'];?>">
                                                 <?php echo $product['name'];?>
