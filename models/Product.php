@@ -341,6 +341,27 @@ class Product
         }
     }
 
+    
+    
+     /**
+     * Возвращает текстое пояснение наличия оптического привода:<br/>
+     * <i>0 - Нет, 1 - DVD±RW</i>
+     * @param integer $drive <p>Статус</p>
+     * @return string <p>Текстовое пояснение</p>
+     */
+    public static function getOpticalDrive($drive)
+    {
+        switch ($drive) {
+            case '1':
+                return 'DVD±RW';
+                break;
+            case '0':
+                return 'Нет';
+                break;
+        }
+    }
+    
+    
     /**
      * Возвращает путь к изображению
      * @param integer $id

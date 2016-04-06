@@ -51,7 +51,7 @@
                                 <p><b>Частота процессора:</b> <?php echo $product['CPU']; ?> Мгц</p>
                                 <p><b>Объем ОП:</b> <?php echo $product['RAM']; ?> Гб</p>
                                 <p><b>Объем жесткого диска:</b> <?php echo $product['hard_disk']; ?> Гб</p>
-                                <!--<p><b>Производитель:</b> привод...</p>-->
+                                <p><b>Оптический привод:</b> <?php echo Product::getOpticalDrive($product['drive']); ?></p>
                                 <p><b>Время автономной работы:</b> <?php echo $product['battery_life']; ?> ч</p>
                                 <p><b>Вес:</b> <?php echo $product['weight']; ?> кг</p>
                             </div><!--/product-information-->
