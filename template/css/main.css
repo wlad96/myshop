@@ -54,6 +54,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
 }
 
+h5 {
+    font-weight: bold;
+}
 .btn:hover, 
 .btn:focus{
     outline: none;
@@ -102,7 +105,14 @@ a#scrollUp i{
     background:inherit;
 }
 
+.contact-information-map {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
 
+.contact-information-map img {
+    height: 300px;   
+}
 .social-icons ul li a {
     border: 0 none;
     border-radius: 0;
