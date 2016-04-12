@@ -149,7 +149,7 @@ class User
     }
 
     /**
-     * Проверяет имя: не меньше, чем 6 символов
+     * Проверяет пароль: не меньше, чем 6 символов
      * @param string $password <p>Пароль</p>
      * @return boolean <p>Результат выполнения метода</p>
      */
@@ -160,7 +160,7 @@ class User
         }
         return false;
     }
-
+    
     /**
      * Проверяет email
      * @param string $email <p>E-mail</p>

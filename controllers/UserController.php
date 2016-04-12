@@ -76,9 +76,10 @@ class UserController
             if (!User::checkEmail($email)) {
                 $errors[] = 'Неправильный email';
             }
-            if (!User::checkPassword($password, $password)) {
-                $errors[] = 'Введенные пароли не совпали';
+              if (!User::checkPassword($password)) {
+                $errors[] = 'Пароль не должен быть короче 6 символов';
             }
+
 
             // Проверяем существует ли пользователь
             $userId = User::checkUserData($email, $password);
