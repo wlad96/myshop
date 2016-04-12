@@ -14,11 +14,13 @@ class SiteController
         // Список категорий для левого меню
         $categories = Category::getCategoriesList();
 
-        // Список последних товаров
-        $latestProducts = Product::getLatestProducts(6);
+//        // Список последних товаров (заменила на список новых товаров)
+//        $latestProducts = Product::getLatestProducts(6);
+       // Список новых товаров
+        $newProducts = Product::getNewProducts(6);
 
         // Список товаров для слайдера
-        $sliderProducts = Product::getRecommendedProducts();
+        $sliderProducts = Product::getHitProducts();
 
         // Подключаем вид
         require_once(ROOT . '/views/site/index.php');

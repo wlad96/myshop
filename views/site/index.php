@@ -23,10 +23,10 @@
             </div>
 
             <div class="col-sm-9 padding-right">
-                <div class="features_items"><!--features_items-->
-                    <h2 class="title text-center">Последние товары</h2>
+                <div class="features_items"><!--new_items-->
+                    <h2 class="title text-center">Новинки</h2>
 
-                    <?php foreach ($latestProducts as $product): ?>
+                    <?php foreach ($newProducts as $product): ?>
                         <div class="col-sm-4">
                             <div class="product-image-wrapper">
                                 <div class="single-products">
@@ -49,10 +49,10 @@
                     <?php endforeach; ?>
 
 
-                </div><!--features_items-->
+                </div><!--new_items-->
 
                 <div class="recommended_items"><!--recommended_items-->
-                    <h2 class="title text-center">Рекомендуемые товары</h2>
+                    <h2 class="title text-center">Лидеры продаж</h2>
                     
                     <div class="cycle-slideshow" 
                          data-cycle-fx=carousel
@@ -69,7 +69,7 @@
                                     <div class="single-products">
                                         <div class="productinfo text-center">
                                             <img src="<?php echo Product::getImage($sliderItem['id']); ?>" alt="" />
-                                            <h2>$<?php echo $sliderItem['price']; ?></h2>
+                                            <h2><?php echo $sliderItem['price']; ?> &#8381;</h2>
                                             <a href="/product/<?php echo $sliderItem['id']; ?>">
                                                 <?php echo $product['name']; ?>
                                             </a>
@@ -92,8 +92,8 @@
                         <i class="fa fa-angle-right"></i>
                     </a>
 
-                </div>
-            </div><!--/recommended_items-->
+                </div><!--/recommended_items-->
+            </div>
 
         </div>
     </div>

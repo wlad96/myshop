@@ -15,7 +15,7 @@ class CatalogController
         // Список категорий для левого меню
         $categories = Category::getCategoriesList();
 
-        /* // Список последних товаров
+        /* // Список последних товаров (заменила на список всех товаров)
         $latestProducts = Product::getLatestProducts(12);
         */
          

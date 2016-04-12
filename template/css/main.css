@@ -607,7 +607,9 @@ ul.sub-menu {
 }
 
 .item {
-    padding-left: 100px;
+    /*padding-left: 100px;*/
+    padding-left: 45px;
+    padding-right: 45px;
 }
 
 
@@ -1079,7 +1081,8 @@ h2.title {
 
 .recommended-item-control {
     position: absolute;
-    top: 41%;
+    /*top: 41%;*/
+    top: 75%;
 }
 
 .recommended-item-control i {
