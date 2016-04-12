@@ -15,8 +15,12 @@ class CatalogController
         // Список категорий для левого меню
         $categories = Category::getCategoriesList();
 
-        // Список последних товаров
+        /* // Список последних товаров
         $latestProducts = Product::getLatestProducts(12);
+        */
+         
+        // Список всех товаров
+        $allProducts = Product::getAllProducts(100);
 
         // Подключаем вид
         require_once(ROOT . '/views/catalog/index.php');
