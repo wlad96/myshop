@@ -33,6 +33,9 @@ class AdminProductController extends AdminBase
 
         // Получаем список категорий для выпадающего списка
         $categoriesList = Category::getCategoriesListAdmin();
+        
+        // Получаем список производителей для выпадающего списка
+        $brandsList = Brand::getBrandsListAdmin();
 
         // Обработка формы
         if (isset($_POST['submit'])) {
@@ -91,6 +94,9 @@ class AdminProductController extends AdminBase
 
         // Получаем список категорий для выпадающего списка
         $categoriesList = Category::getCategoriesListAdmin();
+        
+        // Получаем список производителей для выпадающего списка
+        $brandsList = Brand::getBrandsListAdmin();
 
         // Получаем данные о конкретном заказе
         $product = Product::getProductById($id);

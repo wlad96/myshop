@@ -54,7 +54,24 @@
                         <br/><br/>
 
                         <p>Производитель</p>
-                        <input type="text" name="brand" placeholder="" value="">
+                         <select name="brand_id">
+                            <?php if (is_array($brandsList)): ?>
+                                <?php foreach ($brandsList as $brand): ?>
+                                    <option value="<?php echo $brand['id']; ?>">
+                                        <?php echo $brand['name']; ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </select>
+                        <!--<input type="text" name="brand" placeholder="" value="">-->
+<!--                         <select name="brand">
+                            <option value="1" selected="selected">Acer</option>
+                            <option value="2">Apple</option>
+                            <option value="3">Asus</option>
+                            <option value="4">Dell</option>
+                            <option value="5">HP</option>
+                            <option value="6">Lenovo</option>
+                        </select>-->
 
                         <p>Изображение товара</p>
                         <input type="file" name="image" placeholder="" value="">

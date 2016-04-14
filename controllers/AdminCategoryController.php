@@ -17,6 +17,9 @@ class AdminCategoryController extends AdminBase
 
         // Получаем список категорий
         $categoriesList = Category::getCategoriesListAdmin();
+        
+        // Получаем список производителей
+        $brandsList = Brand::getBrandsListAdmin();
 
         // Подключаем вид
         require_once(ROOT . '/views/admin_category/index.php');

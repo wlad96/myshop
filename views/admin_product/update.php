@@ -47,7 +47,17 @@
                         <br/><br/>
 
                         <p>Производитель</p>
-                        <input type="text" name="brand" placeholder="" value="<?php echo $product['brand']; ?>">
+                        <!--<input type="text" name="brand" placeholder="" value="<?php echo $product['brand']; ?>">-->
+                         <select name="brand_id">
+                            <?php if (is_array($brandsList)): ?>
+                                <?php foreach ($brandsList as $brand): ?>
+                                    <option value="<?php echo $brand['id']; ?>" 
+                                        <?php if ($product['brand_id'] == $brand['id']) echo ' selected="selected"'; ?>>
+                                        <?php echo $brand['name']; ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </select>
 
                         <p>Изображение товара</p>
                         <img src="<?php echo Product::getImage($product['id']); ?>" width="200" alt="" />

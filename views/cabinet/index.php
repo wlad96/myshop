@@ -5,10 +5,7 @@
     <div class="container">
         <div class="row">
 
-            <h3>Кабинет пользователя</h3>
-            
-            <!--<h4>Привет, <?php echo $user['name'];?>!</h4>-->
-           
+            <h3>Кабинет пользователя</h3>          
             <h4>
                 <?php if ($user['role']=='admin')
                            echo "Привет, администратор ".$user['name']."!";
@@ -19,10 +16,8 @@
             <a href="/cabinet/edit">Редактировать данные</a>
                 <!--<li><a href="/cabinet/history">Список покупок</a></li>-->
                 <!--<div class="right">--> <br><br>
-                <a href="/admin/index">Перейти в Панель Администратора</a>
-                 <!--</div>-->
-
-          
+            <a href="/admin/index">Перейти в Панель Администратора</a>
+                 <!--</div>-->     
             
         </div>
     </div>
