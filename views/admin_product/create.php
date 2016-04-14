@@ -63,21 +63,33 @@
                                 <?php endforeach; ?>
                             <?php endif; ?>
                         </select>
-                        <!--<input type="text" name="brand" placeholder="" value="">-->
-<!--                         <select name="brand">
-                            <option value="1" selected="selected">Acer</option>
-                            <option value="2">Apple</option>
-                            <option value="3">Asus</option>
-                            <option value="4">Dell</option>
-                            <option value="5">HP</option>
-                            <option value="6">Lenovo</option>
-                        </select>-->
 
                         <p>Изображение товара</p>
                         <input type="file" name="image" placeholder="" value="">
 
                         <p>Детальное описание</p>
                         <textarea name="description"></textarea>
+                        
+                        <p>Частота процессора, МГц</p>
+                       <input type="text" name="CPU" placeholder="" value="">
+                        
+                        <p>Объем оперативной памяти, Гб</p>
+                        <input type="text" name="RAM" placeholder="" value="">
+                        
+                        <p>Объем жесткого диска, Гб</p>
+                        <input type="text" name="hard_disk" placeholder="" value="">
+                                                
+                        <p>Оптический привод</p>
+                         <select name="drive">
+                            <option value="1" selected="selected">Есть</option>
+                            <option value="0">Нет</option>
+                        </select>
+                        
+                        <p>Время автономной работы, ч</p>
+                        <input type="text" name="battery_life" placeholder="" value="">
+                        
+                        <p>Вес, кг</p>
+                        <input type="text" name="weight" placeholder="" value="">
 
                         <br/><br/>
 
@@ -97,8 +109,8 @@
 
                         <br/><br/>
 
-                        <p>Рекомендуемые</p>
-                        <select name="is_recommended">
+                        <p>Лидер продаж</p>
+                        <select name="is_hit">
                             <option value="1" selected="selected">Да</option>
                             <option value="0">Нет</option>
                         </select>

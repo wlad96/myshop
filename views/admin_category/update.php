@@ -35,7 +35,7 @@
                             <option value="0" <?php if ($category['status'] == 0) echo ' selected="selected"'; ?>>Скрыта</option>
                         </select>
 
-                        <br><br>
+                        <br/><br/>
                         
                         <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
                     </form>

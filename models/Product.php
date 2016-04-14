@@ -348,7 +348,7 @@ class Product
                 availability = :availability, 
                 description = :description, 
                 is_new = :is_new, 
-                is_recommended = :is_recommended, 
+                is_hit = :is_hit, 
                 status = :status
             WHERE id = :id";
 
@@ -363,7 +363,7 @@ class Product
         $result->bindParam(':availability', $options['availability'], PDO::PARAM_INT);
         $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
         $result->bindParam(':is_new', $options['is_new'], PDO::PARAM_INT);
-        $result->bindParam(':is_recommended', $options['is_recommended'], PDO::PARAM_INT);
+        $result->bindParam(':is_hit', $options['is_hit'], PDO::PARAM_INT);
         $result->bindParam(':status', $options['status'], PDO::PARAM_INT);
         return $result->execute();
     }
@@ -381,10 +381,10 @@ class Product
         // Текст запроса к БД
         $sql = 'INSERT INTO product '
                 . '(name, code, price, category_id, brand, availability,'
-                . 'description, is_new, is_recommended, status)'
+                . 'description, is_new, is_hit, status)'
                 . 'VALUES '
                 . '(:name, :code, :price, :category_id, :brand, :availability,'
-                . ':description, :is_new, :is_recommended, :status)';
+                . ':description, :is_new, :is_hit, :status)';
 
         // Получение и возврат результатов. Используется подготовленный запрос
         $result = $db->prepare($sql);
@@ -396,7 +396,7 @@ class Product
         $result->bindParam(':availability', $options['availability'], PDO::PARAM_INT);
         $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
         $result->bindParam(':is_new', $options['is_new'], PDO::PARAM_INT);
-        $result->bindParam(':is_recommended', $options['is_recommended'], PDO::PARAM_INT);
+        $result->bindParam(':is_hit', $options['is_hit'], PDO::PARAM_INT);
         $result->bindParam(':status', $options['status'], PDO::PARAM_INT);
         if ($result->execute()) {
             // Если запрос выполенен успешно, возвращаем id добавленной записи

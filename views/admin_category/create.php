@@ -43,7 +43,7 @@
                             <option value="0">Скрыта</option>
                         </select>
 
-                        <br><br>
+                        <br/><br/>
 
                         <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
                     </form>

@@ -12,10 +12,10 @@
                       else echo "Привет, ".$user['name'];                
                 ?>
             </h4>           
-            <br>
+            <br/>
             <a href="/cabinet/edit">Редактировать данные</a>
                 <!--<li><a href="/cabinet/history">Список покупок</a></li>-->
-                <!--<div class="right">--> <br><br>
+                <!--<div class="right">--> <br/><br/>
             <a href="/admin/index">Перейти в Панель Администратора</a>
                  <!--</div>-->     
             

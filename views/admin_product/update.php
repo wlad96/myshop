@@ -47,7 +47,6 @@
                         <br/><br/>
 
                         <p>Производитель</p>
-                        <!--<input type="text" name="brand" placeholder="" value="<?php echo $product['brand']; ?>">-->
                          <select name="brand_id">
                             <?php if (is_array($brandsList)): ?>
                                 <?php foreach ($brandsList as $brand): ?>
@@ -67,6 +66,29 @@
                         <textarea name="description"><?php echo $product['description']; ?></textarea>
                         
                         <br/><br/>
+                        
+                        <p>Частота процессора, МГц</p>
+                        <textarea name="CPU"><?php echo $product['CPU']; ?></textarea>
+                        
+                        <p>Объем оперативной памяти, Гб</p>
+                        <textarea name="RAM"><?php echo $product['RAM']; ?></textarea>
+                        
+                        <p>Объем жесткого диска, Гб</p>
+                        <textarea name="hard_disk"><?php echo $product['hard_disk']; ?></textarea>
+                        
+                        <p>Оптический привод</p>
+                         <select name="drive">
+                            <option value="1" <?php if ($product['drive'] == 1) echo ' selected="selected"'; ?>>Есть</option>
+                            <option value="0" <?php if ($product['drive'] == 0) echo ' selected="selected"'; ?>>Нет</option>
+                        </select>
+                        
+                        <p>Время автономной работы, ч</p>
+                        <textarea name="battery_life"><?php echo $product['battery_life']; ?></textarea>
+                        
+                        <p>Вес, кг</p>
+                        <textarea name="weight"><?php echo $product['weight']; ?></textarea>
+                        
+                        <br/><br/>
 
                         <p>Наличие на складе</p>
                         <select name="availability">
@@ -84,10 +106,10 @@
                         
                         <br/><br/>
 
-                        <p>Рекомендуемые</p>
-                        <select name="is_recommended">
-                            <option value="1" <?php if ($product['is_recommended'] == 1) echo ' selected="selected"'; ?>>Да</option>
-                            <option value="0" <?php if ($product['is_recommended'] == 0) echo ' selected="selected"'; ?>>Нет</option>
+                        <p>Лидер продаж</p>
+                        <select name="is_hit">
+                            <option value="1" <?php if ($product['is_hit'] == 1) echo ' selected="selected"'; ?>>Да</option>
+                            <option value="0" <?php if ($product['is_hit'] == 0) echo ' selected="selected"'; ?>>Нет</option>
                         </select>
                         
                         <br/><br/>

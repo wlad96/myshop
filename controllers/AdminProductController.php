@@ -45,11 +45,17 @@ class AdminProductController extends AdminBase
             $options['code'] = $_POST['code'];
             $options['price'] = $_POST['price'];
             $options['category_id'] = $_POST['category_id'];
-            $options['brand'] = $_POST['brand'];
+            $options['brand_id'] = $_POST['brand_id'];
             $options['availability'] = $_POST['availability'];
             $options['description'] = $_POST['description'];
+            $options['CPU'] = $_POST['CPU'];
+            $options['RAM'] = $_POST['RAM'];
+            $options['hard_disk'] = $_POST['hard_disk'];
+            $options['drive'] = $_POST['drive'];
+            $options['battery_life'] = $_POST['battery_life'];
+            $options['weight'] = $_POST['weight'];
             $options['is_new'] = $_POST['is_new'];
-            $options['is_recommended'] = $_POST['is_recommended'];
+            $options['is_hit'] = $_POST['is_hit'];
             $options['status'] = $_POST['status'];
 
             // Флаг ошибок в форме
@@ -109,11 +115,17 @@ class AdminProductController extends AdminBase
             $options['code'] = $_POST['code'];
             $options['price'] = $_POST['price'];
             $options['category_id'] = $_POST['category_id'];
-            $options['brand'] = $_POST['brand'];
+            $options['brand_id'] = $_POST['brand_id'];
             $options['availability'] = $_POST['availability'];
             $options['description'] = $_POST['description'];
+            $options['CPU'] = $_POST['CPU'];
+            $options['RAM'] = $_POST['RAM'];
+            $options['hard_disk'] = $_POST['hard_disk'];
+            $options['drive'] = $_POST['drive'];
+            $options['battery_life'] = $_POST['battery_life'];
+            $options['weight'] = $_POST['weight'];
             $options['is_new'] = $_POST['is_new'];
-            $options['is_recommended'] = $_POST['is_recommended'];
+            $options['is_hit'] = $_POST['is_hit'];
             $options['status'] = $_POST['status'];
 
             // Сохраняем изменения

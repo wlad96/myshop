@@ -42,8 +42,8 @@
                             <option value="3" <?php if ($order['status'] == 3) echo ' selected="selected"'; ?>>Доставляется</option>
                             <option value="4" <?php if ($order['status'] == 4) echo ' selected="selected"'; ?>>Закрыт</option>
                         </select>
-                        <br>
-                        <br>
+                        <br/>
+                        <br/>
                         <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
                     </form>
                 </div>
