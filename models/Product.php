@@ -444,6 +444,38 @@ class Product
         }
     }
     
+      /**
+     * Возвращает текстое пояснение бренда:<br/>
+     * <i>1 - Acer, 2 - Apple, 3 - Asus, 4 - Dell, 5 - HP, 6 - Lenovo, 7 - MSI</i>
+     * @param integer $drive <p>Статус</p>
+     * @return string <p>Текстовое пояснение</p>
+     */
+    public static function getBrand($brand)
+    {
+        switch ($brand) {
+            case '1':
+                return 'Acer';
+                break;
+            case '2':
+                return 'Apple';
+                break;
+            case '3':
+                return 'Asus';
+                break;
+            case '4':
+                return 'Dell';
+                break;
+            case '5':
+                return 'HP';
+                break;
+            case '6':
+                return 'Lenovo';
+                break;
+            case '7':
+                return 'MSI';
+                break;
+        }
+    }
     
     /**
      * Возвращает путь к изображению
