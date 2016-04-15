@@ -1009,6 +1009,11 @@ h2.title {
     color: #FFFFFF;
 }
 
+.red-cross a{
+    color: crimson;
+}
+
+
 .choose {
     border-top: 1px solid #F7F7F0;
 }

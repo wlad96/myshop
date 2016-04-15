@@ -50,14 +50,7 @@
 
                 <br/>
                 <br/>
-            </div>
-            
-<!--            <div class="col-sm-6 padding-right contact-information-map">              
-                <b>Как проехать</b>
-                <img src="../template/images/home/map.jpg" alt="схема проезда"> 
-            </div>-->
-
-            
+            </div>          
           
         </div>
     </div>

@@ -32,7 +32,7 @@
                             <tr>
                                 <th>Код товара</th>
                                 <th>Название</th>
-                                <th>Стомость, $</th>
+                                <th>Стоимость, руб.</th>
                                 <th>Количество, шт</th>
                                 <th>Удалить</th>
                             </tr>
@@ -46,7 +46,7 @@
                                     </td>
                                     <td><?php echo $product['price'];?></td>
                                     <td><?php echo $productsInCart[$product['id']];?></td> 
-                                    <td>
+                                    <td class="red-cross" >
                                         <a href="/cart/delete/<?php echo $product['id'];?>">
                                             <i class="fa fa-times"></i>
                                         </a>
@@ -54,7 +54,7 @@
                                 </tr>
                             <?php endforeach; ?>
                                 <tr>
-                                    <td colspan="4">Общая стоимость, $:</td>
+                                    <td colspan="4">Общая стоимость, руб.:</td>
                                     <td><?php echo $totalPrice;?></td>
                                 </tr>
                             
