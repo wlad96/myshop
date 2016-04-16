@@ -42,7 +42,7 @@ return array(
     'about' => 'site/about',
     
 //    // Поиск
-//    'search' => 'site/search',
+    'search' => 'site/search',
     
     // Главная страница
     'index.php' => 'site/index', // actionIndex в SiteController

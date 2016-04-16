@@ -96,7 +96,8 @@ class SiteController
      */
     public function actionIndexssite()
     {
-        echo "тут он орал про actionIndexssite";
+        //echo "тут он орал про actionIndexssite";
+        echo "<script>function();</script>";
         return true;
     }
     

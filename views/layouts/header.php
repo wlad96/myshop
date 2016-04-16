@@ -19,10 +19,6 @@
         <script src="js/respond.min.js"></script>
         <![endif]-->       
         <link rel="shortcut icon" href="/template/images/ico/favicon.ico">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/template/images/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/template/images/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/template/images/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="/template/images/ico/apple-touch-icon-57-precomposed.png">
     </head><!--/head-->
 
     <body>
@@ -32,7 +28,7 @@
                 <div class="header_top"><!--header_top-->      
                     
                     
-                     <div class="searchform pull-right"> <!--searchform-->
+<!--                     <div class="searchform pull-right"> searchform
                           <div class="container">
                             <div class="row">
                                 <div class="col-sm-7"></div>
@@ -42,23 +38,8 @@
                                  </div>                                  
                             </div>  
                           </div>  
-                     </div>    <!--/searchform-->
+                     </div>    /searchform-->
                     
-                    
-                    
-<!--                    <div class="searchform pull-right"> searchform
-                          <div class="container">
-                            <div class="row">
-                                <div class="col-sm-7"></div>
-                                <div class="col-sm-5">
-                                    <form name="search" method="post" action="search.php">
-                                               <input type="search" name="query" placeholder="Поиск">
-                                               <button type="submit">Найти</button> 
-                                    </form>
-                                 </div>                                  
-                            </div>  
-                          </div>  
-                     </div>   /searchform-->
                     
                     <div class="container">
                         <div class="row">
@@ -141,6 +122,7 @@
                                         </li>
                                         <li><a href="/about/">О магазине</a></li>
                                         <li><a href="/contacts/">Контакты</a></li>
+                                        <li><a href="/search/">Поиск</a></li>
                                     </ul>
                                      
                                 </div>

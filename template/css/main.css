@@ -304,11 +304,13 @@ a#scrollUp i{
 .search_result{
     background: #FFF;
     border: 1px #ccc solid;
-    width: 200px;
+    width: 300px;
     border-radius: 4px;
-    max-height:100px;
+    max-height:300px;
     overflow-y:scroll;
     display:none;
+    position: absolute;
+    z-index:9999;
 }
 
 .search_result li{

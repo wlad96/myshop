@@ -1,3 +1,101 @@
+<!--pos.:    views/site/search    -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Главная</title>
+        <link href="/template/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/template/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/template/css/animate.css" rel="stylesheet">
+        <link href="/template/css/main.css" rel="stylesheet">
+        <link href="/template/css/responsive.css" rel="stylesheet">   
+        <link rel="shortcut icon" href="/template/images/ico/favicon.ico">
+    </head><!--/head-->
+
+    <body>
+        <div class="page-wrapper">
+ 
+            <header id="header"><!--header-->
+                <div class="header_top"><!--header_top-->                                           
+                </div><!--/header_top-->
+
+                <div class="header-middle"><!--header-middle-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="logo pull-left">
+                                    <a href="/"><img src="/template/images/home/logo.png" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="shop-menu pull-right">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="/cart">
+                                                <i class="fa fa-shopping-cart"></i> Корзина 
+                                                (<span id="cart-count"><?php echo Cart::countItems(); ?></span>)
+                                            </a>
+                                        </li>
+                                        <?php if (User::isGuest()): ?>                                        
+                                            <li><a href="/user/login/"><i class="fa fa-lock"></i> Вход</a></li>
+                                            <li><a href="/user/register/"><i class="fa fa-check-square-o"></i> Регистрация</a></li>
+                                        <?php else: ?>
+                                            <li><a href="/cabinet/"><i class="fa fa-user"></i> Аккаунт</a></li>
+                                            <li><a href="/user/logout/"><i class="fa fa-unlock"></i> Выход</a></li>
+                                        <?php endif; ?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/header-middle-->
+                
+                
+                    
+
+                <div class="header-bottom"><!--header-bottom-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="navbar-header">
+                                </div>
+                                <div class="mainmenu pull-left">
+                                    <ul class="nav navbar-nav collapse navbar-collapse">
+                                        <li><a href="/">Главная</a></li>
+                                        <li class="dropdown"><a href="#">Магазин<i class="fa fa-angle-down"></i></a>
+                                            <ul role="menu" class="sub-menu">
+                                                <li><a href="/catalog/">Каталог товаров</a></li>
+                                                <li><a href="/cart/">Корзина</a></li> 
+                                            </ul>
+                                        </li>
+                                        <li><a href="/about/">О магазине</a></li>
+                                        <li><a href="/contacts/">Контакты</a></li>
+                                        <li><a href="/search/">Поиск</a></li>
+                                    </ul>
+                                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/header-bottom-->
+
+            </header><!--/header-->
+
+
+
+     <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <input type="text" name="referal" placeholder="Живой поиск" value="" class="who"  autocomplete="off">
+                <ul class="search_result"></ul>
+            </div>
+        </div> 
+      </div> 
+
+
 <?php  
 
 define("DB_HOST","localhost");
@@ -17,86 +115,10 @@ if(!empty($_POST["referal"])){ //Принимаем данные
     or die('Ошибка №'.__LINE__.'<br>Обратитесь к администратору сайта пожалуйста, сообщив номер ошибки.');
 
     while ($row = $db_referal -> fetch_array()) {
-        echo "\n<li>".$row["name"]."</li>"; //$row["name"] - имя таблицы
+        echo "\n<li>".$row["name"]."</li>"; //$row["name"] - имя поля таблицы
     }
 
 }
+ ?>
 
-
-
-
-
-/*
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'myshop');
-
-if (!mysql_connect(DB_HOST, DB_USER, DB_PASS)) {
-    exit('Cannot connect to server');
-}
-if (!mysql_select_db(DB_NAME)) {
-    exit('Cannot select database');
-}
-
-mysql_query('SET NAMES utf8');
-
-function search ($query) 
-{ 
-    $query = trim($query); 
-    $query = mysql_real_escape_string($query);
-    $query = htmlspecialchars($query);
-
-    if (!empty($query)) 
-    { 
-        if (strlen($query) < 3) {
-            $text = '<p>Слишком короткий поисковый запрос.</p>';
-        } else if (strlen($query) > 128) {
-            $text = '<p>Слишком длинный поисковый запрос.</p>';
-        } else { 
-            $q = "SELECT `id`, `name`, `description`, `CPU`, `RAM`, `hard_disk`
-                  FROM `product` WHERE `name` LIKE '%$query%'
-                  OR `description` LIKE '%$query%' OR `CPU` LIKE '%$query%'
-                  OR `RAM` LIKE '%$query%'";
-
-            $result = mysql_query($q);
-
-            if (mysql_affected_rows() > 0) { 
-                $row = mysql_fetch_assoc($result); 
-                $num = mysql_num_rows($result);
-
-                $text = '<p>По запросу <b>'.$query.'</b> найдено совпадений: '.$num.'</p>';
-
-                do {
-                    // Делаем запрос, получающий ссылки на статьи
-                    $q1 = "SELECT `name` FROM `product` WHERE `id` = '$row[id]'";
-                    $result1 = mysql_query($q1);
-
-                    if (mysql_affected_rows() > 0) {
-                        $row1 = mysql_fetch_assoc($result1);
-                    }
-
-                    $text .= '<p><a> href="'.$row1['name'].'/'.$row['category'].'/'.$row['uniq_id'].'" title="'.$row['title_link'].'">'.$row['title'].'</a></p>
-                    <p>'.$row['desc'].'</p>';
-
-                } while ($row = mysql_fetch_assoc($result)); 
-            } else {
-                $text = '<p>По вашему запросу ничего не найдено.</p>';
-            }
-        } 
-    } else {
-        $text = '<p>Задан пустой поисковый запрос.</p>';
-    }
-
-    return $text; 
-} 
-
-
-if (!empty($_POST['query'])) { 
-    $search_result = search ($_POST['query']); 
-    echo $search_result; 
-}
-
-?>
- 
- */
+<?php include ROOT . '/views/layouts/footer.php'; ?>
