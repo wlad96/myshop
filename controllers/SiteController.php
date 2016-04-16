@@ -78,5 +78,15 @@ class SiteController
         require_once(ROOT . '/views/site/about.php');
         return true;
     }
+    
+      /**
+     * Action строки поиска
+     */
+    public function actionSearch()
+    {
+        // Подключаем вид
+        require_once(ROOT . '/views/site/search.php');
+        return true;
+    }
 
 }
