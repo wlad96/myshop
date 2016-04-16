@@ -27,10 +27,24 @@
 
     <body>
         <div class="page-wrapper">
-
-
+ 
             <header id="header"><!--header-->
-                <div class="header_top"><!--header_top-->
+                <div class="header_top"><!--header_top-->                    
+                    
+                    <div class="searchform pull-right"> <!--searchform-->
+                          <div class="container">
+                            <div class="row">
+                                <div class="col-sm-7"></div>
+                                <div class="col-sm-5">
+                                    <form name="search" method="post" action="search.php">
+                                               <input type="search" name="query" placeholder="Поиск">
+                                               <button type="submit">Найти</button> 
+                                    </form>
+                                 </div>                                  
+                            </div>  
+                          </div>  
+                     </div>   <!--/searchform-->
+                    
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-6">
@@ -51,6 +65,9 @@
                             </div>
                         </div>
                     </div>
+                    
+                   
+                    
                 </div><!--/header_top-->
 
                 <div class="header-middle"><!--header-middle-->
@@ -82,6 +99,9 @@
                         </div>
                     </div>
                 </div><!--/header-middle-->
+                
+                
+                    
 
                 <div class="header-bottom"><!--header-bottom-->
                     <div class="container">
@@ -107,6 +127,7 @@
                                         <li><a href="/about/">О магазине</a></li>
                                         <li><a href="/contacts/">Контакты</a></li>
                                     </ul>
+                                     
                                 </div>
                             </div>
                         </div>

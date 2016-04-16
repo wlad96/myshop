@@ -3,16 +3,27 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/OpenServer/domains/myshop/views/admin_category/index.php</file>
-            <file>file:/C:/OpenServer/domains/myshop/views/admin_product/create.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/models/Product.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/template/css/main.css</file>
             <file>file:/C:/OpenServer/domains/myshop/controllers/AdminProductController.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/views/layouts/header.php</file>
             <file>file:/C:/OpenServer/domains/myshop/views/admin_product/delete.php</file>
-            <file>file:/C:/OpenServer/domains/myshop/controllers/AdminCategoryController.php</file>
             <file>file:/C:/OpenServer/domains/myshop/views/admin_product/update.php</file>
             <file>file:/C:/OpenServer/domains/myshop/models/Category.php</file>
-            <file>file:/C:/OpenServer/domains/myshop/views/layouts/footer.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/components/Router.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/views/admin_order/index.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/views/site/contact.php</file>
             <file>file:/C:/OpenServer/domains/myshop/models/Brand.php</file>
             <file>file:/C:/OpenServer/domains/myshop/views/admin_product/index.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/views/admin/index.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/views/admin_category/index.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/views/product/view.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/views/cart/checkout.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/views/admin_product/create.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/controllers/AdminCategoryController.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/views/layouts/footer.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/views/cart/index.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/controllers/CartController.php</file>
         </group>
     </open-files>
 </project-private>
