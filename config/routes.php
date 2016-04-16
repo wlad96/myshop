@@ -41,8 +41,8 @@ return array(
     'contacts' => 'site/contact',
     'about' => 'site/about',
     
-    // Поиск
-    'search' => 'site/search',
+//    // Поиск
+//    'search' => 'site/search',
     
     // Главная страница
     'index.php' => 'site/index', // actionIndex в SiteController

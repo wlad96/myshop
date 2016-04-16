@@ -29,9 +29,24 @@
         <div class="page-wrapper">
  
             <header id="header"><!--header-->
-                <div class="header_top"><!--header_top-->                    
+                <div class="header_top"><!--header_top-->      
                     
-                    <div class="searchform pull-right"> <!--searchform-->
+                    
+                     <div class="searchform pull-right"> <!--searchform-->
+                          <div class="container">
+                            <div class="row">
+                                <div class="col-sm-7"></div>
+                                <div class="col-sm-5">
+                                              <input type="text" name="referal" placeholder="Живой поиск" value="" class="who"  autocomplete="off">
+                                              <ul class="search_result"></ul>
+                                 </div>                                  
+                            </div>  
+                          </div>  
+                     </div>    <!--/searchform-->
+                    
+                    
+                    
+<!--                    <div class="searchform pull-right"> searchform
                           <div class="container">
                             <div class="row">
                                 <div class="col-sm-7"></div>
@@ -43,7 +58,7 @@
                                  </div>                                  
                             </div>  
                           </div>  
-                     </div>   <!--/searchform-->
+                     </div>   /searchform-->
                     
                     <div class="container">
                         <div class="row">

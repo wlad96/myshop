@@ -89,4 +89,25 @@ class SiteController
         return true;
     }
 
+    
+    
+       /**
+     * чиню баг actionIndexssite
+     */
+    public function actionIndexssite()
+    {
+        echo "тут он орал про actionIndexssite";
+        return true;
+    }
+    
+    
+    
+       /**
+     * чиню баг actionIndexcsite
+     */
+    public function actionIndexcsite()
+    {
+        echo "а тут он орал про actionIndexcsite";
+        return true;
+    }
 }
