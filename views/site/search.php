@@ -7,7 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
+        <link href="../../../find/find.css" rel="stylesheet" type="text/css"/>
         <title>Главная</title>
+        <link href="../../../find/find.css" rel="stylesheet" type="text/css"/>
         <link href="/template/css/bootstrap.min.css" rel="stylesheet">
         <link href="/template/css/font-awesome.min.css" rel="stylesheet">
         <link href="/template/css/animate.css" rel="stylesheet">
@@ -18,11 +20,7 @@
 
     <body>
         <div class="page-wrapper">
- 
-            <header id="header"><!--header-->
-                <div class="header_top"><!--header_top-->                                           
-                </div><!--/header_top-->
-
+            <header>
                 <div class="header-middle"><!--header-middle-->
                     <div class="container">
                         <div class="row">
@@ -86,10 +84,10 @@
 
 
 
-     <div class="container">
+     <div class="container"> <!--Живой поиск-->
         <div class="row">
             <div class="col-sm-3">
-                <input type="text" name="referal" placeholder="Живой поиск" value="" class="who"  autocomplete="off">
+                <input type="text" name="referal" placeholder="Поиск" value="" class="who"  autocomplete="off">
                 <ul class="search_result"></ul>
             </div>
         </div> 

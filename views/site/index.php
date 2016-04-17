@@ -5,6 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
+                <link href="../../../find/find.css" rel="stylesheet" type="text/css"/>
                 <div class="left-sidebar">
                     <h2>Каталог</h2>
                     <div class="panel-group category-products">
