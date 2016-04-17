@@ -1,4 +1,4 @@
-//$(function(){
+$(function(){
     
     //Живой поиск
     $('.who').bind("change keyup input click", function() {
@@ -26,4 +26,4 @@
         $(".search_result").fadeOut();
     })
 
-//})
+})

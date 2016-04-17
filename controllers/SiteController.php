@@ -91,6 +91,17 @@ class SiteController
 
     
     
+     /**
+     * Action подбор ноутбука
+     */
+    public function actionChoice()
+    {
+        // Подключаем вид
+        require_once(ROOT . '/views/site/choice.php');
+        return true;
+    }
+
+    
        /**
      * чиню баг actionIndexssite
      */
@@ -112,3 +123,5 @@ class SiteController
         return true;
     }
 }
+
+  

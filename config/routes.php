@@ -41,8 +41,12 @@ return array(
     'contacts' => 'site/contact',
     'about' => 'site/about',
     
-//    // Поиск
+    // Поиск
     'search' => 'site/search',
+    // Подбор ноутбука
+    'choice' => 'site/choice',
+//    // Результат теста
+//    'result' => 'site/result',
     
     // Главная страница
     'index.php' => 'site/index', // actionIndex в SiteController

@@ -123,6 +123,7 @@
                                         <li><a href="/about/">О магазине</a></li>
                                         <li><a href="/contacts/">Контакты</a></li>
                                         <li><a href="/search/">Поиск</a></li>
+                                        <li><a href="/choice/">Подбор ноутбука</a></li>
                                     </ul>
                                      
                                 </div>
