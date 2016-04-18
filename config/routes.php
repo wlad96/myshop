@@ -45,8 +45,8 @@ return array(
     'search' => 'site/search',
     // Подбор ноутбука
     'choice' => 'site/choice',
-//    // Результат теста
-//    'result' => 'site/result',
+    // Результат теста
+    'result' => 'site/result',
     
     // Главная страница
     'index.php' => 'site/index', // actionIndex в SiteController

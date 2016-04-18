@@ -7,7 +7,6 @@
             
             <div class="col-sm-6 padding-right contact-information">   
                 <h4>Результат</h4>
-                
                 <?php
                     $ot = 0;
                     $not = 0;

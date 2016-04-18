@@ -102,6 +102,16 @@ class SiteController
     }
 
     
+      /**
+     * Action подбор ноутбука
+     */
+    public function actionResult()
+    {
+        // Подключаем вид
+        require_once(ROOT . '/views/site/result.php');
+        return true;
+    }
+    
        /**
      * чиню баг actionIndexssite
      */
@@ -122,6 +132,16 @@ class SiteController
         echo "а тут он орал про actionIndexcsite";
         return true;
     }
+    
+        /**
+     * чиню баг actionIndexrsite
+     */
+    public function actionIndexrsite()
+    {
+         echo "а тут он орал про actionIndexrsite";
+        return true;
+    }
+    
 }
 
   
