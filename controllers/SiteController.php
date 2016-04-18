@@ -142,6 +142,61 @@ class SiteController
         return true;
     }
     
+       /**
+     * чиню баг actionIndexqsite. Переход к вопросу1
+     */
+    public function actionIndex1site()
+    {
+        // Подключаем вид
+        require_once(ROOT . '/views/site/1question.php');
+        return true;
+    }
+    
+       
+        /**
+     * чиню баг actionIndex3site. Переход к вопросу3
+     */
+    public function actionIndex3site()
+    {
+        // Подключаем вид
+        require_once(ROOT . '/views/site/3question.php');
+        return true;
+    }
+    
+        /**
+     * чиню баг actionIndex4site. Переход к вопросу4
+     */
+    public function actionIndex4site()
+    {
+        // Подключаем вид
+        require_once(ROOT . '/views/site/4question.php');
+        return true;
+    }
+    
+       
+        /**
+     * чиню баг actionIndex5site. Переход к вопросу5
+     */
+    public function actionIndex5site()
+    {
+        // Подключаем вид
+        require_once(ROOT . '/views/site/5question.php');
+        return true;
+    }
+    
+    
+       /**
+     * чиню баг actionIndexvsite. Переход к вопросу2
+     */
+    public function actionIndexvsite()
+    {
+        // Подключаем вид
+        require_once(ROOT . '/views/site/2question.php');
+        return true;
+    }
+ 
+    
+    
 }
 
   
