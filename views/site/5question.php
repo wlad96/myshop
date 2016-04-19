@@ -4,8 +4,8 @@
     <section>
     <div class="container">
         <div class="row">
-            
-            <div class="col-sm-6 padding-right contact-information">   
+            <div class="col-sm-3"></div>   
+            <div class="col-sm-6 padding-right">   
                 <h3>Подбор ноутбука</h3>                                                     
                 <?php
                     if( isset( $_POST['q5'] ) )
@@ -35,6 +35,7 @@
                             <input type="submit" value='Далее'/>
                         </form>       
             </div>
+             <div class="col-sm-3"></div>  
         </div>
     </div>
     </section>

@@ -5,7 +5,7 @@
         <div class="row">
             
             <div class="col-sm-6 padding-right contact-information">   
-                <h4>Контактная информация</h4>
+                <h3>Контактная информация</h3>
                 <b>Единый справочный телефон:</b> +7 (495) 925-6473 <br/>
                 <b>E-mail:</b> alaptopshop@gmail.com<br/>
                 <b>Адрес магазина:</b> 127642, г.Москва, ул.Сухонская, д.7в<br/><br/>
@@ -33,8 +33,8 @@
                     <?php endif; ?>
 
                     <div class="signup-form"><!--sign up form-->
-                        <h2>Обратная связь</h2>
-                        <h5>Есть вопрос? Напишите нам</h5>
+                        <h3>Обратная связь</h3>
+                        <h4>Есть вопрос? Напишите нам</h4>
                         <br/>
                         <form action="#" method="post">
                             <p>Ваша почта</p>

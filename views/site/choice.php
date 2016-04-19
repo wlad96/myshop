@@ -3,8 +3,8 @@
     <section>
     <div class="container">
         <div class="row">
-            
-            <div class="col-sm-6 padding-right contact-information">   
+            <div class="col-sm-3"></div>   
+            <div class="col-sm-6 padding-right">   
                 <h3>Подбор ноутбука</h3>                                                     
                 <?php
                     if( isset( $_POST['begin'] ) )
@@ -22,13 +22,14 @@
                     ?> 
  
                         <form method="post">                           
-                            <p>Данный тест поможет Вам определиться с выбором ноутбука</p><br/>
+                            <h4>Данный тест поможет Вам определиться с выбором ноутбука</h4><br/>
                             <p>Начать тест?</p>
                              <input type="radio" name="begin" value="one" /> Да<br />
                              <input type="radio" name="begin" value="two" /> Нет, вернуться к каталогу товаров<br />
                             <input type="submit" value='Поехали!'/>
                         </form>    
             </div>
+            <div class="col-sm-3"></div>   
         </div>
     </div>
     </section>
