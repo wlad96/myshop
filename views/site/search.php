@@ -3,10 +3,17 @@
 
      <div class="container"> <!--Живой поиск-->
         <div class="row">
-            <div class="col-sm-3">
+<!--            <div class="col-sm-3">
                 <input type="text" name="referal" placeholder="Поиск" value="" class="who"  autocomplete="off">
                 <ul class="search_result"></ul>
-            </div>
+            </div>-->
+            
+            <form class="navbar-search pull-left">
+                <!--<input type="text" class="search-query" placeholder="Search">-->
+                <input type="text" name="referal" placeholder="Поиск" value="" class="who search-query"  autocomplete="off">
+                <ul class="search_result"></ul>
+            </form>
+
         </div> 
       </div> 
 

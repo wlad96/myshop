@@ -11,6 +11,7 @@ body {
     background:;
     position: relative;
     font-weight:400px;
+    font-size: 14px;
 }
 
 html, body {
@@ -724,7 +725,7 @@ ul.sub-menu {
     padding-top: 15px;
 }
 .left-sidebar h2, .brands_products h2 {
-    color: #FE980F;
+    color: #ff9900;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -794,7 +795,7 @@ h2.title:before{
 }
 
 .category-products .panel-default .panel-heading .panel-title a.active {
-    color: #FE980F;
+    color: #ff9900;
 }
 
 .panel-group .panel-heading + .panel-collapse .panel-body {
@@ -2051,4 +2052,26 @@ h2.title {
     border-bottom: 1px solid #F7F7F0;
 }
 
+/*Choice Laptop */
+.choice {
+  font-size: 18px; 
+}
 
+.choice label{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.choice p{
+    font-size: 14px;
+}
+
+.choice .btn{
+    margin-top: 15px;
+}
+
+
+/*Cabinet */
+.cabinet {
+    font-size: 16px;
+}

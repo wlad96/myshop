@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3"></div>   
-            <div class="col-sm-6 padding-right">   
+            <div class="col-sm-6 padding-right choice">   
                 <h3>Подбор ноутбука</h3>                                                     
                 <?php
                     if( isset( $_POST['begin'] ) )
@@ -23,10 +23,10 @@
  
                         <form method="post">                           
                             <h4>Данный тест поможет Вам определиться с выбором ноутбука</h4><br/>
-                            <p>Начать тест?</p>
-                             <input type="radio" name="begin" value="one" /> Да<br />
-                             <input type="radio" name="begin" value="two" /> Нет, вернуться к каталогу товаров<br />
-                            <input type="submit" value='Поехали!'/>
+                            <h4>Начать тест?</h4>
+                            <label><input type="radio" name="begin" value="one" /> Да</label><br />
+                            <label><input type="radio" name="begin" value="two" /> Нет, вернуться к каталогу товаров</label><br />
+                            <button type="submit" class="btn btn-success">Поехали!</button>
                         </form>    
             </div>
             <div class="col-sm-3"></div>   

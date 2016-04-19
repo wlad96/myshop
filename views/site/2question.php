@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3"></div>   
-            <div class="col-sm-6 padding-right">   
+            <div class="col-sm-6 padding-right choice">   
                 <h3>Подбор ноутбука</h3>                                                     
                 <?php
                     if( isset( $_POST['q2'] ) )
@@ -30,10 +30,10 @@
  
                         <form method="post">
                             <h4>Вопрос 2. Для каких целей вы приобретаете ноутбук?</h4>
-                            <input type="radio" name="q2" value="one" /> В основном для работы/учебы<br />
-                            <input type="radio" name="q2" value="two" /> В основном собираюсь играть<br />
-                            <input type="radio" name="q2" value="three" /> Для проигрывания аудио и видео, общения в сети<br />
-                            <input type="submit" value='Далее'/>
+                            <label><input type="radio" name="q2" value="one" /> В основном для работы/учебы</label><br />
+                            <label><input type="radio" name="q2" value="two" /> В основном собираюсь играть</label><br />
+                            <label><input type="radio" name="q2" value="three" /> Для проигрывания аудио и видео, общения в сети</label><br />
+                            <button type="submit" class="btn btn-success">Далее</button>
                         </form>      
           
             </div>
