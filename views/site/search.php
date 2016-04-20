@@ -1,5 +1,5 @@
 <!--pos.:    views/site/search    -->
-<?php include ROOT . '/views/layouts/header.php'; ?>
+<?php include ROOT . '/views/layouts/header.php';?>
 
      <div class="container"> <!--Живой поиск-->
         <div class="row">
@@ -16,6 +16,7 @@
 
         </div> 
       </div> 
+
 
 
 <?php  
@@ -37,10 +38,9 @@ if(!empty($_POST["referal"])){ //Принимаем данные
     or die('Ошибка №'.__LINE__.'<br>Обратитесь к администратору сайта пожалуйста, сообщив номер ошибки.');
 
     while ($row = $db_referal -> fetch_array()) {
-        echo "\n<li>".$row["name"]."</li>"; //$row["name"] - имя поля таблицы
+        echo "\n<li><a href='http://myshop/product/".$row["id"]."'>".$row["name"]."</a></li>"; //$row["name"] - имя поля таблицы
     }
 
 }
  ?>
-
 <?php include ROOT . '/views/layouts/footer.php'; ?>
