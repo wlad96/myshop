@@ -56,7 +56,7 @@ class SiteController
             if ($errors == false) {
                 // Если ошибок нет
                 // Отправляем письмо администратору 
-                $adminEmail = 'php.start@mail.ru';
+                $adminEmail = 'alaptopshop@gmail.com';
                 $message = "Текст: {$userText}. От {$userEmail}";
                 $subject = 'Тема письма';
                 $result = mail($adminEmail, $subject, $message);
@@ -80,7 +80,7 @@ class SiteController
     }
     
       /**
-     * Action строки поиска
+     * Action строки поиска 
      */
     public function actionSearch()
     {
@@ -88,9 +88,7 @@ class SiteController
         require_once(ROOT . '/views/site/search.php');
         return true;
     }
-
-    
-    
+       
      /**
      * Action подбор ноутбука
      */
