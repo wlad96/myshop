@@ -1,4 +1,4 @@
-<!--pos.:    views/site/livesearch/livesearch.php обработчик-->
+<!--pos.:    models/livesearch обработчик-->
 <?php  
 
 define("DB_HOST","localhost");
@@ -18,7 +18,7 @@ if(!empty($_POST["referal"])){ //Принимаем данные
     or die('Ошибка №'.__LINE__.'<br>Обратитесь к администратору сайта пожалуйста, сообщив номер ошибки.');
 
     while ($row = $db_referal -> fetch_array()) {
-        echo "\n<li><a href='http://myshop/product/".$row["id"]."'>".$row["name"]."</a></li>"; //$row["name"] - имя поля таблицы
+        echo "\n<li><a title='Перейти к описанию товара' href='http://myshop/product/".$row["id"]."'>".$row["name"]."</a></li>"; //$row["name"] - имя поля таблицы
     }
 
 }

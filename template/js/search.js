@@ -6,7 +6,7 @@ $(function(){
             $.ajax({
                 type: 'post',
                 //url: "search.php", //Путь к обработчику
-                url: "livesearch.php", //Путь к обработчику
+                url: "/models/Livesearch.php", //Путь к обработчику
                 data: {'referal':this.value},
                 response: 'text',
                 success: function(data){

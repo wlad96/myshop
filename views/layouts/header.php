@@ -13,6 +13,7 @@
         <link href="/template/css/animate.css" rel="stylesheet">
         <link href="/template/css/main.css" rel="stylesheet">
         <link href="/template/css/responsive.css" rel="stylesheet">
+        <link href="/template/images/home/favicon.ico" rel="icon" type="image/x-icon" />
 
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
@@ -27,8 +28,7 @@
             <header id="header"><!--header-->
                 <div class="header_top"><!--header_top-->      
                     
-                    
-<!--                     <div class="searchform pull-right"> searchform
+<!--                   <div class="searchform pull-right"> searchform
                           <div class="container">
                             <div class="row">
                                 <div class="col-sm-7"></div>
@@ -39,7 +39,6 @@
                             </div>  
                           </div>  
                      </div>    /searchform-->
-                    
                     
                     <div class="container">
                         <div class="row">
@@ -122,10 +121,9 @@
                                         </li>
                                         <li><a href="/about/">О магазине</a></li>
                                         <li><a href="/contacts/">Контакты</a></li>
-                                        <li><a href="/search/">Поиск</a></li>
+                                        <li><a href="/search/">Поиск</a></li> 
                                         <li><a href="/choice/">Подбор ноутбука</a></li>
-                                    </ul>
-                                     
+                                    </ul>                                     
                                 </div>
                             </div>
                         </div>

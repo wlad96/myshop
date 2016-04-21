@@ -310,8 +310,8 @@ a#scrollUp i{
     max-height:300px;
     overflow-y:scroll;
     display:none;
-    position: absolute;
-    z-index:9999;
+/*    position: absolute;
+    z-index:9999;*/
 }
 
 .search_result li{
