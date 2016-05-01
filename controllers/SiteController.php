@@ -13,6 +13,9 @@ class SiteController
     {
         // Список категорий для левого меню
         $categories = Category::getCategoriesList();
+        
+        // Список брендов для левого меню
+        $brands = Brand::getBrandsList();
 
 //        // Список последних товаров (заменила на список новых товаров)
 //        $latestProducts = Product::getLatestProducts(6);
@@ -191,6 +194,19 @@ class SiteController
         // Подключаем вид
         require_once(ROOT . '/views/site/2question.php');
         return true;
+    }
+    
+      /**
+     * Action для Брендов actionIndexbsite 
+     */
+    public function actionIndexbsite()
+    {
+        // Подключаем вид
+        require_once(ROOT . '/views/catalog/brand.php');
+        return true;
+        
+//         echo "а тут он орал про actionIndexbsite";
+//        return true;
     }
  
     

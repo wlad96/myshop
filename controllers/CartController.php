@@ -53,6 +53,8 @@ class CartController
     {
         // Список категорий для левого меню
         $categories = Category::getCategoriesList();
+        // Список брендов для левого меню
+        $brands = Brand::getBrandsList();
 
         // Получим идентификаторы и количество товаров в корзине
         $productsInCart = Cart::getProducts();
@@ -89,6 +91,8 @@ class CartController
 
         // Список категорий для левого меню
         $categories = Category::getCategoriesList();
+        // Список брендов для левого меню
+        $brands = Brand::getBrandsList();
 
         // Находим общую стоимость
         $productsIds = array_keys($productsInCart);

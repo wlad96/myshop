@@ -5,9 +5,14 @@ return array(
     'product/([0-9]+)' => 'product/view/$1', // actionView в ProductController
     // Каталог:
     'catalog' => 'catalog/index', // actionIndex в CatalogController
+    // Бренд:
+    //'brand' => 'brand/index', // actionIndex?? в CatalogController
     // Категория товаров:
     'category/([0-9]+)/page-([0-9]+)' => 'catalog/category/$1/$2', // actionCategory в CatalogController   
     'category/([0-9]+)' => 'catalog/category/$1', // actionCategory в CatalogController
+    // Бренд товаров:
+    'brand/([0-9]+)/page-([0-9]+)' => 'catalog/brand/$1/$2', // actionBrand в CatalogController   
+    'brand/([0-9]+)' => 'catalog/brand/$1', // actionBrand в CatalogController
     // Корзина:
     'cart/checkout' => 'cart/checkout', // actionAdd в CartController    
     'cart/delete/([0-9]+)' => 'cart/delete/$1', // actionDelete в CartController    
@@ -30,6 +35,11 @@ return array(
     'admin/category/update/([0-9]+)' => 'adminCategory/update/$1',
     'admin/category/delete/([0-9]+)' => 'adminCategory/delete/$1',
     'admin/category' => 'adminCategory/index',
+    // Управление брендами:    
+    'admin/brand/create' => 'adminBrand/create',
+    'admin/brand/update/([0-9]+)' => 'adminBrand/update/$1',
+    'admin/brand/delete/([0-9]+)' => 'adminBrand/delete/$1',
+    'admin/brand' => 'adminBrand/index',
     // Управление заказами:    
     'admin/order/update/([0-9]+)' => 'adminOrder/update/$1',
     'admin/order/delete/([0-9]+)' => 'adminOrder/delete/$1',

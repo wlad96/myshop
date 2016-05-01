@@ -20,6 +20,21 @@
                             </div>
                         <?php endforeach; ?>
                     </div>
+                    
+                    <div class="panel-group category-products">
+                        <?php foreach ($brands as $brandItem): ?>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a href="/brand/<?php echo $brandItem['id']; ?>">
+                                            <?php echo $brandItem['name']; ?>
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                    
                 </div>
             </div>
 

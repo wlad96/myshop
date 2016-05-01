@@ -26,7 +26,7 @@ class Brand
             $brandList[$i]['name'] = $row['name'];
             $i++;
         }
-        return $categoryList;
+        return $brandList;
     }
 
     /**
@@ -121,25 +121,6 @@ class Brand
         // Возвращаем данные
         return $result->fetch();
     }
-
-    /**
-     * Возвращает текстое пояснение статуса для категории :<br/>
-     * <i>0 - Скрыта, 1 - Отображается</i>
-     * @param integer $status <p>Статус</p>
-     * @return string <p>Текстовое пояснение</p>
-     */
-//    public static function getStatusText($status)
-//    {
-//        switch ($status) {
-//            case '1':
-//                return 'Отображается';
-//                break;
-//            case '0':
-//                return 'Скрыта';
-//                break;
-//        }
-//    }
-
     /**
      * Добавляет нового производителя
      * @param string $name <p>Название</p>

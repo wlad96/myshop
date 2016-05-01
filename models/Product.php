@@ -173,6 +173,50 @@ class Product
         return $products;
     }
 
+    
+    /**
+     * Возвращает список товаров с указанным брендом
+     * @param type $brandId <p>id бренда</p>
+     * @param type $page [optional] <p>Номер страницы</p>
+     * @return type <p>Массив с товарами</p>
+     */
+    public static function getProductsListByBrand($brandId, $page = 1)
+    {
+        $limit = Product::SHOW_BY_DEFAULT;
+        // Смещение (для запроса)
+        $offset = ($page - 1) * self::SHOW_BY_DEFAULT;
+
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Текст запроса к БД
+        $sql = 'SELECT id, name, price, is_new FROM product '
+                . 'WHERE status = 1 AND brand_id = :brand_id '
+                . 'ORDER BY id ASC LIMIT :limit OFFSET :offset';
+
+        // Используется подготовленный запрос
+        $result = $db->prepare($sql);
+        $result->bindParam(':brand_id', $brandId, PDO::PARAM_INT);
+        $result->bindParam(':limit', $limit, PDO::PARAM_INT);
+        $result->bindParam(':offset', $offset, PDO::PARAM_INT);
+
+        // Выполнение коменды
+        $result->execute();
+
+        // Получение и возврат результатов
+        $i = 0;
+        $products = array();
+        while ($row = $result->fetch()) {
+            $products[$i]['id'] = $row['id'];
+            $products[$i]['name'] = $row['name'];
+            $products[$i]['price'] = $row['price'];
+            $products[$i]['is_new'] = $row['is_new'];
+            $i++;
+        }
+        return $products;
+    }
+    
+    
     /**
      * Возвращает продукт с указанным id
      * @param integer $id <p>id товара</p>
@@ -225,6 +269,33 @@ class Product
         return $row['count'];
     }
 
+    
+     /**
+     * Возвращаем количество товаров с указанным брендом 
+     * @param integer $brandId
+     * @return integer
+     */
+    public static function getTotalProductsInBrand($brandId)
+    {
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Текст запроса к БД
+        $sql = 'SELECT count(id) AS count FROM product WHERE status="1" AND brand_id = :brand_id';
+
+        // Используется подготовленный запрос
+        $result = $db->prepare($sql);
+        $result->bindParam(':brand_id', $brandId, PDO::PARAM_INT);
+
+        // Выполнение коменды
+        $result->execute();
+
+        // Возвращаем значение count - количество
+        $row = $result->fetch();
+        return $row['count'];
+    }
+    
+    
     /**
      * Возвращает список товаров с указанными индентификторами
      * @param array $idsArray <p>Массив с идентификаторами</p>

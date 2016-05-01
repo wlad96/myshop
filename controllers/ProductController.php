@@ -15,8 +15,11 @@ class ProductController
     {
         // Список категорий для левого меню
         $categories = Category::getCategoriesList();
+        
+        // Список брендов для левого меню
+        $brands = Brand::getBrandsList();
 
-        // Получаем инфомрацию о товаре
+        // Получаем информацию о товаре
         $product = Product::getProductById($productId);
 
         // Подключаем вид

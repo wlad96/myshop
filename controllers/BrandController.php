@@ -1,10 +1,11 @@
 <?php
 
 /**
- * Контроллер CatalogController
+ * Контроллер BrandController
  * Каталог товаров
+ * Бренды!
  */
-class CatalogController
+class BrandController
 {
 
     /**
@@ -22,11 +23,12 @@ class CatalogController
         $latestProducts = Product::getLatestProducts(12);
         */
          
-        // Список всех товаров
-        $allProducts = Product::getAllProducts(100);
+//        // Список всех товаров ВСЕ ТОВАРЫ
+//        $allProducts = Product::getAllProducts(100);
 
         // Подключаем вид
-        require_once(ROOT . '/views/catalog/index.php');
+//        require_once(ROOT . '/views/catalog/index.php');
+         require_once(ROOT . '/views/catalog/brand.php');
         return true;
     }
 
@@ -40,6 +42,7 @@ class CatalogController
 
         // Список товаров в категории
         $categoryProducts = Product::getProductsListByCategory($categoryId, $page);
+       
 
         // Общее количетсво товаров (необходимо для постраничной навигации)
         $total = Product::getTotalProductsInCategory($categoryId);
@@ -55,11 +58,16 @@ class CatalogController
       /**
      * Action Для брендов
      */
-    public function actionBrand($brandId, $page = 1)
+    public function actionBrand($brandId, $categoryId, $page = 1)
     {
+        
         // Список категорий для левого меню
+        $categories = Category::getCategoriesList();
+        // Список брендов для левого меню
         $brands = Brand::getBrandsList();
 
+        // Список товаров в категории
+        $categoryProducts = Product::getProductsListByCategory($categoryId, $page);
         // Список товаров в бренде
         $brandProducts = Product::getProductsListByBrand($brandId, $page);
 
