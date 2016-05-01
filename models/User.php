@@ -294,9 +294,9 @@ class User
         // Получение и возврат результатов. Используется подготовленный запрос
         $result = $db->prepare($sql);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
-        $result->bindParam(':name', $userName, PDO::PARAM_STR);
-        $result->bindParam(':email', $userEmail, PDO::PARAM_STR);
-        $result->bindParam(':password', $userPassword, PDO::PARAM_STR);
+        $result->bindParam(':name', $name, PDO::PARAM_STR);
+        $result->bindParam(':email', $email, PDO::PARAM_STR);
+        $result->bindParam(':password', $password, PDO::PARAM_STR);
         $result->bindParam(':role', $role, PDO::PARAM_INT);
         return $result->execute();
     }

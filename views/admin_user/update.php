@@ -34,9 +34,9 @@
 
                         <p>Роль</p>
                         <select name="role">
-                            <option value="1" <?php if ($user['role'] == 1) echo ' selected="selected"'; ?>>Клиент</option>
-                            <option value="2" <?php if ($user['role'] == 2) echo ' selected="selected"'; ?>>Менеджер</option>
-                            <option value="3" <?php if ($user['role'] == 3) echo ' selected="selected"'; ?>>Администратор</option>
+                            <option value="" <?php if ($user['role'] == '') echo ' selected="selected"'; ?>>Клиент</option>
+                            <option value="manager" <?php if ($user['role'] == 'manager') echo ' selected="selected"'; ?>>Менеджер</option>
+                            <option value="admin" <?php if ($user['role'] == 'admin') echo ' selected="selected"'; ?>>Администратор</option>
                         </select>
                         <br/>
                         <br/>
@@ -46,6 +46,7 @@
             </div>
 
         </div>
+        <a href="/admin/user/" class="btn btn-default back" title="Выйти без сохранения"><i class="fa fa-arrow-left"></i> Назад</a>
     </div>
 </section>
 

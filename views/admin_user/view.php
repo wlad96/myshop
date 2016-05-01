@@ -23,10 +23,12 @@
 
             <h5>Информация о пользователе</h5>
             <table class="table-admin-small table-bordered table-striped table">
-                <tr>
-                    <td>ID пользователя</td>
-                    <td><?php echo $user['id']; ?></td>
-                </tr>
+                 <?php if ($user['id'] != 0): ?>
+                    <tr>
+                        <td>ID пользователя</td>
+                        <td><?php echo $user['id']; ?></td>
+                    </tr>
+                <?php endif; ?>
                 <tr>
                     <td>Имя пользователя</td>
                     <td><?php echo $user['name']; ?></td>
@@ -39,12 +41,6 @@
                     <td>Пароль пользователя</td>
                     <td><?php echo $user['password']; ?></td>
                 </tr>
-                <?php if ($user['id'] != 0): ?>
-                    <tr>
-                        <td>ID пользователя</td>
-                        <td><?php echo $user['id']; ?></td>
-                    </tr>
-                <?php endif; ?>
                 <tr>
                     <td><b>Роль</b></td>
                     <td><?php echo User::getRoleText($user['role']); ?></td>
