@@ -49,6 +49,7 @@
     <?php include ROOT . '/views/layouts/footer.php'; ?>    
     
 </body>
+</html>
 
 
 
