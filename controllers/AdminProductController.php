@@ -131,9 +131,10 @@ class AdminProductController extends AdminBase
             // Сохраняем изменения
             if (Product::updateProductById($id, $options)) {
 
-                echo '<pre>';
-                print_r($_FILES["image"]);
-                echo '</pre>';
+//                <!--инфа об изображении-->                
+//                echo '<pre>';
+//                print_r($_FILES["image"]);
+//                echo '</pre>';
 
                 // Если запись сохранена
                 // Проверим, загружалось ли через форму изображение

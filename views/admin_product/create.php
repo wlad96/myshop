@@ -29,7 +29,8 @@
 
             <div class="col-lg-4">
                 <div class="login-form">
-                    <form action="#" method="post" enctype="multipart/form-data">
+                    <!--<form action="#" method="post" enctype="multipart/form-data">-->
+                    <form action="#" method="post">
 
                         <p>Название товара</p>
                         <input type="text" name="name" placeholder="" value="">

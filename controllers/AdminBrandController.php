@@ -15,8 +15,8 @@ class AdminBrandController extends AdminBase
         // Проверка доступа
         self::checkAdmin();
 
-        // Получаем список категорий
-        $categoriesList = Category::getCategoriesListAdmin();
+//        // Получаем список категорий
+//        $categoriesList = Category::getCategoriesListAdmin();
         
         // Получаем список производителей
         $brandsList = Brand::getBrandsListAdmin();
@@ -71,7 +71,7 @@ class AdminBrandController extends AdminBase
         // Проверка доступа
         self::checkAdmin();
 
-        // Получаем данные о конкретной категории
+        // Получаем данные о конкретном бренде
         $brand = Brand::getBrandById($id);
 
         // Обработка формы

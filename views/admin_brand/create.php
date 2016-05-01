@@ -9,7 +9,7 @@
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
                     <li><a href="/admin">Админпанель</a></li>
-                    <li><a href="/admin/order">Управление брендами</a></li>
+                    <li><a href="/admin/brand">Управление брендами</a></li>
                     <li class="active">Добавить бренд</li>
                 </ol>
             </div>

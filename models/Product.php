@@ -415,7 +415,7 @@ class Product
                 code = :code, 
                 price = :price, 
                 category_id = :category_id, 
-                brand = :brand, 
+                brand_id = :brand_id, 
                 availability = :availability, 
                 description = :description, 
                 is_new = :is_new, 
@@ -430,7 +430,7 @@ class Product
         $result->bindParam(':code', $options['code'], PDO::PARAM_STR);
         $result->bindParam(':price', $options['price'], PDO::PARAM_STR);
         $result->bindParam(':category_id', $options['category_id'], PDO::PARAM_INT);
-        $result->bindParam(':brand', $options['brand'], PDO::PARAM_STR);
+        $result->bindParam(':brand_id', $options['brand_id'], PDO::PARAM_STR);
         $result->bindParam(':availability', $options['availability'], PDO::PARAM_INT);
         $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
         $result->bindParam(':is_new', $options['is_new'], PDO::PARAM_INT);
@@ -451,10 +451,10 @@ class Product
 
         // Текст запроса к БД
         $sql = 'INSERT INTO product '
-                . '(name, code, price, category_id, brand, availability,'
+                . '(name, code, price, category_id, brand_id, availability,'
                 . 'description, is_new, is_hit, status)'
                 . 'VALUES '
-                . '(:name, :code, :price, :category_id, :brand, :availability,'
+                . '(:name, :code, :price, :category_id, :brand_id, :availability,'
                 . ':description, :is_new, :is_hit, :status)';
 
         // Получение и возврат результатов. Используется подготовленный запрос
@@ -463,7 +463,7 @@ class Product
         $result->bindParam(':code', $options['code'], PDO::PARAM_STR);
         $result->bindParam(':price', $options['price'], PDO::PARAM_STR);
         $result->bindParam(':category_id', $options['category_id'], PDO::PARAM_INT);
-        $result->bindParam(':brand', $options['brand'], PDO::PARAM_STR);
+        $result->bindParam(':brand_id', $options['brand_id'], PDO::PARAM_STR);
         $result->bindParam(':availability', $options['availability'], PDO::PARAM_INT);
         $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
         $result->bindParam(':is_new', $options['is_new'], PDO::PARAM_INT);
