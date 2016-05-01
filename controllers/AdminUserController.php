@@ -24,7 +24,7 @@ class AdminUserController extends AdminBase
     }
 
     /**
-     * Action для страницы "Редактирование заказа"
+     * Action для страницы "Редактирование пользователя"
      */
     public function actionUpdate($id)
     {
@@ -47,7 +47,7 @@ class AdminUserController extends AdminBase
             User::updateUserById($id, $name, $email, $password, $role);
 
             // Перенаправляем пользователя на страницу управлениями пользователями
-            header("Location: /admin/user/view/$id");
+            header("Location: /admin/user");
         }
 
         // Подключаем вид
@@ -83,7 +83,7 @@ class AdminUserController extends AdminBase
         if (isset($_POST['submit'])) {
             // Если форма отправлена
             // Удаляем пользователя
-            Order::deleteUserById($id);
+            User::deleteUserById($id);
 
             // Перенаправляем пользователя на страницу управлениями товарами
             header("Location: /admin/user");
@@ -123,7 +123,7 @@ class AdminUserController extends AdminBase
             if ($errors == false) {
                 // Если ошибок нет
                 // Добавляем нового пользователя
-                User::createUser($name,$email, $password, $role);
+                User::createUser($name, $email, $password, $role);
 
                 // Перенаправляем пользователя на страницу управлениями категориями
                 header("Location: /admin/user");

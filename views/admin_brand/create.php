@@ -42,6 +42,7 @@
 
 
         </div>
+        <a href="/admin/brand/" class="btn btn-default back" title="Выйти без сохранения"><i class="fa fa-arrow-left"></i> Назад</a>
     </div>
 </section>
 

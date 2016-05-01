@@ -18,9 +18,6 @@
             <h4>Просмотр пользователя #<?php echo $user['id']; ?></h4>
             <br/>
 
-
-
-
             <h5>Информация о пользователе</h5>
             <table class="table-admin-small table-bordered table-striped table">
                  <?php if ($user['id'] != 0): ?>
