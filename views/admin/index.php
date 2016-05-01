@@ -19,6 +19,7 @@
                 <li><a href="/admin/category">Управление категориями</a></li>
                 <li><a href="/admin/brand">Управление брендами</a></li>
                 <li><a href="/admin/order">Управление заказами</a></li>
+                <li><a href="/admin/user">Управление пользователями</a></li>
             </ul>
             
         </div>

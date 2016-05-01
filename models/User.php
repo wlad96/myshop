@@ -220,5 +220,112 @@ class User
 
         return $result->fetch();
     }
+    
+    
+     /**
+     * Возвращает список пользователей
+     * @return array <p>Список пользователей</p>
+     */
+    public static function getUsersList()
+    {
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Получение и возврат результатов
+        $result = $db->query('SELECT id, name, email, password, role FROM user ORDER BY id DESC');
+        $usersList = array();
+        $i = 0;
+        while ($row = $result->fetch()) {
+            $usersList[$i]['id'] = $row['id'];
+            $usersList[$i]['name'] = $row['name'];
+            $usersList[$i]['email'] = $row['email'];
+            $usersList[$i]['password'] = $row['password'];
+            $usersList[$i]['role'] = $row['role'];
+            $i++;
+        }
+        return $usersList;
+    }
+
+    /**
+     * Возвращает текстое пояснение роли для пользователя :<br/>
+     * <i>1 - Клиент, 2 - Менеджер, 3 - Администратор</i>
+     * @param integer $role <p>Роль</p>
+     * @return string <p>Текстовое пояснение</p>
+     */
+    public static function getRoleText($role)
+    {
+        switch ($role) {
+            case 'manager':
+                return 'Менеджер';
+                break;
+            case 'admin':
+                return 'Администратор';
+                break;
+            default :
+                return 'Клиент';
+                break;
+        }
+    }
+    
+    
+    /**
+     * Редактирует пользователя с заданным id
+     * @param integer $id <p>id пользователя</p>
+     * @param string $name <p>Имя пользователя</p>
+     * @param string $email <p>Email пользователя</p>
+     * @param string $password <p>Пароль пользователя</p>
+     * @param integer $role <p>Роль <i>(клиент по умолчанию, менеджер "manager", администратор "admin")</i></p>
+     * @return boolean <p>Результат выполнения метода</p>
+     */
+    public static function updateUserById($id, $name, $email, $password, $role)
+    {
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Текст запроса к БД
+        $sql = "UPDATE user
+            SET 
+                name = :name, 
+                email = :email, 
+                password = :password, 
+                role = :role, 
+            WHERE id = :id";
+
+        // Получение и возврат результатов. Используется подготовленный запрос
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->bindParam(':name', $userName, PDO::PARAM_STR);
+        $result->bindParam(':email', $userEmail, PDO::PARAM_STR);
+        $result->bindParam(':password', $userPassword, PDO::PARAM_STR);
+        $result->bindParam(':role', $role, PDO::PARAM_INT);
+        return $result->execute();
+    }
+    
+    
+    /**
+     * Добавляет нового пользователя
+     * @param string $name <p>Название</p>
+     * @return boolean <p>Результат добавления записи в таблицу</p>
+     */
+    public static function createUser($name, $email, $password, $role)
+    {
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Текст запроса к БД
+        $sql = 'INSERT INTO user (name, email, password, role) '
+                . 'VALUES (:name, :email, :password, :role )';
+
+        // Получение и возврат результатов. Используется подготовленный запрос
+        $result = $db->prepare($sql);
+        $result->bindParam(':name', $name, PDO::PARAM_STR);
+        $result->bindParam(':email', $email, PDO::PARAM_STR);
+        $result->bindParam(':password', $password, PDO::PARAM_STR);
+        $result->bindParam(':role', $role, PDO::PARAM_STR);
+        return $result->execute();
+    }
+    
+    
+    
 
 }

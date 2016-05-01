@@ -37,6 +37,7 @@
             </table>
             
         </div>
+         <a href="/admin/" class="btn btn-default back"><i class="fa fa-arrow-left"></i> Назад</a>
     </div>
 </section>
 
