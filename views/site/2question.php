@@ -38,7 +38,7 @@
                             <label><input type="radio" name="q2" value="one" /> В основном для работы/учебы</label><br />
                             <label><input type="radio" name="q2" value="two" /> В основном собираюсь играть</label><br />
                             <label><input type="radio" name="q2" value="three" /> Для проигрывания аудио и видео, общения в сети</label><br />
-                            <button type="submit" class="btn btn-success">Далее</button>
+                            <button type="submit" class="btn btn-primary">Далее</button>
                         </form>      
           
             </div>

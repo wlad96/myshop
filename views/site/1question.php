@@ -34,7 +34,7 @@
                             <h4>Вопрос 1. Рассчитываете ли вы потратить большую сумму денег на покупку ноутбука?</h4>
                             <label><input type="radio" name="q1" value="one" /> Нет</label><br />
                             <label><input type="radio" name="q1" value="two" /> Да</label><br />
-                            <button type="submit" class="btn btn-success">Далее</button>
+                            <button type="submit" class="btn btn-primary">Далее</button>
                         </form>      
           
             </div>

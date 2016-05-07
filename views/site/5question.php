@@ -39,7 +39,7 @@
                             <h4>Вопрос 5. Вы будете смотреть фильмы с дисков?</h4>
                             <label><input type="radio" name="q5" value="one" /> Нет</label><br />
                             <label><input type="radio" name="q5" value="two" /> Да</label><br />
-                            <button type="submit" class="btn btn-success">Далее</button>
+                            <button type="submit" class="btn btn-primary">Далее</button>
                         </form>       
             </div>
              <div class="col-sm-3"></div>  

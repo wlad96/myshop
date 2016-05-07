@@ -3,9 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/OpenServer/domains/myshop/config/routes.php</file>
-            <file>file:/C:/OpenServer/domains/myshop/models/Category.php</file>
-            <file>file:/C:/OpenServer/domains/myshop/models/Brand.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/models/User.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/views/admin_user/update.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/controllers/AdminUserController.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/views/admin_category/update.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/views/admin_user/view.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/views/admin_user/index.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/controllers/AdminProductController.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/views/admin_category/create.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/views/admin_brand/create.php</file>
+            <file>file:/C:/OpenServer/domains/myshop/controllers/AdminOrderController.php</file>
         </group>
     </open-files>
 </project-private>

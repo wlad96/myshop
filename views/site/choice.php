@@ -26,7 +26,7 @@
                             <h4>Начать тест?</h4>
                             <label><input type="radio" name="begin" value="one" /> Да</label><br />
                             <label><input type="radio" name="begin" value="two" /> Нет, вернуться к каталогу товаров</label><br />
-                            <button type="submit" class="btn btn-success">Поехали!</button>
+                            <button type="submit" class="btn btn-primary">Поехали!</button>
                         </form>    
             </div>
             <div class="col-sm-3"></div>   
