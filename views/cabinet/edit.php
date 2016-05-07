@@ -18,7 +18,7 @@
                     <?php endif; ?>
 
                     <div class="signup-form"><!--sign up form-->
-                        <h2>Редактирование данных</h2>
+                        <h3>Редактирование данных</h3>
                         <form action="#" method="post">
                             <p>Имя:</p>
                             <input type="text" name="name" placeholder="Имя" value="<?php echo $name; ?>"/>

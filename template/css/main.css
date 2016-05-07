@@ -49,12 +49,21 @@ a {
     -moz-transition: 300ms;
     -o-transition: 300ms;
     transition: 300ms;
+    color: #3366CC;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
 }
-
+    /*
+        Main colors: 
+        color: #3366CC - blue
+        color: #ff9900 - orange
+    */
+h2, h3 {
+    color: #3366CC;
+    margin-bottom: 20px;
+}
 h5 {
     font-weight: bold;
 }
@@ -710,14 +719,6 @@ ul.sub-menu {
     color: #FE980F ;
 }
 
-.right {
-    right: 0;
-}
-
-.right a{
-    float: right;
-}
-
 .category-products {
     border: 1px solid #F7F7F0;
     margin-bottom: 35px;
@@ -1013,7 +1014,7 @@ h2.title {
 
 
 .add-to-cart, .checkout, .back {
-    background:#F5F5ED;
+    background: #eee;
     border: 0 none;
     border-radius: 0;
     color: #696763;
@@ -1301,7 +1302,7 @@ h2.title {
 }
 
 .product-information h2 {
-    color: #363432;
+    color: #3366CC;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     margin-top: 0;
@@ -1511,7 +1512,7 @@ h2.title {
 
 }
 
-.login-form h2, .signup-form h2 {
+.login-form h2 /*, .signup-form h2*/ {
     color: #696763;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
@@ -1535,6 +1536,10 @@ h2.title {
     width: 100%;
 }
 
+.btn-default:hover {
+    background: #ff9900;
+    color: #fff;
+}
 .login-form form span{
     line-height: 25px;
 }
@@ -2074,10 +2079,16 @@ h2.title {
 .cabinet {
     font-size: 16px;
 }
-
+.cabinet a{
+    margin-top: 10px;
+}
 /*************************
 *******Admin panel CSS******
 **************************/
 .admin-buttons li {
     margin-top: 10px;
+}
+
+.center {
+    text-align: center; 
 }
