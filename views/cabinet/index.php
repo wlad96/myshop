@@ -12,8 +12,13 @@
                     ?>
                 </h3>
                 <h4>
-                    <?php 
-                           echo "Привет, ".$user['name'];                
+                    <?php               
+                           if ($user['role']=='admin') 
+                               echo "Привет, администратор ".$user['name'];  
+                           else if ($user['role']=='manager') 
+                                echo "Привет, менеджер ".$user['name']; 
+                           else
+                               echo "Привет, ".$user['name']; 
                     ?>
                 </h4>           
                 <br/>
@@ -24,6 +29,9 @@
 
                 <?php if ($user['role']=='admin')   
                               echo  "<a class='btn btn-primary' href='/admin/index' role='button' ><span class='glyphicon glyphicon-inbox'></span> Перейти в Панель Администратора</a>";     
+                ?>
+                <?php if ($user['role']=='manager')   
+                              echo  "<a class='btn btn-primary' href='/manager/index' role='button' ><span class='glyphicon glyphicon-inbox'></span> Перейти к списку заказов</a>";     
                 ?>
                 
             </div>

@@ -206,6 +206,17 @@ class SiteController
     }
  
     
+      /**
+     * Action для менеджера actionIndexmsite 
+     */
+    public function actionIndexmsite()
+    {
+        // Подключаем вид
+        require_once(ROOT . '/views/manager/index.php');
+        return true;
+    }
+ 
+    
     
 }
 

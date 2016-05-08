@@ -35,6 +35,7 @@
                 <br/>
             </div>
         </div>
+        <a href="/cabinet/" class="btn btn-default back"><i class="fa fa-arrow-left"></i> Назад</a>
     </div>
 </section>
 
