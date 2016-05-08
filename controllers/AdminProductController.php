@@ -42,11 +42,11 @@ class AdminProductController extends AdminBase
             // Если форма отправлена
             // Получаем данные из формы
             $options['name'] = $_POST['name'];
+            $options['category_id'] = $_POST['category_id'];
             $options['code'] = $_POST['code'];
             $options['price'] = $_POST['price'];
-            $options['category_id'] = $_POST['category_id'];
-            $options['brand_id'] = $_POST['brand_id'];
             $options['availability'] = $_POST['availability'];
+            $options['brand_id'] = $_POST['brand_id'];
             $options['description'] = $_POST['description'];
             $options['CPU'] = $_POST['CPU'];
             $options['RAM'] = $_POST['RAM'];

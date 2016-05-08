@@ -3,9 +3,7 @@
 <section>
     <div class="container">
         <div class="row">
-
             <br/>
-
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
                     <li><a href="/admin">Админпанель</a></li>
@@ -14,11 +12,8 @@
                 </ol>
             </div>
 
-
             <h4>Редактировать заказ #<?php echo $id; ?></h4>
-
             <br/>
-
             <div class="col-lg-4">
                 <div class="login-form">
                     <form action="#" method="post">
@@ -50,6 +45,7 @@
             </div>
 
         </div>
+        <a href="/admin/order/" class="btn btn-default back" title="Выйти без сохранения"><i class="fa fa-arrow-left"></i> Назад</a>
     </div>
 </section>
 

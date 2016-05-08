@@ -38,7 +38,7 @@
                         <p>Артикул</p>
                         <input type="text" name="code" placeholder="" value="">
 
-                        <p>Стоимость, $</p>
+                        <p>Стоимость, руб.</p>
                         <input type="text" name="price" placeholder="" value="">
 
                         <p>Категория</p>
@@ -133,8 +133,9 @@
                     </form>
                 </div>
             </div>
-
+            
         </div>
+        <a href="/admin/product/" class="btn btn-default back"><i class="fa fa-arrow-left"></i> Назад</a>
     </div>
 </section>
 

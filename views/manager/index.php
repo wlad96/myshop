@@ -7,10 +7,8 @@
             <div class="col-sm-6 center"> 
             <br/>
             
-            <h2>Кабинет менеджера</h2>
-            
+            <h2 class="admin-title">Панель менеджера</h2>
             <br/>
-            
             <ul class="admin-buttons">
                 <li><a class="btn btn-primary" href="/manager/order" role="button" ><span class="glyphicon glyphicon-shopping-cart"></span> Управление заказами</a></li>       
             </ul>

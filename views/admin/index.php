@@ -7,7 +7,7 @@
             <div class="col-sm-6 center"> 
             <br/>
             
-            <h2>Кабинет администратора</h2>
+            <h2 class="admin-title">Панель администратора</h2>
             
             <br/>
             

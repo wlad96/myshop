@@ -2,9 +2,7 @@
 <section>
     <div class="container">
         <div class="row">
-
             <br/>
-
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
                     <li><a href="/admin">Админпанель</a></li>
@@ -12,12 +10,9 @@
                     <li class="active">Редактировать товар</li>
                 </ol>
             </div>
-
-
+            
             <h4>Редактировать товар #<?php echo $id; ?></h4>
-
             <br/>
-
             <div class="col-lg-4">
                 <div class="login-form">
                     <form action="#" method="post" enctype="multipart/form-data">
@@ -130,6 +125,7 @@
             </div>
 
         </div>
+        <a href="/admin/product/" class="btn btn-default back" title="Выйти без сохранения"><i class="fa fa-arrow-left"></i> Назад</a>
     </div>
 </section>
 

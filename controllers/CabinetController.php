@@ -22,7 +22,7 @@ class CabinetController
         require_once(ROOT . '/views/cabinet/index.php');
         return true;
     }
-
+ 
     /**
      * Action для страницы "Редактирование данных пользователя"
      */

@@ -433,17 +433,17 @@ class Product
         $result = $db->prepare($sql);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
         $result->bindParam(':name', $options['name'], PDO::PARAM_STR);
-        $result->bindParam(':code', $options['code'], PDO::PARAM_STR);
+        $result->bindParam(':code', $options['code'], PDO::PARAM_INT);
         $result->bindParam(':price', $options['price'], PDO::PARAM_STR);
         $result->bindParam(':category_id', $options['category_id'], PDO::PARAM_INT);
-        $result->bindParam(':brand_id', $options['brand_id'], PDO::PARAM_STR);
+        $result->bindParam(':brand_id', $options['brand_id'], PDO::PARAM_INT);
         $result->bindParam(':availability', $options['availability'], PDO::PARAM_INT);
         $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
-        $result->bindParam(':CPU', $options['CPU'], PDO::PARAM_STR);
-        $result->bindParam(':RAM', $options['RAM'], PDO::PARAM_STR);
-        $result->bindParam(':hard_disk', $options['hard_disk'], PDO::PARAM_STR);
-        $result->bindParam(':drive', $options['drive'], PDO::PARAM_STR);
-        $result->bindParam(':battery_life', $options['battery_life'], PDO::PARAM_STR);
+        $result->bindParam(':CPU', $options['CPU'], PDO::PARAM_INT);
+        $result->bindParam(':RAM', $options['RAM'], PDO::PARAM_INT);
+        $result->bindParam(':hard_disk', $options['hard_disk'], PDO::PARAM_INT);
+        $result->bindParam(':drive', $options['drive'], PDO::PARAM_INT);
+        $result->bindParam(':battery_life', $options['battery_life'], PDO::PARAM_INT);
         $result->bindParam(':weight', $options['weight'], PDO::PARAM_STR);
         $result->bindParam(':is_new', $options['is_new'], PDO::PARAM_INT);
         $result->bindParam(':is_hit', $options['is_hit'], PDO::PARAM_INT);
@@ -463,32 +463,34 @@ class Product
 
         // Текст запроса к БД
         $sql = 'INSERT INTO product '
-                . '(name, code, price, category_id, brand_id, availability,'
-                . 'description, is_new, is_hit, status)'
+                . '(name, category_id, code, price, availability, brand_id, description'
+                . 'CPU, RAM, hard_disk, drive, battery_life, weight'
+                . 'is_new, is_hit, status)'
                 . 'VALUES '
-                . '(:name, :code, :price, :category_id, :brand_id, :availability,'
-                . ':description, :is_new, :is_hit, :status)';
+                . '(:name, :category_id, :code, :price, :availability, :brand_id, :description'
+                . ':CPU, :RAM, :hard_disk, :drive, :battery_life, :weight'
+                . ':is_new, :is_hit, :status)';
 
         // Получение и возврат результатов. Используется подготовленный запрос
         $result = $db->prepare($sql);
         $result->bindParam(':name', $options['name'], PDO::PARAM_STR);
-        $result->bindParam(':code', $options['code'], PDO::PARAM_STR);
-        $result->bindParam(':price', $options['price'], PDO::PARAM_STR);
         $result->bindParam(':category_id', $options['category_id'], PDO::PARAM_INT);
-        $result->bindParam(':brand_id', $options['brand_id'], PDO::PARAM_STR);
+        $result->bindParam(':code', $options['code'], PDO::PARAM_INT);
+        $result->bindParam(':price', $options['price'], PDO::PARAM_STR);
         $result->bindParam(':availability', $options['availability'], PDO::PARAM_INT);
+        $result->bindParam(':brand_id', $options['brand_id'], PDO::PARAM_INT);
         $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
-        $result->bindParam(':CPU', $options['CPU'], PDO::PARAM_STR);
-        $result->bindParam(':RAM', $options['RAM'], PDO::PARAM_STR);
-        $result->bindParam(':hard_disk', $options['hard_disk'], PDO::PARAM_STR);
-        $result->bindParam(':drive', $options['drive'], PDO::PARAM_STR);
-        $result->bindParam(':battery_life', $options['battery_life'], PDO::PARAM_STR);
+        $result->bindParam(':CPU', $options['CPU'], PDO::PARAM_INT);
+        $result->bindParam(':RAM', $options['RAM'], PDO::PARAM_INT);
+        $result->bindParam(':hard_disk', $options['hard_disk'], PDO::PARAM_INT);
+        $result->bindParam(':drive', $options['drive'], PDO::PARAM_INT);
+        $result->bindParam(':battery_life', $options['battery_life'], PDO::PARAM_INT);
         $result->bindParam(':weight', $options['weight'], PDO::PARAM_STR);
         $result->bindParam(':is_new', $options['is_new'], PDO::PARAM_INT);
         $result->bindParam(':is_hit', $options['is_hit'], PDO::PARAM_INT);
         $result->bindParam(':status', $options['status'], PDO::PARAM_INT);
         if ($result->execute()) {
-            // Если запрос выполенен успешно, возвращаем id добавленной записи
+            // Если запрос выполнен успешно, возвращаем id добавленной записи
             return $db->lastInsertId();
         }
         // Иначе возвращаем 0
@@ -512,8 +514,6 @@ class Product
                 break;
         }
     }
-
-    
     
      /**
      * Возвращает текстое пояснение наличия оптического привода:<br/>
