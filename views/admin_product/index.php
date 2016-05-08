@@ -15,10 +15,7 @@
 
             <a href="/admin/product/create" class="btn btn-default back"><i class="fa fa-plus"></i> Добавить товар</a>
             
-            <h4>Список товаров</h4>
-
-            <br/>
-
+            <h3>Список товаров</h3>
             <table class="table-bordered table-striped table">
                 <tr>
                     <th>ID товара</th>

@@ -21,10 +21,12 @@
             <p>Вы действительно хотите удалить этот товар?</p>
 
             <form method="post">
-                <input type="submit" name="submit" value="Удалить" />
+                <input class="btn btn-danger" type="submit" name="submit" value="Удалить" />
             </form>
-
+            </br>
+            <a href="/admin/product/" class="btn btn-default back"><i class="fa fa-arrow-left"></i> Назад</a>
         </div>
+        
     </div>
 </section>
 

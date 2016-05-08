@@ -15,10 +15,7 @@
 
             <a href="/admin/brand/create" class="btn btn-default back"><i class="fa fa-plus"></i> Добавить бренд</a>
             
-            <h4>Список брендов</h4>
-
-            <br/>
-
+            <h3>Список брендов</h3>
             <table class="table-bordered table-striped table">
                 <tr>
                     <th>ID бренда</th>

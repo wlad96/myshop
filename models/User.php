@@ -325,6 +325,24 @@ class User
         return $result->execute();
     }
     
+     /**
+     * Удаляет пользователя с указанным id
+     * @param integer $id <p>id пользователя</p>
+     * @return boolean <p>Результат выполнения метода</p>
+     */
+    public static function deleteUserById($id)
+    {
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Текст запроса к БД
+        $sql = 'DELETE FROM user WHERE id = :id';
+
+        // Получение и возврат результатов. Используется подготовленный запрос
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        return $result->execute();
+    }
     
     
 

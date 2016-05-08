@@ -20,9 +20,11 @@
 
             <p>Вы действительно хотите удалить эту категорию?</p>
 
-            <form method="post">
-                <input type="submit" name="submit" value="Удалить" />
+             <form method="post">
+                <input class="btn btn-danger" type="submit" name="submit" value="Удалить" />
             </form>
+            </br>
+            <a href="/admin/category/" class="btn btn-default back"><i class="fa fa-arrow-left"></i> Назад</a>
 
         </div>
     </div>

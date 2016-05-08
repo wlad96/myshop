@@ -6,7 +6,7 @@
             <div class="col-sm-3">
                 <div class="left-sidebar">
                     <h2>Каталог</h2>                  
-                      <div class="panel-group category-products">
+                      <div class="panel-group category-products">                          
                         <?php foreach ($brands as $brandItem): ?>
                             <div class="panel panel-default">
                                 <div class="panel-heading">

@@ -15,10 +15,7 @@
 
             <a href="/admin/category/create" class="btn btn-default back"><i class="fa fa-plus"></i> Добавить категорию</a>
             
-            <h4>Список категорий</h4>
-
-            <br/>
-
+            <h3>Список категорий</h3>
             <table class="table-bordered table-striped table">
                 <tr>
                     <th>ID категории</th>

@@ -18,11 +18,12 @@
             <h4>Удалить пользователя #<?php echo $id; ?></h4>
 
 
-            <p>Вы действительно хотите удалить этого пользователя?</p>
-
-            <form method="post">
-                <input type="submit" name="submit" value="Удалить" />
-            </form>
+            <p>Вы действительно хотите удалить этого пользователя?</p>           
+             <form method="post">
+                <input class="btn btn-danger" type="submit" name="submit" value="Удалить" />
+             </form>
+            </br>
+            <a href="/admin/user/" class="btn btn-default back"><i class="fa fa-arrow-left"></i> Назад</a>
 
         </div>
     </div>

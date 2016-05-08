@@ -15,11 +15,7 @@
             
              <a href="/admin/user/create" class="btn btn-default back"><i class="fa fa-plus"></i> Добавить пользователя</a>
 
-            <h4>Список пользователей</h4>
-
-            <br/>
-
-            
+            <h3>Список пользователей</h3>
             <table class="table-bordered table-striped table">
                 <tr>
                     <th>ID пользователя</th>

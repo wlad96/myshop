@@ -2,8 +2,7 @@
 
 /**
  * Контроллер BrandController
- * Каталог товаров
- * Бренды!
+ * Бренды
  */
 class BrandController
 {
@@ -27,47 +26,41 @@ class BrandController
 //        $allProducts = Product::getAllProducts(100);
 
         // Подключаем вид
-//        require_once(ROOT . '/views/catalog/index.php');
-         require_once(ROOT . '/views/catalog/brand.php');
+        require_once(ROOT . '/views/catalog/brand.php');
         return true;
     }
 
     /**
      * Action для страницы "Категория товаров"
      */
-    public function actionCategory($categoryId, $page = 1)
-    {
-        // Список категорий для левого меню
-        $categories = Category::getCategoriesList();
-
-        // Список товаров в категории
-        $categoryProducts = Product::getProductsListByCategory($categoryId, $page);
-       
-
-        // Общее количетсво товаров (необходимо для постраничной навигации)
-        $total = Product::getTotalProductsInCategory($categoryId);
-
-        // Создаем объект Pagination - постраничная навигация
-        $pagination = new Pagination($total, $page, Product::SHOW_BY_DEFAULT, 'page-');
-
-        // Подключаем вид
-        require_once(ROOT . '/views/catalog/category.php');
-        return true;
-    }
-    
-      /**
+//    public function actionCategory($categoryId, $page = 1)
+//    {
+//        // Список категорий для левого меню
+//        $categories = Category::getCategoriesList();
+//
+//        // Список товаров в категории
+//        $categoryProducts = Product::getProductsListByCategory($categoryId, $page);
+//       
+//
+//        // Общее количетсво товаров (необходимо для постраничной навигации)
+//        $total = Product::getTotalProductsInCategory($categoryId);
+//
+//        // Создаем объект Pagination - постраничная навигация
+//        $pagination = new Pagination($total, $page, Product::SHOW_BY_DEFAULT, 'page-');
+//
+//        // Подключаем вид
+//        require_once(ROOT . '/views/catalog/category.php');
+//        return true;
+//    }
+//    
+     /**
      * Action Для брендов
      */
-    public function actionBrand($brandId, $categoryId, $page = 1)
+    public function actionBrand($brandId, $page = 1)
     {
-        
         // Список категорий для левого меню
-        $categories = Category::getCategoriesList();
-        // Список брендов для левого меню
         $brands = Brand::getBrandsList();
 
-        // Список товаров в категории
-        $categoryProducts = Product::getProductsListByCategory($categoryId, $page);
         // Список товаров в бренде
         $brandProducts = Product::getProductsListByBrand($brandId, $page);
 
@@ -75,8 +68,8 @@ class BrandController
         $total = Product::getTotalProductsInBrand($brandId);
 
         // Создаем объект Pagination - постраничная навигация
-        $pagination = new Pagination($total, $page, Product::SHOW_BY_DEFAULT, 'page-');
-
+        $pagination = new Pagination($total, $page, Product::SHOW_BY_DEFAULT, 'page-');       
+        
         // Подключаем вид
         require_once(ROOT . '/views/catalog/brand.php');
         return true;
