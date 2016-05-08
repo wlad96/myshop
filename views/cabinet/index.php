@@ -31,7 +31,7 @@
                               echo  "<a class='btn btn-primary' href='/admin/index' role='button' ><span class='glyphicon glyphicon-inbox'></span> Перейти в Панель Администратора</a>";     
                 ?>
                 <?php if ($user['role']=='manager')   
-                              echo  "<a class='btn btn-primary' href='/manager/index' role='button' ><span class='glyphicon glyphicon-inbox'></span> Перейти к списку заказов</a>";     
+                              echo  "<a class='btn btn-primary' href='/manager/index' role='button' ><span class='glyphicon glyphicon-inbox'></span> Перейти в Панель Менеджера</a>";     
                 ?>
                 
             </div>
