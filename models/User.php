@@ -288,7 +288,7 @@ class User
                 name = :name, 
                 email = :email, 
                 password = :password, 
-                role = :role, 
+                role = :role 
             WHERE id = :id";
 
         // Получение и возврат результатов. Используется подготовленный запрос

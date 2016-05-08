@@ -21,7 +21,47 @@ class AdminUserController extends AdminBase
         // Подключаем вид
         require_once(ROOT . '/views/admin_user/index.php');
         return true;
+    } 
+        
+    /**
+     * Action для страницы "Добавить пользователя"
+     */
+    public function actionCreate()
+    {
+        // Проверка доступа
+        self::checkAdmin();
+
+        // Обработка формы
+        if (isset($_POST['submit'])) {
+            // Если форма отправлена
+            // Получаем данные из формы
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $role = $_POST['role'];
+
+            // Флаг ошибок в форме
+            $errors = false;
+
+            // При необходимости можно валидировать значения нужным образом
+            if (!isset($name) || empty($name)) {
+                $errors[] = 'Заполните поля';
+            }
+
+            if ($errors == false) {
+                // Если ошибок нет
+                // Добавляем нового пользователя
+                User::createUser($name, $email, $password, $role);
+
+                // Перенаправляем пользователя на страницу управлениями категориями
+                header("Location: /admin/user");
+            }
+        }
+
+        require_once(ROOT . '/views/admin_user/create.php');
+        return true;
     }
+    
 
     /**
      * Action для страницы "Редактирование пользователя"
@@ -54,24 +94,8 @@ class AdminUserController extends AdminBase
         require_once(ROOT . '/views/admin_user/update.php');
         return true;
     }
-
-    /**
-     * Action для страницы "Просмотр пользователя"
-     */
-    public function actionView($id)
-    {
-        // Проверка доступа
-        self::checkAdmin();
-
-        // Получаем данные о конкретном пользователе
-        $user = User::getUserById($id);
-
-        // Подключаем вид
-        require_once(ROOT . '/views/admin_user/view.php');
-        return true;
-    }
-
-    /**
+    
+     /**
      * Action для страницы "Удалить пользователя"
      */
     public function actionDelete($id)
@@ -93,47 +117,21 @@ class AdminUserController extends AdminBase
         require_once(ROOT . '/views/admin_user/delete.php');
         return true;
     }
-    
+
     /**
-     * Action для страницы "Добавить пользователя"
+     * Action для страницы "Просмотр пользователя"
      */
-    public function actionCreate()
+    public function actionView($id)
     {
         // Проверка доступа
         self::checkAdmin();
 
-        // Обработка формы
-        if (isset($_POST['submit'])) {
-            // Если форма отправлена
-            // Получаем данные из формы
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            $role = $_POST['role'];
+        // Получаем данные о конкретном пользователе
+        $user = User::getUserById($id);
 
-            // Флаг ошибок в форме
-            $errors = false;
-
-            // При необходимости можно валидировать значения нужным образом
-            if (!isset($name) || empty($name)) {
-                $errors[] = 'Заполните поля';
-            }
-
-
-            if ($errors == false) {
-                // Если ошибок нет
-                // Добавляем нового пользователя
-                User::createUser($name, $email, $password, $role);
-
-                // Перенаправляем пользователя на страницу управлениями категориями
-                header("Location: /admin/user");
-            }
-        }
-
-        require_once(ROOT . '/views/admin_user/create.php');
+        // Подключаем вид
+        require_once(ROOT . '/views/admin_user/view.php');
         return true;
     }
-    
-    
 
 }

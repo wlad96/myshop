@@ -144,7 +144,7 @@ class SiteController
     }
     
        /**
-     * чиню баг actionIndexqsite. Переход к вопросу1
+     * Action Переход к вопросу1
      */
     public function actionIndex1site()
     {
@@ -155,7 +155,7 @@ class SiteController
     
        
         /**
-     * чиню баг actionIndex3site. Переход к вопросу3
+     * Action Переход к вопросу3
      */
     public function actionIndex3site()
     {
@@ -165,7 +165,7 @@ class SiteController
     }
     
         /**
-     * чиню баг actionIndex4site. Переход к вопросу4
+     * Action Переход к вопросу4
      */
     public function actionIndex4site()
     {
@@ -176,7 +176,7 @@ class SiteController
     
        
         /**
-     * чиню баг actionIndex5site. Переход к вопросу5
+     * Action Переход к вопросу5
      */
     public function actionIndex5site()
     {
@@ -184,10 +184,9 @@ class SiteController
         require_once(ROOT . '/views/site/5question.php');
         return true;
     }
-    
-    
+
        /**
-     * чиню баг actionIndexvsite. Переход к вопросу2
+     * Action Переход к вопросу2
      */
     public function actionIndexvsite()
     {
@@ -204,9 +203,6 @@ class SiteController
         // Подключаем вид
         require_once(ROOT . '/views/catalog/brand.php');
         return true;
-        
-//         echo "а тут он орал про actionIndexbsite";
-//        return true;
     }
  
     

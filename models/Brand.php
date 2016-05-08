@@ -85,7 +85,7 @@ class Brand
         // Текст запроса к БД
         $sql = "UPDATE brand
             SET 
-                name = :name, 
+                name = :name 
             WHERE id = :id";
 
         // Получение и возврат результатов. Используется подготовленный запрос
