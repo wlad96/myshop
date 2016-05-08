@@ -418,6 +418,12 @@ class Product
                 brand_id = :brand_id, 
                 availability = :availability, 
                 description = :description, 
+                CPU = :CPU, 
+                RAM = :RAM, 
+                hard_disk = :hard_disk, 
+                drive = :drive, 
+                battery_life = :battery_life, 
+                weight = :weight, 
                 is_new = :is_new, 
                 is_hit = :is_hit, 
                 status = :status
@@ -433,6 +439,12 @@ class Product
         $result->bindParam(':brand_id', $options['brand_id'], PDO::PARAM_STR);
         $result->bindParam(':availability', $options['availability'], PDO::PARAM_INT);
         $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
+        $result->bindParam(':CPU', $options['CPU'], PDO::PARAM_STR);
+        $result->bindParam(':RAM', $options['RAM'], PDO::PARAM_STR);
+        $result->bindParam(':hard_disk', $options['hard_disk'], PDO::PARAM_STR);
+        $result->bindParam(':drive', $options['drive'], PDO::PARAM_STR);
+        $result->bindParam(':battery_life', $options['battery_life'], PDO::PARAM_STR);
+        $result->bindParam(':weight', $options['weight'], PDO::PARAM_STR);
         $result->bindParam(':is_new', $options['is_new'], PDO::PARAM_INT);
         $result->bindParam(':is_hit', $options['is_hit'], PDO::PARAM_INT);
         $result->bindParam(':status', $options['status'], PDO::PARAM_INT);
@@ -466,6 +478,12 @@ class Product
         $result->bindParam(':brand_id', $options['brand_id'], PDO::PARAM_STR);
         $result->bindParam(':availability', $options['availability'], PDO::PARAM_INT);
         $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
+        $result->bindParam(':CPU', $options['CPU'], PDO::PARAM_STR);
+        $result->bindParam(':RAM', $options['RAM'], PDO::PARAM_STR);
+        $result->bindParam(':hard_disk', $options['hard_disk'], PDO::PARAM_STR);
+        $result->bindParam(':drive', $options['drive'], PDO::PARAM_STR);
+        $result->bindParam(':battery_life', $options['battery_life'], PDO::PARAM_STR);
+        $result->bindParam(':weight', $options['weight'], PDO::PARAM_STR);
         $result->bindParam(':is_new', $options['is_new'], PDO::PARAM_INT);
         $result->bindParam(':is_hit', $options['is_hit'], PDO::PARAM_INT);
         $result->bindParam(':status', $options['status'], PDO::PARAM_INT);
