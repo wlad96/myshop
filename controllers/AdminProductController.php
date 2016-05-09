@@ -81,7 +81,7 @@ class AdminProductController extends AdminBase
                 };
 
                 // Перенаправляем пользователя на страницу управлениями товарами
-                header("Location: /admin/product");
+                // header("Location: /admin/product/"); //если раскомментить, заорет что headers already sent by..
             }
         }
 
@@ -146,7 +146,7 @@ class AdminProductController extends AdminBase
             }
 
             // Перенаправляем пользователя на страницу управлениями товарами
-            header("Location: /admin/product");
+            //header("Location: /admin/product/"); //если раскомментить, заорет что headers already sent by..
         }
 
         // Подключаем вид

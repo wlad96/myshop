@@ -463,12 +463,12 @@ class Product
 
         // Текст запроса к БД
         $sql = 'INSERT INTO product '
-                . '(name, category_id, code, price, availability, brand_id, description'
-                . 'CPU, RAM, hard_disk, drive, battery_life, weight'
+                . '(name, category_id, code, price, availability, brand_id, description,'
+                . 'CPU, RAM, hard_disk, drive, battery_life, weight,'
                 . 'is_new, is_hit, status)'
                 . 'VALUES '
-                . '(:name, :category_id, :code, :price, :availability, :brand_id, :description'
-                . ':CPU, :RAM, :hard_disk, :drive, :battery_life, :weight'
+                . '(:name, :category_id, :code, :price, :availability, :brand_id, :description,'
+                . ':CPU, :RAM, :hard_disk, :drive, :battery_life, :weight,'
                 . ':is_new, :is_hit, :status)';
 
         // Получение и возврат результатов. Используется подготовленный запрос
