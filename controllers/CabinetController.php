@@ -37,8 +37,6 @@ class CabinetController
         // Заполняем переменные для полей формы
         $name = $user['name'];
         $password = $user['password'];
-        $phone = $user['phone'];
-        $address = $user['address'];
 
         // Флаг результата
         $result = false;
@@ -49,8 +47,6 @@ class CabinetController
             // Получаем данные из формы редактирования
             $name = $_POST['name'];
             $password = $_POST['password'];
-            $phone = $_POST['phone'];
-            $address = $_POST['address'];
 
             // Флаг ошибок
             $errors = false;
@@ -62,13 +58,10 @@ class CabinetController
             if (!User::checkPassword($password)) {
                 $errors[] = 'Пароль не должен быть короче 6-ти символов';
             }
-            if (!User::checkPhone($phone)) {
-                $errors[] = 'Номер телефона не должен быть короче 10 символов';
-            }
 
             if ($errors == false) {
                 // Если ошибок нет, сохраняет изменения профиля
-                $result = User::edit($userId, $name, $password, $phone, $address);
+                $result = User::edit($userId, $name, $password);
             }
         }
 

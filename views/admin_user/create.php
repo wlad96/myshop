@@ -48,13 +48,6 @@
                                 <option value="admin">Администратор</option>
                             </select>
                         <br/><br/>
-                        
-                        <p>Телефон пользователя</p>
-                        <input type="text" name="phone" placeholder="" value="">
-                        
-                        <p>Адрес пользователя</p>
-                        <input type="text" name="address" placeholder="" value="">
-
                         <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
 
                         <br/><br/>
@@ -64,6 +57,7 @@
             </div>
 
         </div>
+        <a href="/admin/user/" class="btn btn-default back" title="Выйти без сохранения"><i class="fa fa-arrow-left"></i> Назад</a>
     </div>
 </section>
 

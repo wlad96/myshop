@@ -11,8 +11,6 @@ class User
      * @param string $name <p>Имя</p>
      * @param string $email <p>E-mail</p>
      * @param string $password <p>Пароль</p>
-     * @param string $phone <p>Телефон</p>
-     * @param string $address <p>Адрес</p>
      * @return boolean <p>Результат выполнения метода</p>
      */
     public static function register($name, $email, $password, $phone, $address)
@@ -21,16 +19,14 @@ class User
         $db = Db::getConnection();
 
         // Текст запроса к БД
-        $sql = 'INSERT INTO user (name, email, password, phone, address) '
-                . 'VALUES (:name, :email, :password, :phone, :address)';
+        $sql = 'INSERT INTO user (name, email, password) '
+                . 'VALUES (:name, :email, :password)';
 
         // Получение и возврат результатов. Используется подготовленный запрос
         $result = $db->prepare($sql);
         $result->bindParam(':name', $name, PDO::PARAM_STR);
         $result->bindParam(':email', $email, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
-        $result->bindParam(':phone', $phone, PDO::PARAM_STR);
-        $result->bindParam(':address', $address, PDO::PARAM_STR);
         return $result->execute();
     }
 
@@ -39,18 +35,16 @@ class User
      * @param integer $id <p>id пользователя</p>
      * @param string $name <p>Имя</p>
      * @param string $password <p>Пароль</p>
-     * @param string $phone <p>Телефон</p>
-     * @param string $address <p>Адрес</p>
      * @return boolean <p>Результат выполнения метода</p>
      */
-    public static function edit($id, $name, $password, $phone, $address)
+    public static function edit($id, $name, $password)
     {
         // Соединение с БД
         $db = Db::getConnection();
 
         // Текст запроса к БД
         $sql = "UPDATE user 
-            SET name = :name, password = :password, phone = :phone, address = :address 
+            SET name = :name, password = :password
             WHERE id = :id";
 
         // Получение и возврат результатов. Используется подготовленный запрос
@@ -58,8 +52,6 @@ class User
         $result->bindParam(':id', $id, PDO::PARAM_INT);
         $result->bindParam(':name', $name, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
-        $result->bindParam(':phone', $phone, PDO::PARAM_STR);
-        $result->bindParam(':address', $address, PDO::PARAM_STR);
         return $result->execute();
     }
 
@@ -240,7 +232,7 @@ class User
         $db = Db::getConnection();
 
         // Получение и возврат результатов
-        $result = $db->query('SELECT id, name, email, password, role, phone, address FROM user ORDER BY id DESC');
+        $result = $db->query('SELECT id, name, email, password, role FROM user ORDER BY id DESC');
         $usersList = array();
         $i = 0;
         while ($row = $result->fetch()) {
@@ -249,8 +241,6 @@ class User
             $usersList[$i]['email'] = $row['email'];
             $usersList[$i]['password'] = $row['password'];
             $usersList[$i]['role'] = $row['role'];
-            $usersList[$i]['phone'] = $row['phone'];
-            $usersList[$i]['address'] = $row['address'];
             $i++;
         }
         return $usersList;
@@ -285,11 +275,9 @@ class User
      * @param string $email <p>Email пользователя</p>
      * @param string $password <p>Пароль пользователя</p>
      * @param integer $role <p>Роль <i>(клиент по умолчанию, менеджер "manager", администратор "admin")</i></p>
-     * @param string $phone <p>Телефон пользователя</p>
-     * @param string $address <p>Адрес пользователя</p>
      * @return boolean <p>Результат выполнения метода</p>
      */
-    public static function updateUserById($id, $name, $email, $password, $role, $phone, $address)
+    public static function updateUserById($id, $name, $email, $password, $role)
     {
         // Соединение с БД
         $db = Db::getConnection();
@@ -301,8 +289,6 @@ class User
                 email = :email, 
                 password = :password, 
                 role = :role 
-                phone = :phone 
-                address = :address 
             WHERE id = :id";
 
         // Получение и возврат результатов. Используется подготовленный запрос
@@ -312,8 +298,6 @@ class User
         $result->bindParam(':email', $email, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
         $result->bindParam(':role', $role, PDO::PARAM_INT);
-        $result->bindParam(':phone', $phone, PDO::PARAM_STR);
-        $result->bindParam(':address', $address, PDO::PARAM_STR);
         return $result->execute();
     }
     
@@ -329,8 +313,8 @@ class User
         $db = Db::getConnection();
 
         // Текст запроса к БД
-        $sql = 'INSERT INTO user (name, email, password, role, phone, address) '
-                . 'VALUES (:name, :email, :password, :role, :phone, :address)';
+        $sql = 'INSERT INTO user (name, email, password, role) '
+                . 'VALUES (:name, :email, :password, :role)';
 
         // Получение и возврат результатов. Используется подготовленный запрос
         $result = $db->prepare($sql);
@@ -338,8 +322,6 @@ class User
         $result->bindParam(':email', $email, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
         $result->bindParam(':role', $role, PDO::PARAM_STR);
-        $result->bindParam(':phone', $phone, PDO::PARAM_STR);
-        $result->bindParam(':address', $address, PDO::PARAM_STR);
         return $result->execute();
     }
     

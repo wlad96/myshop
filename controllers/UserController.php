@@ -14,8 +14,6 @@ class UserController
         $name = false;
         $email = false;
         $password = false;
-        $phone= false;
-        $address = false;
         $result = false;
 
         // Обработка формы
@@ -25,8 +23,6 @@ class UserController
             $name = $_POST['name'];
             $email = $_POST['email'];
             $password = $_POST['password'];
-            $phone = $_POST['phone'];
-            $address = $_POST['address'];
 
             // Флаг ошибок
             $errors = false;
@@ -38,9 +34,6 @@ class UserController
             if (!User::checkEmail($email)) {
                 $errors[] = 'Неправильный email';
             }
-            if (!User::checkPhone($phone)) {
-                $errors[] = 'Номер телефона должен быть не короче 10 символов';
-            }
             if (!User::checkPassword($password)) {
                 $errors[] = 'Пароль должен быть не короче 6 символов';
             }
@@ -51,7 +44,7 @@ class UserController
             if ($errors == false) {
                 // Если ошибок нет
                 // Регистрируем пользователя
-                $result = User::register($name, $email, $password, $phone, $address);
+                $result = User::register($name, $email, $password);
             }
         }
 

@@ -22,8 +22,6 @@
                     <th>Имя пользователя</th>
                     <th>Email пользователя</th>
                     <th>Пароль пользователя</th>
-                    <th>Телефон пользователя</th>
-                    <th>Адрес пользователя</th>
                     <th>Роль пользователя</th>
                     <th></th>
                     <th></th>
@@ -39,8 +37,6 @@
                         <td><?php echo $user['name']; ?></td>
                         <td><?php echo $user['email']; ?></td>
                         <td><?php echo $user['password']; ?></td>
-                        <td><?php echo $user['phone']; ?></td>
-                        <td><?php echo $user['address']; ?></td>
                         <td><?php echo User::getRoleText($user['role']); ?></td>  
                         <td><a href="/admin/user/view/<?php echo $user['id']; ?>" title="Смотреть"><i class="fa fa-eye"></i></a></td>
                         <td><a href="/admin/user/update/<?php echo $user['id']; ?>" title="Редактировать"><i class="fa fa-pencil-square-o"></i></a></td>
