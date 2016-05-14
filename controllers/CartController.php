@@ -117,6 +117,7 @@ class CartController
             $userId = User::checkLogged();
             $user = User::getUserById($userId);
             $userName = $user['name'];
+            $userPhone = $user['phone'];
         } else {
             // Если гость, поля формы останутся пустыми
             $userId = false;

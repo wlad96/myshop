@@ -42,6 +42,10 @@
                     <td><b>Роль</b></td>
                     <td><?php echo User::getRoleText($user['role']); ?></td>
                 </tr>
+                <tr>
+                    <td>Телефон пользователя</td>
+                    <td><?php echo $user['phone']; ?></td>
+                </tr>
             </table>
 
             <a href="/admin/user/" class="btn btn-default back"><i class="fa fa-arrow-left"></i> Назад</a>

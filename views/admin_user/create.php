@@ -47,6 +47,9 @@
                                 <option value="manager">Менеджер</option>
                                 <option value="admin">Администратор</option>
                             </select>
+                        
+<!--                        <p>Телефон пользователя</p>
+                        <input type="text" name="phone" placeholder="" value="">-->
                         <br/><br/>
                         <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
 

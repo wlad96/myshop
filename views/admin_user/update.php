@@ -33,7 +33,7 @@
                             <option value="manager" <?php if ($user['role'] == 'manager') echo ' selected="selected"'; ?>>Менеджер</option>
                             <option value="admin" <?php if ($user['role'] == 'admin') echo ' selected="selected"'; ?>>Администратор</option>
                         </select>
-
+                        <br/><br/>
                         <br/>
                         <br/>
                         <input type="submit" name="submit" class="btn btn-default" value="Сохранить">

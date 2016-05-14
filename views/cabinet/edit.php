@@ -25,6 +25,9 @@
                             
                             <p>Пароль:</p>
                             <input type="password" name="password" placeholder="Пароль" value="<?php echo $password; ?>"/>
+                            
+                            <p>Номер телефона:</p>
+                            <input type="text" name="phone" placeholder="Номер телефона" value="<?php echo $phone; ?>"/>
                             <br/>
                             <input type="submit" name="submit" class="btn btn-default" value="Сохранить" />
                         </form>
