@@ -60,9 +60,6 @@
                             </div>
                         </div>
                     </div>
-                    
-                   
-                    
                 </div><!--/header_top-->
 
                 <div class="header-middle"><!--header-middle-->
@@ -94,9 +91,6 @@
                         </div>
                     </div>
                 </div><!--/header-middle-->
-                
-                
-                    
 
                 <div class="header-bottom"><!--header-bottom-->
                     <div class="container">

@@ -40,7 +40,7 @@
 
                         <p>Пароль пользователя</p>
                         <input type="text" name="password" placeholder="" value="">
-
+                        
                         <p>Роль</p>                      
                             <select name="role">
                                 <option value="" selected="selected">Клиент</option>
@@ -48,6 +48,12 @@
                                 <option value="admin">Администратор</option>
                             </select>
                         <br/><br/>
+                        
+                        <p>Телефон пользователя</p>
+                        <input type="text" name="phone" placeholder="" value="">
+                        
+                        <p>Адрес пользователя</p>
+                        <input type="text" name="address" placeholder="" value="">
 
                         <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
 

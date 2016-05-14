@@ -33,6 +33,12 @@
                             <option value="manager" <?php if ($user['role'] == 'manager') echo ' selected="selected"'; ?>>Менеджер</option>
                             <option value="admin" <?php if ($user['role'] == 'admin') echo ' selected="selected"'; ?>>Администратор</option>
                         </select>
+                        
+                        <p>Телефон пользователя</p>
+                        <input type="text" name="phone" placeholder="" value="<?php echo $user['phone']; ?>">
+                        
+                        <p>Адрес пользователя</p>
+                        <input type="text" name="address" placeholder="" value="<?php echo $user['address']; ?>">
                         <br/>
                         <br/>
                         <input type="submit" name="submit" class="btn btn-default" value="Сохранить">

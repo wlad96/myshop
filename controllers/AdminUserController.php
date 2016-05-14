@@ -39,6 +39,8 @@ class AdminUserController extends AdminBase
             $email = $_POST['email'];
             $password = $_POST['password'];
             $role = $_POST['role'];
+            $phone = $_POST['phone'];
+            $address = $_POST['address'];
 
             // Флаг ошибок в форме
             $errors = false;
@@ -51,7 +53,7 @@ class AdminUserController extends AdminBase
             if ($errors == false) {
                 // Если ошибок нет
                 // Добавляем нового пользователя
-                User::createUser($name, $email, $password, $role);
+                User::createUser($name, $email, $password, $role, $phone, $address);
 
                 // Перенаправляем пользователя на страницу управлениями категориями
                 header("Location: /admin/user");
@@ -82,9 +84,11 @@ class AdminUserController extends AdminBase
             $email = $_POST['email'];
             $password = $_POST['password'];
             $role = $_POST['role'];
+            $phone = $_POST['phone'];
+            $address = $_POST['address'];
 
             // Сохраняем изменения
-            User::updateUserById($id, $name, $email, $password, $role);
+            User::updateUserById($id, $name, $email, $password, $role, $phone, $address);
 
             // Перенаправляем пользователя на страницу управлениями пользователями
             header("Location: /admin/user");
