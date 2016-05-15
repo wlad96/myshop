@@ -14,21 +14,23 @@ class User
      * @param string $phone <p>Номер телефона</p>
      * @return boolean <p>Результат выполнения метода</p>
      */
-    public static function register($name, $email, $password, $phone)
+    public static function register($name, $email, $password/*, $phone*/)
     {
         // Соединение с БД
         $db = Db::getConnection();
 
         // Текст запроса к БД
-        $sql = 'INSERT INTO user (name, email, password, phone) '
-                . 'VALUES (:name, :email, :password, :phone)';
+//        $sql = 'INSERT INTO user (name, email, password, phone) '
+//                . 'VALUES (:name, :email, :password, :phone)';
+        $sql = 'INSERT INTO user (name, email, password) '
+                . 'VALUES (:name, :email, :password)';
 
         // Получение и возврат результатов. Используется подготовленный запрос
         $result = $db->prepare($sql);
         $result->bindParam(':name', $name, PDO::PARAM_STR);
         $result->bindParam(':email', $email, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
-        $result->bindParam(':phone', $phone, PDO::PARAM_STR);
+//        $result->bindParam(':phone', $phone, PDO::PARAM_STR);
         return $result->execute();
     }
 
@@ -133,7 +135,7 @@ class User
      */
     public static function checkName($name)
     {
-        if (strlen($name) >= 2) {
+        if (strlen($name) >= 3) {
             return true;
         }
         return false;
@@ -349,14 +351,16 @@ class User
      * @param string $name <p>Название</p>
      * @return boolean <p>Результат добавления записи в таблицу</p>
      */
-    public static function createUser($name, $email, $password, $role, $phone)
+    public static function createUser($name, $email, $password, $role/*, $phone*/)
     {
         // Соединение с БД
         $db = Db::getConnection();
 
         // Текст запроса к БД
-        $sql = 'INSERT INTO user (name, email, password, role, phone) '
-                . 'VALUES (:name, :email, :password, :role, :phone)';
+//        $sql = 'INSERT INTO user (name, email, password, role, phone) '
+//                . 'VALUES (:name, :email, :password, :role, :phone)';
+        $sql = 'INSERT INTO user (name, email, password, role) '
+                . 'VALUES (:name, :email, :password, :role)';
 
         // Получение и возврат результатов. Используется подготовленный запрос
         $result = $db->prepare($sql);
@@ -364,7 +368,7 @@ class User
         $result->bindParam(':email', $email, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
         $result->bindParam(':role', $role, PDO::PARAM_STR);
-        $result->bindParam(':phone', $phone, PDO::PARAM_STR);
+//        $result->bindParam(':phone', $phone, PDO::PARAM_STR);
         return $result->execute();
     }
     

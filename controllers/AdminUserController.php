@@ -39,7 +39,6 @@ class AdminUserController extends AdminBase
             $email = $_POST['email'];
             $password = $_POST['password'];
             $role = $_POST['role'];
-            $phone = $_POST['phone'];
 
             // Флаг ошибок в форме
             $errors = false;
@@ -52,7 +51,7 @@ class AdminUserController extends AdminBase
             if ($errors == false) {
                 // Если ошибок нет
                 // Добавляем нового пользователя
-                User::createUser($name, $email, $password, $role/*, $phone*/);
+                User::createUser($name, $email, $password, $role);
 
                 // Перенаправляем пользователя на страницу управлениями категориями
                 header("Location: /admin/user");
