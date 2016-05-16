@@ -967,7 +967,10 @@ h2.title {
 }
 
 .productinfo img{
-    width: 100%;
+    /*width: 100%;*/
+    height: 100%;
+    width: 230px;
+    
 }
 
 .productinfo{
@@ -1151,20 +1154,10 @@ h2.title {
     background: #ccccc6;
 }
 
-
-.our_partners{
-    overflow:hidden;
+.recommended_items img{
+    width: 200px;
 }
 
-.our_partners ul {
-    background: #F7F7F0;
-    margin-bottom: 50px;
-}
-
-
-.our_partners ul li a:hover{
-    background:none;
-}
 
 /*************************
 *******Shop CSS******
@@ -2107,4 +2100,15 @@ h2.title {
 
 .admin-title {
     margin-left: 5%;
+}
+
+
+/*  Green-msg   */
+.green-msg span{
+    color: #4cae4c;
+    font-size: 18px;
+}
+
+.space {
+    padding-top: 20px;
 }

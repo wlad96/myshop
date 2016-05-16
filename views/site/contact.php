@@ -20,17 +20,18 @@
             </div>
 
             <div class="col-sm-4 padding-right">
-
-                <?php if ($result): ?>
-                    <p>Сообщение отправлено! Мы ответим Вам на указанный email.</p>
-                <?php else: ?>
-                    <?php if (isset($errors) && is_array($errors)): ?>
-                        <ul>
-                            <?php foreach ($errors as $error): ?>
-                                <li> - <?php echo $error; ?></li>
-                            <?php endforeach; ?>
-                        </ul>
-                    <?php endif; ?>
+                <div class="green-msg">
+                    <?php if ($result): ?>
+                        </br><span><i class="fa fa-check" aria-hidden="true"></i> Сообщение отправлено! Мы ответим Вам на указанный email.</span>
+                </div>    
+                    <?php else: ?>
+                        <?php if (isset($errors) && is_array($errors)): ?>
+                            <ul>
+                                <?php foreach ($errors as $error): ?>
+                                    <li> - <?php echo $error; ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
 
                     <div class="signup-form"><!--sign up form-->
                         <h3>Обратная связь</h3>

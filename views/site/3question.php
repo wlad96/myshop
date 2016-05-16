@@ -28,7 +28,7 @@
                     ?> 
  
                         <form method="post">
-                            <h4>Вопрос 3. Часто ли вы носите с собой ноутбук?</h4>
+                            <h4>Часто ли вы носите с собой ноутбук?</h4>
                             <label><input type="radio" name="q3" value="one" /> Нет</label><br />
                             <label><input type="radio" name="q3" value="two" /> Да</label><br />                           
                             <button type="submit" class="btn btn-primary">Далее</button>

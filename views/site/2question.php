@@ -34,7 +34,7 @@
                     ?> 
  
                         <form method="post">
-                            <h4>Вопрос 2. Для каких целей вы приобретаете ноутбук?</h4>
+                            <h4>Для каких целей вы приобретаете ноутбук?</h4>
                             <label><input type="radio" name="q2" value="one" /> В основном для работы/учебы</label><br />
                             <label><input type="radio" name="q2" value="two" /> В основном собираюсь играть</label><br />
                             <label><input type="radio" name="q2" value="three" /> Для проигрывания аудио и видео, общения в сети</label><br />

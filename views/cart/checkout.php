@@ -41,11 +41,11 @@
                 <div class="features_items">
                     <h2 class="title text-center">Корзина</h2>
 
-
-                    <?php if ($result): ?>
-                        <p>Заказ оформлен. Мы Вам перезвоним.</p>
-                    <?php else: ?>
-
+                    <div class="green-msg">
+                        <?php if ($result): ?>
+                            <span><i class="fa fa-check" aria-hidden="true"></i> Заказ оформлен. Мы Вам перезвоним.</span>
+                        <?php else: ?>
+                    </div>
                         <p>Выбрано товаров: <?php echo $totalQuantity; ?>, на сумму: <?php echo $totalPrice; ?> руб.</p><br/>
 
                         <?php if (!$result): ?>                        

@@ -37,7 +37,7 @@
                     ?> 
  
                         <form method="post">
-                            <h4>Вопрос 4. Вы собираетесь работать от батареи более 6 часов?</h4>
+                            <h4>Вы собираетесь работать от батареи более 6 часов?</h4>
                             <label><input type="radio" name="q4" value="one" /> Нет</label><br />
                             <label><input type="radio" name="q4" value="two" /> Да</label><br />                           
                             <button type="submit" class="btn btn-primary">Далее</button>
