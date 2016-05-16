@@ -103,5 +103,5 @@ class AdminOrderController extends AdminBase
         require_once(ROOT . '/views/admin_order/delete.php');
         return true;
     }
-
+    
 }
