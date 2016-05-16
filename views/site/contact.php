@@ -41,7 +41,7 @@
                             <p>Ваша почта</p>
                             <input type="email" name="userEmail" placeholder="E-mail" value="<?php echo $userEmail; ?>"/>
                             <p>Сообщение</p>
-                            <input type="text" name="userText" placeholder="Сообщение" value="<?php echo $userText; ?>"/>
+                            <input type="text" name="userText" placeholder="Текст сообщения" value="<?php echo $userText; ?>"/>
                             <br/>
                             <input type="submit" name="submit" class="btn btn-default" value="Отправить" />
                         </form>
