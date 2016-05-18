@@ -647,12 +647,6 @@ h2.title:before{
     text-transform: uppercase;
 }
 
-
-.price-range{
-    margin-top:30px;
-}
-
-
 .padding-right {
     padding-right: 0;
 }
@@ -730,7 +724,7 @@ h2.title {
     transition: height 500ms ease 0s;
     width: 100%;
     display: block;
-    opacity:;
+/*    opacity:;*/
 }
 
 .single-products:hover .product-overlay {
@@ -1406,7 +1400,11 @@ h2.title {
 }
 
 
-/*  Choice Laptop   */
+
+/*************************
+***** Choice Laptop   ****
+**************************/
+
 .choice {
   font-size: 18px; 
 }
@@ -1425,7 +1423,47 @@ h2.title {
 }
 
 
-/*  Cabinet */
+#price1,#price2 {
+	border: 1px solid gray;
+	padding: 5px;
+	width: 80px;
+}
+#options {
+	width: 400px;
+	padding: 10px 20px;
+	border: 1px dotted gray;
+}
+#slider_price {
+	margin-top:10px;
+} 
+
+
+/*Ползунок*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default { 
+	border: 1px solid #000;
+	background: silver;
+	font-weight: normal;
+	color: #555555;
+}
+
+.ui-slider-horizontal .ui-slider-range { 
+    top: 0;
+    height: 100%;
+    background: #FF9900;
+}
+
+.ui-widget-content { /*фон ползунка*/
+    border: 1px solid #777;
+    background: gold;
+    color: #222222;
+}
+
+
+/*************************
+*******   Cabinet   ******
+**************************/
 .cabinet {
     font-size: 16px;
 }

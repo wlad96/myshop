@@ -9,12 +9,11 @@
         <link href="/template/css/bootstrap.min.css" rel="stylesheet">
         <link href="/template/css/font-awesome.min.css" rel="stylesheet">
         <link href="/template/css/prettyPhoto.css" rel="stylesheet">
-        <link href="/template/css/price-range.css" rel="stylesheet">
         <link href="/template/css/animate.css" rel="stylesheet">
         <link href="/template/css/main.css" rel="stylesheet">
         <link href="/template/css/responsive.css" rel="stylesheet">
         <link href="/template/images/home/favicon.ico" rel="icon" type="image/x-icon" />
-
+        
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
@@ -27,39 +26,6 @@
  
             <header id="header"><!--header-->
                 <div class="header_top"><!--header_top-->      
-                    
-<!--                   <div class="searchform pull-right"> searchform
-                          <div class="container">
-                            <div class="row">
-                                <div class="col-sm-7"></div>
-                                <div class="col-sm-5">
-                                              <input type="text" name="referal" placeholder="Живой поиск" value="" class="who"  autocomplete="off">
-                                              <ul class="search_result"></ul>
-                                 </div>                                  
-                            </div>  
-                          </div>  
-                     </div>    /searchform-->
-                    
-<!--                    <div class="container"> contactinfo, social-icons
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="contactinfo">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="#"><i class="fa fa-phone"></i> my_phone </a></li>
-                                        <li><a href="#"><i class="fa fa-envelope"></i> my_e-mail </a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="social-icons pull-right">
-                                    <ul class="nav navbar-nav">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>-->
                 </div><!--/header_top-->
 
                 <div class="header-middle"><!--header-middle-->
