@@ -16,16 +16,19 @@
                      <div id='options'>
                         <h4>Цена:</h4>
                         <form method='post'>
-                                <label for='price1'>
-                                От:     <input type="text" name="price1" id="price1" maxlength="10"> &#8381;
+                                <label for='price_less'>
+                                От:     <input type="text" name="price_less" id="price_less" maxlength="10"> &#8381;
                                 </label>
-                                <label for='price2'>
-                                До:     <input type="text" name="price2" id="price2" maxlength="10"> &#8381;
+                                <label for='price_more'>
+                                До:     <input type="text" name="price_more" id="price_more" maxlength="10"> &#8381;
                                 </label>
+                           <!--<input type="submit" name="submit" class="btn btn-default" value="Отправить" />-->
                         </form>
                         <div id="slider_price"></div>
 
                     </div>
+
+                    
 
             <div class="col-sm-3"></div>   
         </div>
@@ -36,29 +39,34 @@
             $(function($) {           
 		$( "#slider_price" ).slider({
 			range: true,
-			min: 16400,
-			max: 146000,
+//			min: 16400,
+//			max: 146000,
+                        <?php $price_less = 16400;?>
+                        <?php $price_more = 146000;?>
+			min: <?php echo (int)$price_less?>,
+			max: <?php echo (int)$price_more?>,
                         step: 100,
-			values: [ 1000, 146000 ],
+//			values: [ 1000, 146000 ],
+			values: [ <?php echo (int)$price_less?>, <?php echo (int)$price_more?>],
 			slide: function( event, ui ) {
 				//Поле минимального значения
-				$("#price1").val(ui.values[ 0 ]);
+				$("#price_less").val(ui.values[ 0 ]);
 				//Поле максимального значения
-				$("#price2").val(ui.values[ 1 ]);
+				$("#price_more").val(ui.values[ 1 ]);
                             }
 		});
 		//Записываем значения ползунков в момент загрузки страницы
 		//То есть значения по умолчанию
-		$("#price1").val($("#slider_price").slider( "values", 0 ));
-		$("#price2").val($("#slider_price").slider( "values", 1 ));
+		$("#price_less").val($("#slider_price").slider( "values", 0 ));
+		$("#price_more").val($("#slider_price").slider( "values", 1 ));
 	});
         
-        $('#price1').change(function() {
+        $('#price_less').change(function() {
 			var val1 = $(this).val();
 			$('#slider_price').slider("values",0,val1);
 		});
                 
-       $('#price2').change(function() {
+       $('#price_more').change(function() {
 			var val2 = $(this).val();
 			$('#slider_price').slider("values",1,val2);
 		});         

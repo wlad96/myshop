@@ -1423,7 +1423,7 @@ h2.title {
 }
 
 
-#price1,#price2 {
+#price_less,#price_more {
 	border: 1px solid gray;
 	padding: 5px;
 	width: 80px;
