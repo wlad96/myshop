@@ -1404,7 +1404,10 @@ h2.title {
 /*************************
 ***** Choice Laptop   ****
 **************************/
-
+.choice .price input  {
+  width: 100px;
+  margin-left: 10px;
+}
 .choice {
   font-size: 18px; 
 }
@@ -1423,7 +1426,7 @@ h2.title {
 }
 
 
-#price_less,#price_more {
+#price_start,#price_end {
 	border: 1px solid gray;
 	padding: 5px;
 	width: 80px;
