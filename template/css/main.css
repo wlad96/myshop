@@ -131,54 +131,6 @@ a#scrollUp i{
 .contact-information-map img {
     height: 300px;   
 }
-/*.social-icons ul li a {
-    border: 0 none;
-    border-radius: 0;
-    color: #696763;
-    padding:0px;
-}*/
-
-
-/*.social-icons ul li{
-    display:inline-block;
-}
-
-.social-icons ul li a i {
-    padding: 11px 15px;
-    transition: all 0.9s ease 0s;
-    -moz-transition: all 0.9s ease 0s;
-    -webkit-transition: all 0.9s ease 0s;
-    -o-transition: all 0.9s ease 0s;
-}
-
-.social-icons ul li a i:hover{
-    color: #fff;
-    transition: all 0.9s ease 0s;
-    -moz-transition: all 0.9s ease 0s;
-    -webkit-transition: all 0.9s ease 0s;
-    -o-transition: all 0.9s ease 0s;
-}
-
-
-.fa-facebook:hover {
-    background: #0083C9;
-}
-
-.fa-twitter:hover  {
-    background:#5BBCEC;
-}
-
-.fa-linkedin:hover  {
-    background:#FF4518;
-}
-
-.fa-dribbble:hover  {
-    background:#90C9DC;
-}
-
-.fa-google-plus:hover  {
-    background:#CE3C2D;
-}*/
 
 .header-middle .container .row {
     border-bottom: 1px solid #f5f5f5;
@@ -1404,9 +1356,14 @@ h2.title {
 /*************************
 ***** Choice Laptop   ****
 **************************/
-.choice .price input  {
+.choice > div input{ /*только первый уровень вложенности, для каждого div input внутри .choice*/
   width: 100px;
   margin-left: 10px;
+  padding-left: 5px;
+}
+
+.choice > div {
+    padding-top: 10px;
 }
 .choice {
   font-size: 18px; 
@@ -1421,9 +1378,48 @@ h2.title {
     font-size: 14px;
 }
 
-.choice .btn{
+.choice-btn input{
     margin-top: 15px;
+    padding-left: 0;
+    padding-right: 5px;
+    font-size: 17px;
+    background-color: #FF9900;
 }
+
+/*  Custom checkbox    */
+input[type="checkbox"] {
+    display:none;            
+}
+input[type="checkbox"] + label {
+  font: 18px bold;
+  color: #444;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+input[type="checkbox"] + label::before {
+    content: "";
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    margin: 0 5px 0 0;
+    background-image: url(/template/images/home/sprite.png);
+    background-repeat: no-repeat;
+}
+input[type="checkbox"] + label::before {
+    background-position: -38px -260px;    
+}
+
+input[type="checkbox"]:checked + label::before {
+    background-position: -114px -260px;
+}
+
+input[type="checkbox"]:disabled + label::before {
+    background-position: -152px -260px;
+}
+input[type="checkbox"]:checked:disabled + label::before {
+    background-position: -171px -260px;
+}
+/*  /Checkbox   */
 
 
 #price_start,#price_end {
@@ -1441,7 +1437,7 @@ h2.title {
 } 
 
 
-/*Ползунок*/
+/*  Ползунок    */
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default { 

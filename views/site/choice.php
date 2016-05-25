@@ -27,32 +27,56 @@
                             
                              
                                 <div class="price">
-                                    <h4>Цена:</h4>
-                                    <ul>
-                                         <li><label>От: </label><input type="text" name="price_start"> &#8381;</li> 
-                                         <li><label>До: </label><input type="text" name="price_end"> &#8381;</li> 
-                                     </ul>			
+                                    <h4>Цена, руб:</h4>
+                                        <label>От: </label><input type="text" name="price_start" placeholder="16400">
+                                        <label>До: </label><input type="text" name="price_end" placeholder="194000">
                                 </div>
                             
                                 <div class="brand">
                                 <h4>Производитель:</h4>
                                     <ul>
-                                          <li><label><input type="checkbox" name="brands[]" value="1">Acer</label></li>
-                                          <li><label><input type="checkbox" name="brands[]" value="2">Apple</label></li>
-                                          <li><label><input type="checkbox" name="brands[]" value="3">Asus</label></li>
-                                          <li><label><input type="checkbox" name="brands[]" value="4">Dell</label></li>
-                                          <li><label><input type="checkbox" name="brands[]" value="5">HP</label></li>
-                                          <li><label><input type="checkbox" name="brands[]" value="6">Lenovo</label></li>
-                                          <li><label><input type="checkbox" name="brands[]" value="7">MSI</label></li>
+                                        <li><input id="b1" type="checkbox" name="brands[]" value="1" hidden /> <label for="b1">Acer</label></li>
+                                        <li><input id="b2" type="checkbox" name="brands[]" value="2" hidden /> <label for="b2">Apple</label></li>
+                                        <li><input id="b3" type="checkbox" name="brands[]" value="3" hidden /> <label for="b3">Asus</label></li>
+                                        <li><input id="b4" type="checkbox" name="brands[]" value="4" hidden /> <label for="b4">Dell</label></li>
+                                        <li><input id="b5" type="checkbox" name="brands[]" value="5" hidden /> <label for="b5">HP</label></li>
+                                        <li><input id="b6" type="checkbox" name="brands[]" value="6" hidden /> <label for="b6">Lenovo</label></li>
+                                        <li><input id="b7" type="checkbox" name="brands[]" value="7" hidden /> <label for="b7">MSI</label></li>
                                     </ul>	
                                  </div>
-                                <ul>
+                            
+                            <div class="CPU">
+                                <h4>Частота процессора, Мгц:</h4>
+                                    <label>От: </label><input type="text" name="cpu_start" placeholder="800">
+                                    <label>До: </label><input type="text" name="cpu_end" placeholder="3100"> 
+                            </div>
+                            
+                            <div class="hard_disk">
+                                <h4>Объем жесткого диска, Гб:</h4>
+                                    <label>От: </label><input type="text" name="hard_start" placeholder="32">
+                                    <label>До: </label><input type="text" name="hard_end" placeholder="2000"> 
+                            </div>
+                            
+                            <div class="RAM">
+                                <h4>Объем оперативной памяти, Гб:</h4>
+                                    <label>От: </label><input type="text" name="ram_start" placeholder="2">
+                                    <label>До: </label><input type="text" name="ram_end" placeholder="16"> 
+                            </div>
+                            
+                            <div class="weight">
+                                <h4>Вес, кг:</h4>
+                                    <label>От: </label><input type="text" name="weight_start" placeholder="1">
+                                    <label>До: </label><input type="text" name="weight_end" placeholder="3.5"> 
+                            </div>
+                            
+<!--                                <ul>
                                     <li><label><input type="checkbox" name="availability">В наличии</label></li>
-                                    <!--<li><label>Хит продаж</label><input type="checkbox" name="is_hit" value="2"></li>-->
-                                </ul>
-                                    
-                            <input type="submit" name="filter" value="Подобрать" />
-                        </form>
+                                    <li><label>Хит продаж</label><input type="checkbox" name="is_hit" value="2"></li>
+                                </ul>-->
+                            <div class="choice-btn">       
+                                <input type="submit" name="filter" value="Подобрать" class="btn btn-default" />
+                            </div>
+              </form>
                     </div>
             <div class="col-sm-3"></div>   
         </div>
@@ -111,8 +135,14 @@
               $where = "";
               if ($_POST["price_start"]) $where = addWhere($where, "`price` >= '".htmlspecialchars($_POST["price_start"]))."'";
               if ($_POST["price_end"]) $where = addWhere($where, "`price` <= '".htmlspecialchars($_POST["price_end"]))."'";
+              if ($_POST["cpu_start"]) $where = addWhere($where, "`CPU` >= '".htmlspecialchars($_POST["cpu_start"]))."'";
+              if ($_POST["cpu_end"]) $where = addWhere($where, "`CPU` <= '".htmlspecialchars($_POST["cpu_end"]))."'";
+              if ($_POST["hard_start"]) $where = addWhere($where, "`hard_disk` >= '".htmlspecialchars($_POST["hard_start"]))."'";
+              if ($_POST["hard_end"]) $where = addWhere($where, "`hard_disk` <= '".htmlspecialchars($_POST["hard_end"]))."'";
+              if ($_POST["ram_start"]) $where = addWhere($where, "`ram_disk` >= '".htmlspecialchars($_POST["ram_start"]))."'";
+              if ($_POST["ram_end"]) $where = addWhere($where, "`ram_disk` <= '".htmlspecialchars($_POST["ram_end"]))."'";
               if ($_POST["brands"]) $where = addWhere($where, "`brand_id` IN (".htmlspecialchars(implode(",", $_POST["brands"])).")");
-              if ($_POST["availability"]) $where = addWhere($where, "`availability` = '1'");
+//              if ($_POST["availability"]) $where = addWhere($where, "`availability` = '1'");
               $sql = "SELECT * FROM `product`";
               if ($where) $sql .= " WHERE $where";
               echo $sql;
