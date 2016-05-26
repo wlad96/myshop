@@ -80,7 +80,77 @@
                     </div>
             <div class="col-sm-3"></div>   
         </div>
-    </div>
+    </div> <!--/row-->
+    
+    <div class="row">
+       <div class="col-sm-1"></div>   
+       <div class="col-sm-10 padding-right choice">
+           <?php
+           
+            $hostname = 'localhost';
+            $username = 'root';
+            $passwordname = '';
+            $basename = 'myshop';
+            $conn = new mysqli($hostname, $username, $passwordname, $basename) or die       ('Невозможно открыть базу');
+   
+
+            function addWhere($where, $add, $and = true) {
+              if ($where) {
+                if ($and) $where .= " AND $add";
+                else $where .= " OR $add";
+              }
+              else $where = $add;
+              return $where;
+            }
+            if (!empty($_POST["filter"])) {
+              $where = "";
+              if ($_POST["price_start"]) $where = addWhere($where, "`price` >= '".htmlspecialchars($_POST["price_start"]))."'";
+              if ($_POST["price_end"]) $where = addWhere($where, "`price` <= '".htmlspecialchars($_POST["price_end"]))."'";
+              if ($_POST["cpu_start"]) $where = addWhere($where, "`CPU` >= '".htmlspecialchars($_POST["cpu_start"]))."'";
+              if ($_POST["cpu_end"]) $where = addWhere($where, "`CPU` <= '".htmlspecialchars($_POST["cpu_end"]))."'";
+              if ($_POST["hard_start"]) $where = addWhere($where, "`hard_disk` >= '".htmlspecialchars($_POST["hard_start"]))."'";
+              if ($_POST["hard_end"]) $where = addWhere($where, "`hard_disk` <= '".htmlspecialchars($_POST["hard_end"]))."'";
+              if ($_POST["ram_start"]) $where = addWhere($where, "`ram_disk` >= '".htmlspecialchars($_POST["ram_start"]))."'";
+              if ($_POST["ram_end"]) $where = addWhere($where, "`ram_disk` <= '".htmlspecialchars($_POST["ram_end"]))."'";
+              if ($_POST["brands"]) $where = addWhere($where, "`brand_id` IN (".htmlspecialchars(implode(",", $_POST["brands"])).")");
+//              if ($_POST["availability"]) $where = addWhere($where, "`availability` = '1'");
+              $sql = "SELECT * FROM `product`";
+              
+//              $res = mysql_query($sql) or trigger_error(mysql_error()." in ".$sql); //показ ошибок
+
+              if ($where) $sql .= " WHERE $where";
+              echo $sql;
+
+                $result = $conn->query($sql); 
+   
+              echo '<h3>Список подобранных ноутбуков</h3>';   
+              echo '<table class="table-bordered table-striped table">';
+             echo '<tr>';
+                echo '<th>Модель</th>';
+                echo '<th>Частота процессора</th>';
+                echo '<th>Объем ОП</th>';
+                echo '<th>Объем жесткого диска</th>';
+                echo '<th>Вес</th>';
+                echo '<th>Цена</th>';
+                echo '</tr>';
+
+                while ($data = $result->fetch_assoc())
+                {
+                   echo '<tr>';
+                        echo '<td>' . $data['name'] . '</td>';
+                        echo '<td>' . $data['CPU'] . '</td>';
+                        echo '<td>' . $data['RAM'] . '</td>';
+                        echo '<td>' . $data['hard_disk'] . '</td>';
+                        echo '<td>' . $data['weight'] . '</td>';
+                        echo '<td>' . $data['price'] . '</td>';
+                  echo '</tr>';
+                }
+            echo '</table>';        
+            }     
+    ?>
+           
+       </div>   
+       <div class="col-sm-1"></div>     
     </section>
     
 <!--    <script>
@@ -120,37 +190,10 @@
 		});         
 </script>-->
         
-    <?php
-            $db = Db::getConnection();
-        
-            function addWhere($where, $add, $and = true) {
-              if ($where) {
-                if ($and) $where .= " AND $add";
-                else $where .= " OR $add";
-              }
-              else $where = $add;
-              return $where;
-            }
-            if (!empty($_POST["filter"])) {
-              $where = "";
-              if ($_POST["price_start"]) $where = addWhere($where, "`price` >= '".htmlspecialchars($_POST["price_start"]))."'";
-              if ($_POST["price_end"]) $where = addWhere($where, "`price` <= '".htmlspecialchars($_POST["price_end"]))."'";
-              if ($_POST["cpu_start"]) $where = addWhere($where, "`CPU` >= '".htmlspecialchars($_POST["cpu_start"]))."'";
-              if ($_POST["cpu_end"]) $where = addWhere($where, "`CPU` <= '".htmlspecialchars($_POST["cpu_end"]))."'";
-              if ($_POST["hard_start"]) $where = addWhere($where, "`hard_disk` >= '".htmlspecialchars($_POST["hard_start"]))."'";
-              if ($_POST["hard_end"]) $where = addWhere($where, "`hard_disk` <= '".htmlspecialchars($_POST["hard_end"]))."'";
-              if ($_POST["ram_start"]) $where = addWhere($where, "`ram_disk` >= '".htmlspecialchars($_POST["ram_start"]))."'";
-              if ($_POST["ram_end"]) $where = addWhere($where, "`ram_disk` <= '".htmlspecialchars($_POST["ram_end"]))."'";
-              if ($_POST["brands"]) $where = addWhere($where, "`brand_id` IN (".htmlspecialchars(implode(",", $_POST["brands"])).")");
-//              if ($_POST["availability"]) $where = addWhere($where, "`availability` = '1'");
-              $sql = "SELECT * FROM `product`";
-              if ($where) $sql .= " WHERE $where";
-              echo $sql;
-            }
-    ?>
     
     
     
+
     <?php include ROOT . '/views/layouts/footer.php'; ?> 
     
 </body>
