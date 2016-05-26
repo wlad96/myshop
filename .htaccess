@@ -19,4 +19,4 @@ RewriteRule ^(.*)$ index.php
 #RewriteRule ^.*$ - [L]
 #RewriteRule ^.*$ index.php [L]
 
-php_flag display_errors 1
+#php_flag display_errors 1 #показ ошибок

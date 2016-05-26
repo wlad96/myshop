@@ -1385,6 +1385,11 @@ h2.title {
     font-size: 17px;
     background-color: #FF9900;
 }
+.choice span .red-msg {
+    color: #red;
+    font-size: 18px;
+}
+
 
 /*  Custom checkbox    */
 input[type="checkbox"] {
@@ -1428,7 +1433,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 	width: 80px;
 }
 #options {
-	width: 400px;
+	/*width: 400px;*/
 	padding: 10px 20px;
 	border: 1px dotted gray;
 }
