@@ -24,8 +24,8 @@
                                     </label>
                                     <div id="slider_price"></div>
                              </div> -->
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-5 padding-right choice">
+                            <!--<div class="col-sm-1"></div>-->
+                            <div class="col-sm-4 choice">
                                 <div class="price">
                                     <h4>Цена, руб:</h4>
                                         <label>От: </label><input type="text" name="price_start" placeholder="16400">
@@ -46,7 +46,7 @@
                                  </div>
                              </div>
                             
-                            <div class="col-sm-5 padding-right choice">
+                            <div class="col-sm-4 choice">
                                 <div class="CPU">
                                     <h4>Частота процессора, Мгц:</h4>
                                         <label>От: </label><input type="text" name="cpu_start" placeholder="800">
@@ -64,7 +64,9 @@
                                         <label>От: </label><input type="text" name="ram_start" placeholder="2">
                                         <label>До: </label><input type="text" name="ram_end" placeholder="16"> 
                                 </div>
+                            </div>
 
+                            <div class="col-sm-4 choice">  
                                 <div class="weight">
                                     <h4>Вес, кг:</h4>
                                         <label>От: </label><input type="text" name="weight_start" placeholder="1">
@@ -76,7 +78,7 @@
                                         <label>До: </label><input type="text" name="battery_end" placeholder="12"> 
                                 </div>
                               </div>  
-                            <div class="col-sm-1"></div>
+                            <!--<div class="col-sm-1"></div>-->
 
                             
 <!--                                <ul>
@@ -148,7 +150,7 @@
                 echo '<th>Объем ОП</th>';
                 echo '<th>Объем жесткого диска</th>';
                 echo '<th>Вес</th>';
-                echo '<th>Время автономной работы</th>';
+                echo '<th>Время работы</th>';
                 echo '<th>Цена</th>';
                 echo '</tr>';
 
