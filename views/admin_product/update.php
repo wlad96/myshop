@@ -59,6 +59,9 @@
                         <p>Детальное описание</p>
                         <textarea name="description"><?php echo $product['description']; ?></textarea>
                         
+                        <p>Размер экрана, "</p>
+                        <textarea name="screen_size"><?php echo $product['screen_size']; ?></textarea>
+                        
                         <br/><br/>
                         
                         <p>Частота процессора, МГц</p>

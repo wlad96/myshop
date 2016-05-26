@@ -71,6 +71,9 @@
                         <p>Детальное описание</p>
                         <textarea name="description"></textarea>
                         
+                        <p>Размер экрана, "</p>
+                        <textarea name="screen_size"></textarea>
+                        
                         <p>Частота процессора, МГц</p>
                        <input type="text" name="CPU" placeholder="" value="">
                         

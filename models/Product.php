@@ -418,6 +418,7 @@ class Product
                 brand_id = :brand_id, 
                 availability = :availability, 
                 description = :description, 
+                screen_size = :screen_size, 
                 CPU = :CPU, 
                 RAM = :RAM, 
                 hard_disk = :hard_disk, 
@@ -439,6 +440,7 @@ class Product
         $result->bindParam(':brand_id', $options['brand_id'], PDO::PARAM_INT);
         $result->bindParam(':availability', $options['availability'], PDO::PARAM_INT);
         $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
+        $result->bindParam(':screen_size', $options['screen_size'], PDO::PARAM_STR);
         $result->bindParam(':CPU', $options['CPU'], PDO::PARAM_INT);
         $result->bindParam(':RAM', $options['RAM'], PDO::PARAM_INT);
         $result->bindParam(':hard_disk', $options['hard_disk'], PDO::PARAM_INT);
@@ -463,11 +465,11 @@ class Product
 
         // Текст запроса к БД
         $sql = 'INSERT INTO product '
-                . '(name, category_id, code, price, availability, brand_id, description,'
+                . '(name, category_id, code, price, availability, brand_id, description, screen_size,'
                 . 'CPU, RAM, hard_disk, drive, battery_life, weight,'
                 . 'is_new, is_hit, status)'
                 . 'VALUES '
-                . '(:name, :category_id, :code, :price, :availability, :brand_id, :description,'
+                . '(:name, :category_id, :code, :price, :availability, :brand_id, :description, :screen_size,'
                 . ':CPU, :RAM, :hard_disk, :drive, :battery_life, :weight,'
                 . ':is_new, :is_hit, :status)';
 
@@ -480,6 +482,7 @@ class Product
         $result->bindParam(':availability', $options['availability'], PDO::PARAM_INT);
         $result->bindParam(':brand_id', $options['brand_id'], PDO::PARAM_INT);
         $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
+        $result->bindParam(':screen_size', $options['screen_size'], PDO::PARAM_INT);
         $result->bindParam(':CPU', $options['CPU'], PDO::PARAM_INT);
         $result->bindParam(':RAM', $options['RAM'], PDO::PARAM_INT);
         $result->bindParam(':hard_disk', $options['hard_disk'], PDO::PARAM_INT);

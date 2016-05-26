@@ -48,6 +48,7 @@ class AdminProductController extends AdminBase
             $options['availability'] = $_POST['availability'];
             $options['brand_id'] = $_POST['brand_id'];
             $options['description'] = $_POST['description'];
+            $options['screen_size'] = $_POST['screen_size'];
             $options['CPU'] = $_POST['CPU'];
             $options['RAM'] = $_POST['RAM'];
             $options['hard_disk'] = $_POST['hard_disk'];
@@ -118,6 +119,7 @@ class AdminProductController extends AdminBase
             $options['brand_id'] = $_POST['brand_id'];
             $options['availability'] = $_POST['availability'];
             $options['description'] = $_POST['description'];
+            $options['screen_size'] = $_POST['screen_size'];
             $options['CPU'] = $_POST['CPU'];
             $options['RAM'] = $_POST['RAM'];
             $options['hard_disk'] = $_POST['hard_disk'];

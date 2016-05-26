@@ -65,6 +65,7 @@
                                 </span>
                                 <p><b>Наличие:</b> <?php echo Product::getAvailabilityText($product['availability']); ?></p>
                                 <p><b>Производитель:</b> <?php echo Product::getBrand($product['brand_id']); ?></p>
+                                <p><b>Размер экрана:</b> <?php echo $product['screen_size']; ?>"</p>
                                 <p><b>Частота процессора:</b> <?php echo $product['CPU']; ?> МГц</p>
                                 <p><b>Объем ОП:</b> <?php echo $product['RAM']; ?> Гб</p>
                                 <p><b>Объем жесткого диска:</b> <?php echo $product['hard_disk']; ?> Гб</p>

@@ -1435,7 +1435,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 #options {
 	/*width: 400px;*/
 	padding: 10px 20px;
-	border: 1px dotted gray;
+	/*border: 1px dotted gray;*/
 }
 #slider_price {
 	margin-top:10px;
