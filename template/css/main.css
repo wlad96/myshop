@@ -1356,10 +1356,21 @@ h2.title {
 /*************************
 ***** Choice Laptop   ****
 **************************/
-.choice > div input{ /*только первый уровень вложенности, для каждого div input внутри .choice*/
-  width: 100px;
+/*.choice > div input{ только первый уровень вложенности, для каждого div input внутри .choice*/
+.price input{ /*только первый уровень вложенности, для каждого div input внутри .choice*/
+  width: 80px;
   margin-left: 10px;
   padding-left: 5px;
+}
+
+.options_num > div input{ /*для каждого div input внутри .options_num*/
+  width: 60px;
+  margin-left: 10px;
+  padding-left: 5px;
+}
+
+ul {
+    padding-left: 0; 
 }
 
 .choice > div {
@@ -1379,8 +1390,10 @@ h2.title {
 }
 
 .choice-btn input{
+    width: 100px;
     margin-top: 15px;
-    padding-left: 0;
+    margin-left: 10px;
+    padding-left: 5px;
     padding-right: 5px;
     font-size: 17px;
     background-color: #FF9900;

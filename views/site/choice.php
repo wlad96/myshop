@@ -22,94 +22,85 @@
                                     <div id="slider_price"></div>
                              </div> -->
                             
-                            <div class="row"> <!--строка 1-->
-                              <div class="col-sm-4 choice">
-                                <div class="brand">
-                                <h4>Производитель:</h4>
-                                    <ul>
-                                        <li><input id="b1" type="checkbox" name="brands[]" value="1" hidden /> <label for="b1">Acer</label></li>
-                                        <li><input id="b2" type="checkbox" name="brands[]" value="2" hidden /> <label for="b2">Apple</label></li>
-                                        <li><input id="b3" type="checkbox" name="brands[]" value="3" hidden /> <label for="b3">Asus</label></li>
-                                        <li><input id="b4" type="checkbox" name="brands[]" value="4" hidden /> <label for="b4">Dell</label></li>
-                                        <li><input id="b5" type="checkbox" name="brands[]" value="5" hidden /> <label for="b5">HP</label></li>
-                                        <li><input id="b6" type="checkbox" name="brands[]" value="6" hidden /> <label for="b6">Lenovo</label></li>
-                                        <li><input id="b7" type="checkbox" name="brands[]" value="7" hidden /> <label for="b7">MSI</label></li>
-                                    </ul>	
-                                 </div>
-                              </div> 
-                              <div class="col-sm-4 choice">
-                                <div class="category">
-                                <h4>Категория:</h4>
-                                    <ul>
-                                        <li><input id="c1" type="checkbox" name="categories[]" value="1" hidden /> <label for="c1">Недорогие</label></li>
-                                        <li><input id="c2" type="checkbox" name="categories[]" value="2" hidden /> <label for="c2">Для работы</label></li>
-                                        <li><input id="c3" type="checkbox" name="categories[]" value="3" hidden /> <label for="c3">Всегда с собой</label></li>
-                                        <li><input id="c4" type="checkbox" name="categories[]" value="4" hidden /> <label for="c4">Ультрабуки</label></li>
-                                        <li><input id="c5" type="checkbox" name="categories[]" value="5" hidden /> <label for="c5">Игровые</label></li>
-                                        <li><input id="c6" type="checkbox" name="categories[]" value="6" hidden /> <label for="c6">Универсальные</label></li>
-                                    </ul>	
-                                 </div>
-                              </div>
-                              <div class="col-sm-4 choice">
-                                <div class="price">
-                                    <h4>Цена, руб:</h4>
-                                        <label>От: </label><input type="text" name="price_start" placeholder="16400">
-                                        <label>До: </label><input type="text" name="price_end" placeholder="194000">
+                            <div class="row">
+                                <div class="col-sm-3 choice">
+                                    <div class="price">
+                                        <h4>Цена, руб:</h4>
+                                            <label>От: </label><input type="text" name="price_start" placeholder="16400">
+                                            <label>До: </label><input type="text" name="price_end" placeholder="194000">
+                                    </div>
+                                   <div class="category">
+                                    <h4>Категория:</h4>
+                                        <ul>
+                                            <li><input id="c1" type="checkbox" name="categories[]" value="1" hidden /> <label for="c1">Недорогие</label></li>
+                                            <li><input id="c2" type="checkbox" name="categories[]" value="2" hidden /> <label for="c2">Для работы</label></li>
+                                            <li><input id="c3" type="checkbox" name="categories[]" value="3" hidden /> <label for="c3">Всегда с собой</label></li>
+                                            <li><input id="c4" type="checkbox" name="categories[]" value="4" hidden /> <label for="c4">Ультрабуки</label></li>
+                                            <li><input id="c5" type="checkbox" name="categories[]" value="5" hidden /> <label for="c5">Игровые</label></li>
+                                            <li><input id="c6" type="checkbox" name="categories[]" value="6" hidden /> <label for="c6">Универсальные</label></li>
+                                        </ul>	
+                                     </div>
+
+
+                                    <div class="col-sm-10 choice-btn left">   
+                                    <!--<div class="space"></div>-->
+                                        <input type="submit" name="filter" value="Подобрать" class="btn btn-default" />
+                                    </div>
                                 </div>
-                                
-                                <div class="col-sm-10 choice-btn center">   
-                                <div class="space"></div>
-                                    <input type="submit" name="filter" value="Подобрать" class="btn btn-default" />
+                                <div class="col-sm-2 choice">
+                                    <div class="brand">
+                                    <h4>Производитель:</h4>
+                                        <ul>
+                                            <li><input id="b1" type="checkbox" name="brands[]" value="1" hidden /> <label for="b1">Acer</label></li>
+                                            <li><input id="b2" type="checkbox" name="brands[]" value="2" hidden /> <label for="b2">Apple</label></li>
+                                            <li><input id="b3" type="checkbox" name="brands[]" value="3" hidden /> <label for="b3">Asus</label></li>
+                                            <li><input id="b4" type="checkbox" name="brands[]" value="4" hidden /> <label for="b4">Dell</label></li>
+                                            <li><input id="b5" type="checkbox" name="brands[]" value="5" hidden /> <label for="b5">HP</label></li>
+                                            <li><input id="b6" type="checkbox" name="brands[]" value="6" hidden /> <label for="b6">Lenovo</label></li>
+                                            <li><input id="b7" type="checkbox" name="brands[]" value="7" hidden /> <label for="b7">MSI</label></li>
+                                        </ul>	
+                                    </div>
                                 </div>
-                              </div>      
-                            </div> <!--/строка 1-->
-                            
-                            <div class="row"><!--строка 2-->
-                             <div class="col-sm-4 choice">
-                                <div class="screen_size">
-                                    <h4>Размер экрана, ":</h4>
-                                        <label>От: </label><input type="text" name="screen_start" placeholder="11">
-                                        <label>До: </label><input type="text" name="screen_end" placeholder="17.3"> 
+                                <div class="col-sm-3 choice options_num">
+                                    <div class="screen_size">
+                                        <h4>Размер экрана, ":</h4>
+                                            <label>От: </label><input type="text" name="screen_start" placeholder="11">
+                                            <label>До: </label><input type="text" name="screen_end" placeholder="17.3"> 
+                                    </div>
+                                    <div class="weight">
+                                        <h4>Вес, кг:</h4>
+                                            <label>От: </label><input type="text" name="weight_start" placeholder="1">
+                                            <label>До: </label><input type="text" name="weight_end" placeholder="3.5"> 
+                                    </div>
+                                    <div class="battery_life">
+                                        <h4>Время автономной работы, ч:</h4>
+                                            <label>От: </label><input type="text" name="battery_start" placeholder="3">
+                                            <label>До: </label><input type="text" name="battery_end" placeholder="12"> 
+                                    </div>
                                 </div>
-                                <div class="weight">
-                                    <h4>Вес, кг:</h4>
-                                        <label>От: </label><input type="text" name="weight_start" placeholder="1">
-                                        <label>До: </label><input type="text" name="weight_end" placeholder="3.5"> 
+                                <div class="col-sm-4 choice options_num">
+                                    <div class="CPU">
+                                        <h4>Частота процессора, Мгц:</h4>
+                                            <label>От: </label><input type="text" name="cpu_start" placeholder="800">
+                                            <label>До: </label><input type="text" name="cpu_end" placeholder="3100"> 
+                                    </div>
+                                    <div class="RAM">
+                                        <h4>Объем оперативной памяти, Гб:</h4>
+                                            <label>От: </label><input type="text" name="ram_start" placeholder="2">
+                                            <label>До: </label><input type="text" name="ram_end" placeholder="16"> 
+                                    </div>
+                                    <div class="hard_disk">
+                                        <h4>Объем жесткого диска, Гб:</h4>
+                                            <label>От: </label><input type="text" name="hard_start" placeholder="32">
+                                            <label>До: </label><input type="text" name="hard_end" placeholder="2000"> 
+                                    </div>
                                 </div>
-                             </div>
-                             
-                             <div class="col-sm-4 choice">
-                                <div class="battery_life">
-                                    <h4>Время автономной работы, ч:</h4>
-                                        <label>От: </label><input type="text" name="battery_start" placeholder="3">
-                                        <label>До: </label><input type="text" name="battery_end" placeholder="12"> 
-                                </div>
-                                <div class="CPU">
-                                    <h4>Частота процессора, Мгц:</h4>
-                                        <label>От: </label><input type="text" name="cpu_start" placeholder="800">
-                                        <label>До: </label><input type="text" name="cpu_end" placeholder="3100"> 
-                                </div>
-                              </div> <!--/col-sm-4-->
-                              
-                             <div class="col-sm-4 choice">
-                                <div class="RAM">
-                                    <h4>Объем оперативной памяти, Гб:</h4>
-                                        <label>От: </label><input type="text" name="ram_start" placeholder="2">
-                                        <label>До: </label><input type="text" name="ram_end" placeholder="16"> 
-                                </div>
-                                <div class="hard_disk">
-                                    <h4>Объем жесткого диска, Гб:</h4>
-                                        <label>От: </label><input type="text" name="hard_start" placeholder="32">
-                                        <label>До: </label><input type="text" name="hard_end" placeholder="2000"> 
-                                </div>
-                              </div>
-                            </div> <!--/строка 2-->
+                            </div><!--/row-->
                         </form>
                     </div>
     
     <div class="row">
-       <div class="col-sm-1"></div>   
-       <div class="col-sm-10 padding-right choice">
+       <div class="col-sm-12 padding-right choice">
            <?php
            
             $hostname = 'localhost';
@@ -151,7 +142,6 @@
 
 //              if ($_POST["availability"]) $where = addWhere($where, "`availability` = '1'");
               $sql = "SELECT * FROM `product`";
-//              $sql = "SELECT * FROM `product` ORDER BY `weight`";
               
               //$res = mysql_query($sql) or trigger_error(mysql_error()." in ".$sql); //показ ошибок
 
@@ -194,7 +184,6 @@
     ?>
            
        </div>   
-       <div class="col-sm-1"></div>     
     </div> <!--/row-->
     </section>
     
