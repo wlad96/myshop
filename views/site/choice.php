@@ -8,7 +8,6 @@
 <body>
     <section>
     <div class="container">
-        <div class="row">
                 <h2>Подбор ноутбука</h2>                                                     
                      <div id='options'>
                         <form name="form" method="post" class="choice">
@@ -22,13 +21,9 @@
                                     </label>
                                     <div id="slider_price"></div>
                              </div> -->
-                            <div class="col-sm-4 choice">
-                                <div class="price">
-                                    <h4>Цена, руб:</h4>
-                                        <label>От: </label><input type="text" name="price_start" placeholder="16400">
-                                        <label>До: </label><input type="text" name="price_end" placeholder="194000">
-                                </div>
                             
+                            <div class="row"> <!--строка 1-->
+                              <div class="col-sm-4 choice">
                                 <div class="brand">
                                 <h4>Производитель:</h4>
                                     <ul>
@@ -41,6 +36,8 @@
                                         <li><input id="b7" type="checkbox" name="brands[]" value="7" hidden /> <label for="b7">MSI</label></li>
                                     </ul>	
                                  </div>
+                              </div> 
+                              <div class="col-sm-4 choice">
                                 <div class="category">
                                 <h4>Категория:</h4>
                                     <ul>
@@ -52,9 +49,23 @@
                                         <li><input id="c6" type="checkbox" name="categories[]" value="6" hidden /> <label for="c6">Универсальные</label></li>
                                     </ul>	
                                  </div>
-                             </div>
+                              </div>
+                              <div class="col-sm-4 choice">
+                                <div class="price">
+                                    <h4>Цена, руб:</h4>
+                                        <label>От: </label><input type="text" name="price_start" placeholder="16400">
+                                        <label>До: </label><input type="text" name="price_end" placeholder="194000">
+                                </div>
+                                
+                                <div class="col-sm-10 choice-btn center">   
+                                <div class="space"></div>
+                                    <input type="submit" name="filter" value="Подобрать" class="btn btn-default" />
+                                </div>
+                              </div>      
+                            </div> <!--/строка 1-->
                             
-                            <div class="col-sm-4 choice">  
+                            <div class="row"><!--строка 2-->
+                             <div class="col-sm-4 choice">
                                 <div class="screen_size">
                                     <h4>Размер экрана, ":</h4>
                                         <label>От: </label><input type="text" name="screen_start" placeholder="11">
@@ -65,25 +76,22 @@
                                         <label>От: </label><input type="text" name="weight_start" placeholder="1">
                                         <label>До: </label><input type="text" name="weight_end" placeholder="3.5"> 
                                 </div>
+                             </div>
+                             
+                             <div class="col-sm-4 choice">
                                 <div class="battery_life">
                                     <h4>Время автономной работы, ч:</h4>
                                         <label>От: </label><input type="text" name="battery_start" placeholder="3">
                                         <label>До: </label><input type="text" name="battery_end" placeholder="12"> 
                                 </div>
-                                
-                                <div class="col-sm-10 choice-btn center">   
-                                <div class="space"></div>
-                                    <input type="submit" name="filter" value="Подобрать" class="btn btn-default" />
-                                </div>
-                              </div> 
-                            
-                            
-                            <div class="col-sm-4 choice">
                                 <div class="CPU">
                                     <h4>Частота процессора, Мгц:</h4>
                                         <label>От: </label><input type="text" name="cpu_start" placeholder="800">
                                         <label>До: </label><input type="text" name="cpu_end" placeholder="3100"> 
                                 </div>
+                              </div> <!--/col-sm-4-->
+                              
+                             <div class="col-sm-4 choice">
                                 <div class="RAM">
                                     <h4>Объем оперативной памяти, Гб:</h4>
                                         <label>От: </label><input type="text" name="ram_start" placeholder="2">
@@ -94,11 +102,10 @@
                                         <label>От: </label><input type="text" name="hard_start" placeholder="32">
                                         <label>До: </label><input type="text" name="hard_end" placeholder="2000"> 
                                 </div>
-
-                            </div>
+                              </div>
+                            </div> <!--/строка 2-->
                         </form>
                     </div>
-    </div> <!--/row-->
     
     <div class="row">
        <div class="col-sm-1"></div>   
