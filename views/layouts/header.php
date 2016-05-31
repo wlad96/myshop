@@ -87,8 +87,12 @@
                                     </ul>                                     
                                 </div>
                             </div>
+                            
                         </div>
+                        <hr>
                     </div>
+                                    
                 </div><!--/header-bottom-->
+
 
             </header><!--/header-->
