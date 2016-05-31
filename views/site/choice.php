@@ -41,6 +41,17 @@
                                         <li><input id="b7" type="checkbox" name="brands[]" value="7" hidden /> <label for="b7">MSI</label></li>
                                     </ul>	
                                  </div>
+                                <div class="category">
+                                <h4>Категория:</h4>
+                                    <ul>
+                                        <li><input id="c1" type="checkbox" name="categories[]" value="1" hidden /> <label for="c1">Недорогие</label></li>
+                                        <li><input id="c2" type="checkbox" name="categories[]" value="2" hidden /> <label for="c2">Для работы</label></li>
+                                        <li><input id="c3" type="checkbox" name="categories[]" value="3" hidden /> <label for="c3">Всегда с собой</label></li>
+                                        <li><input id="c4" type="checkbox" name="categories[]" value="4" hidden /> <label for="c4">Ультрабуки</label></li>
+                                        <li><input id="c5" type="checkbox" name="categories[]" value="5" hidden /> <label for="c5">Игровые</label></li>
+                                        <li><input id="c6" type="checkbox" name="categories[]" value="6" hidden /> <label for="c6">Универсальные</label></li>
+                                    </ul>	
+                                 </div>
                              </div>
                             
                             <div class="col-sm-4 choice">  
@@ -113,7 +124,11 @@
               $where = "";
               if ($_POST["price_start"]) $where = addWhere($where, "`price` >= '".htmlspecialchars($_POST["price_start"]))."'";
               if ($_POST["price_end"]) $where = addWhere($where, "`price` <= '".htmlspecialchars($_POST["price_end"]))."'";
+              
               if ($_POST["brands"]) $where = addWhere($where, "`brand_id` IN (".htmlspecialchars(implode(",", $_POST["brands"])).")");
+              
+              if ($_POST["categories"]) $where = addWhere($where, "`category_id` IN (".htmlspecialchars(implode(",", $_POST["categories"])).")");
+              
               if ($_POST["screen_start"]) $where = addWhere($where, "`screen_size` >= '".htmlspecialchars($_POST["screen_start"]))."'";
               if ($_POST["screen_end"]) $where = addWhere($where, "`screen_size` <= '".htmlspecialchars($_POST["screen_end"]))."'";
               if ($_POST["weight_start"]) $where = addWhere($where, "`weight` >= '".htmlspecialchars($_POST["weight_start"]))."'";
@@ -134,7 +149,7 @@
               //$res = mysql_query($sql) or trigger_error(mysql_error()." in ".$sql); //показ ошибок
 
               if ($where) $sql .= " WHERE $where";
-              if ($sql) $sql .= " ORDER BY `weight`";
+              if ($sql) $sql .= " ORDER BY `price`, `weight`";
               echo $sql; //показ sql-запроса
 
                 $result = $conn->query($sql); 
