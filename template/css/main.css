@@ -61,9 +61,9 @@ h1, h2, h3, h4, h5, h6 {
         color: #3366CC - old blue
         color: #ff9900 - orange
         color: #009688 - material blue
+        pallete: http://www.materialpalette.com/orange/teal
     */
 h2, h3 {
-    /*color: #3366CC;*/
     color: #009688;
     margin-bottom: 20px;
     font-size: 28px;
@@ -126,7 +126,6 @@ a#scrollUp i{
 .contactinfo ul li a{
     font-size: 12px;
     color: #696763;
-    /*font-family: 'Roboto', sans-serif;*/
 }
 
 
@@ -147,7 +146,6 @@ a#scrollUp i{
     border-bottom: 1px solid #f5f5f5;
     margin-left: 0;
     margin-right: 0;
-    /*padding-bottom: 20px;*/
     padding-top: 20px;
 }
 
@@ -166,7 +164,6 @@ a#scrollUp i{
 .dropdown-menu  li  a:hover, .dropdown-menu  li  a:focus {
     background-color: #FE980F;
     color: #FFFFFF;
-    /*font-family: 'Roboto', sans-serif;*/
     text-decoration: none;
 }
 
@@ -183,10 +180,7 @@ a#scrollUp i{
 
 
 .shop-menu ul li a {
-    background: #FFFFFF;
-    /*color: #696763;*/
     color: #212121;
-    /*font-family: 'Roboto', sans-serif;*/
     font-size: 14px;
     font-weight: 300;
     padding:0;
@@ -202,13 +196,9 @@ a#scrollUp i{
     text-transform: uppercase;
 }
 
-
 .shop-menu ul li a:hover {
-    /*color:#fe980f;*/
-    color:#FFE0B2;
-    background:#fff;
+    color:#009688;
 }
-
 
 .navbar-collapse.collapse{
     padding-left: 0;
@@ -225,7 +215,6 @@ a#scrollUp i{
 
 .mainmenu ul li a {
     color: #696763;
-    /*font-family: 'Roboto', sans-serif;*/
     font-size: 17px;
     font-weight: 300;
     text-transform: uppercase;
@@ -263,7 +252,7 @@ a#scrollUp i{
     position:relative;
 }
 
-.search_result{
+#search_result{
     background: #FFF;
     border: 1px #ccc solid;
     width: 300px;
@@ -273,7 +262,7 @@ a#scrollUp i{
     display:none;
 }
 
-.search_result li{
+#search_result li{
     list-style: none;
     padding: 5px 50px;
     margin: 0 0 0 -40px;
@@ -283,7 +272,7 @@ a#scrollUp i{
     transition:0.3s;
 }
 
-.search_result li:hover{
+#search_result li:hover{
     background: #F9FF00;
 }
 
@@ -382,13 +371,9 @@ nav ul a {
 **************************/
 
 #footer {
-/*    background: #F0F0E9;
-    height: 50px;*/
-    
     margin-top: 5px;
     padding-top: 5px;
     background-color: #F0F0E9;
-
 }
 
 .searchform input {
@@ -618,6 +603,12 @@ h2.title:before{
     white-space: nowrap;
 }
 
+.category-products h3 {
+    padding-left: 10px;
+    margin: 5px 10px;
+}
+
+
 .panel-body ul{
     padding-left: 20px;
 }
@@ -640,7 +631,7 @@ h2.title:before{
 
 h2.title {
     color: #FE980F;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 30px;
@@ -684,9 +675,7 @@ h2.title {
 }
 
 .productinfo img{
-    height: 100%;
-    width: 230px;
-    
+    height: 150px;  
 }
 
 .productinfo{
@@ -847,7 +836,7 @@ h2.title {
 }
 
 .recommended_items img{
-    width: 200px;
+    height: 100px;
 }
 
 
@@ -1141,9 +1130,7 @@ h2.title {
 
 
 .login-form form input, .signup-form form input {
-    background: #ccc;
-    border: medium none;
-    color: #696763;
+    color: #212121;
     display: block;
     font-size: 14px;
     font-weight: 300;
@@ -1153,9 +1140,11 @@ h2.title {
     padding-left: 10px;
     width: 100%;
 }
+.login-form form .btn-default, .signup-form form .btn-default {
+    color: #fff;
+}
 
 .btn-default:hover {
-    /*background: #ff5722;*/
     background: #2bbbad;
     color: #fff;
 }
@@ -1471,6 +1460,14 @@ input[type="checkbox"]:disabled + label::before {
 input[type="checkbox"]:checked:disabled + label::before {
     background-position: -171px -260px;
 }
+
+
+[type="checkbox"] + label:before, [type="checkbox"]:not(.filled-in) + label:after {
+    border: 2px solid #727272;
+    border-radius: 2px;
+}
+
+
 /*  /Checkbox   */
 
 
