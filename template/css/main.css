@@ -49,7 +49,8 @@ a {
     -moz-transition: 300ms;
     -o-transition: 300ms;
     transition: 300ms;
-    color: #3366CC;
+    /*color: #3366CC;*/
+    color: #009688;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -57,19 +58,28 @@ h1, h2, h3, h4, h5, h6 {
 }
     /*
         Main colors: 
-        color: #3366CC - blue
+        color: #3366CC - old blue
         color: #ff9900 - orange
+        color: #009688 - material blue
     */
 h2, h3 {
-    color: #3366CC;
+    /*color: #3366CC;*/
+    color: #009688;
     margin-bottom: 20px;
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 25px;
 }
 h4 {
     /*color: #3366CC;*/
     margin-bottom: 10px;
+    font-size: 20px;
 }
 h5 {
-    font-weight: bold;
+    /*font-weight: bold;*/
+    font-size: 18px;
 }
 .btn:hover, 
 .btn:focus{
@@ -100,12 +110,13 @@ a#scrollUp i{
 *******Header CSS******
 **************************/
 
-.header_top {
+/*.header_top {
     background: none repeat scroll 0 0 #F0F0E9;
-}
+}*/
 
 .logo img{
-    width: 230px;
+    width: 200px;
+    margin-left: 10px;
 }
 
 .contactinfo ul li:first-child{
@@ -115,7 +126,7 @@ a#scrollUp i{
 .contactinfo ul li a{
     font-size: 12px;
     color: #696763;
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
 }
 
 
@@ -136,7 +147,7 @@ a#scrollUp i{
     border-bottom: 1px solid #f5f5f5;
     margin-left: 0;
     margin-right: 0;
-    padding-bottom: 20px;
+    /*padding-bottom: 20px;*/
     padding-top: 20px;
 }
 
@@ -148,10 +159,14 @@ a#scrollUp i{
     padding-right:0;
 }
 
+.header-bottom {
+    padding-bottom: 0;
+}
+
 .dropdown-menu  li  a:hover, .dropdown-menu  li  a:focus {
     background-color: #FE980F;
     color: #FFFFFF;
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     text-decoration: none;
 }
 
@@ -169,8 +184,9 @@ a#scrollUp i{
 
 .shop-menu ul li a {
     background: #FFFFFF;
-    color: #696763;
-    font-family: 'Roboto', sans-serif;
+    /*color: #696763;*/
+    color: #212121;
+    /*font-family: 'Roboto', sans-serif;*/
     font-size: 14px;
     font-weight: 300;
     padding:0;
@@ -188,15 +204,11 @@ a#scrollUp i{
 
 
 .shop-menu ul li a:hover {
-    color:#fe980f;
+    /*color:#fe980f;*/
+    color:#FFE0B2;
     background:#fff;
 }
 
-
-.header-bottom {
-/*    padding-bottom: 30px;*/
-    padding-top: 30px;
-}
 
 .navbar-collapse.collapse{
     padding-left: 0;
@@ -213,7 +225,7 @@ a#scrollUp i{
 
 .mainmenu ul li a {
     color: #696763;
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     font-size: 17px;
     font-weight: 300;
     text-transform: uppercase;
@@ -233,7 +245,6 @@ a#scrollUp i{
     background: #F0F0E9;
     border: medium none;
     color: #B2B2B2;
-    font-family: 'roboto';
     font-size: 12px;
     font-weight: 300;
     height: 35px;
@@ -264,7 +275,7 @@ a#scrollUp i{
 
 .search_result li{
     list-style: none;
-    padding: 5px 10px;
+    padding: 5px 50px;
     margin: 0 0 0 -40px;
     color: #0896D3;
     border-bottom: 1px #ccc solid;
@@ -276,13 +287,16 @@ a#scrollUp i{
     background: #F9FF00;
 }
 
+.navbar-search div{
+    display: inline;
+}
 
 /*  Dropdown menu*/
 
-.navbar-header 
+/*.navbar-header 
 .navbar-toggle .icon-bar {
     background-color: #fff;
-}
+}*/
 
 
 .nav.navbar-nav > li:hover > ul.sub-menu{
@@ -349,19 +363,37 @@ ul.sub-menu {
     }
 }
 
+
+.nav-wrapper {
+    background-color: #FF9800;
+}
+
+nav ul a {
+    transition: background-color .3s;
+    font-size: 1rem;
+    color: #fff;
+    display: inline-block;
+    padding: 0 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
 /*************************
 *******Footer CSS******
 **************************/
 
 #footer {
-    background: #F0F0E9;
-    height: 50px;
+/*    background: #F0F0E9;
+    height: 50px;*/
+    
+    margin-top: 5px;
+    padding-top: 5px;
+    background-color: #F0F0E9;
+
 }
 
 .searchform input {
     border: 1px solid #DDDDDD;
     color: #CCCCC6;
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     margin-top: 0;
     outline: medium none;
@@ -391,24 +423,21 @@ ul.sub-menu {
 
 .searchform p {
     color: #8C8C88;
-    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 300;
     margin-top: 25px;
 }
 
-.footer-bottom {
-    padding-top: 15px;
-}
 
-.footer-bottom p {
+footer p {
     color: #363432;
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     margin-left: 15px;
+    margin-bottom: 0;
+    margin-top: 10px;
 }
 
-.footer-bottom p span a {
+.footer p span a {
     color: #FE980F;
     font-style: italic;
     text-decoration: underline;
@@ -450,7 +479,6 @@ ul.sub-menu {
 
 .item h2 {
     color: #363432;
-    font-family: 'Roboto', sans-serif;
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 22px;
@@ -461,7 +489,6 @@ ul.sub-menu {
     color:#363432;
     font-size:16px;
     font-weight:300;
-    font-family: 'Roboto', sans-serif;
 }
 
 .get {
@@ -469,7 +496,6 @@ ul.sub-menu {
     border: 0 none;
     border-radius: 0;
     color: #FFFFFF;
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
     margin-top: 23px;
@@ -499,7 +525,6 @@ ul.sub-menu {
 }
 recommended-item-control-sidebar h2, .brands_products h2 {
     color: #ff9900;
-    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 700;
     margin: 0 auto 30px;
@@ -565,7 +590,6 @@ h2.title:before{
 
 .category-products .panel-default .panel-heading .panel-title a {
     color: #696763;
-    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     text-decoration: none;
     text-transform: uppercase;
@@ -601,7 +625,6 @@ h2.title:before{
 
 .panel-body ul li a {
     color: #696763;
-    font-family: 'Roboto', sans-serif;
     font-size: 12px;
     text-transform: uppercase;
 }
@@ -617,7 +640,6 @@ h2.title:before{
 
 h2.title {
     color: #FE980F;
-    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
@@ -644,20 +666,17 @@ h2.title {
 
 .productinfo h2{
     color: #FE980F;
-    font-family: 'Roboto', sans-serif;
     font-size: 24px;
     font-weight: 700;
 }
 .product-overlay h2{
     color: #fff;
-    font-family: 'Roboto', sans-serif;
     font-size: 24px;
     font-weight: 700;
 }
 
 
 .productinfo p{
-    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
     height: 34px;
@@ -696,7 +715,6 @@ h2.title {
     border: 0 none;
     border-radius: 0;
     color: #FE980F;
-    font-family: 'Roboto', sans-serif;
     font-size: 15px;
     margin-bottom: 25px;
 }
@@ -711,7 +729,6 @@ h2.title {
     border: 0 none;
     border-radius: 0;
     color: #696763;
-    font-family: 'Roboto', sans-serif;
     font-size: 15px;
     margin-bottom: 25px;
 }
@@ -747,7 +764,6 @@ h2.title {
 
 .choose ul li a {
     color: #B3AFA8;
-    font-family: 'Roboto', sans-serif;
     font-size: 13px;
     padding-left: 0;
     padding-right: 0;
@@ -780,7 +796,6 @@ h2.title {
     border-radius: 0;
     color: #B3AFA8;
     display: block;
-    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     text-transform: uppercase;
 }
@@ -936,7 +951,6 @@ h2.title {
     background: #FE980F;
     bottom: 0;
     color: #FFFFFF;
-    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 0;
@@ -985,15 +999,15 @@ h2.title {
 }
 
 .product-information h2 {
-    color: #3366CC;
-    font-family: 'Roboto', sans-serif;
+    /*color: #3366CC;*/
+    color: #212121;
     font-size: 20px;
-    margin-top: 0;
+    margin-top: 10px;
 }
 
 .product-information p {
-    color: #696763;
-    font-family: 'Roboto', sans-serif;
+    /*color: #696763;*/
+    color: #727272;
     margin-bottom: 5px;
 }
 
@@ -1006,7 +1020,6 @@ h2.title {
 .product-information span span {
     color: #FE980F;
     float: left;
-    font-family: 'Roboto', sans-serif;
     font-size: 30px;
     font-weight: 700;
     margin-right: 20px;
@@ -1015,7 +1028,6 @@ h2.title {
 .product-information span input {
     border: 1px solid #DEDEDC;
     color: #696763;
-    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 700;
     height: 33px;
@@ -1026,7 +1038,6 @@ h2.title {
 
 .product-information span label {
     color: #696763;
-    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     margin-right: 5px;
 }
@@ -1041,7 +1052,6 @@ h2.title {
     border: 0 none;
     border-radius: 0;
     color: #FFFFFF;
-    font-family: 'Roboto', sans-serif;
     font-size: 15px;
     margin-bottom: 10px;
     margin-left: 20px;
@@ -1077,7 +1087,6 @@ h2.title {
 
 .content-404 h1 {
     color: #363432;
-    font-family: 'Roboto', sans-serif;
     font-size: 41px;
     font-weight: 300;
 }
@@ -1088,7 +1097,6 @@ h2.title {
 
 .content-404 p {
     color: #363432;
-    font-family: 'Roboto', sans-serif;
     font-size: 18px;
 }
 
@@ -1099,7 +1107,6 @@ h2.title {
 .content-404 h2 a {
     background: #FE980F;
     color: #FFFFFF;
-    font-family: 'Roboto', sans-serif;
     font-size: 44px;
     font-weight: 300;
     padding: 8px 40px;
@@ -1127,7 +1134,6 @@ h2.title {
 
 .login-form h2 /*, .signup-form h2*/ {
     color: #696763;
-    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 30px;
@@ -1139,7 +1145,6 @@ h2.title {
     border: medium none;
     color: #696763;
     display: block;
-    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 300;
     height: 40px;
@@ -1150,13 +1155,24 @@ h2.title {
 }
 
 .btn-default:hover {
-    background: #ff5722;
+    /*background: #ff5722;*/
+    background: #2bbbad;
     color: #fff;
 }
 
 .btn-default {
     color: #fff;
     background: #ff9900;
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #26a69a;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
 }
 
 .login-form form span{
@@ -1180,7 +1196,6 @@ h2.title {
     border-radius: 0;
     color: #FFFFFF;
     display: block;
-    font-family: 'Roboto', sans-serif;
     padding: 6px 25px;
 }
 
@@ -1203,7 +1218,6 @@ h2.title {
     background: #FE980F;
     border-radius: 40px;
     color: #FFFFFF;
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     height: 50px;
     line-height: 50px;
@@ -1263,7 +1277,6 @@ h2.title {
     background: #FE980F;
     color: #fff;
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;
     font-weight: normal;
 }
 
@@ -1297,7 +1310,6 @@ h2.title {
 
 #cart_items .cart_info .cart_description h4 a {
     color: #363432;
-    font-family: 'Roboto',sans-serif;
     font-size: 20px;
     font-weight: normal;
 
@@ -1328,7 +1340,6 @@ h2.title {
 .heading h3 {
     color: #363432;
     font-size: 20px;
-    font-family: 'Roboto', sans-serif;
 }
 
 .heading p {
@@ -1369,7 +1380,6 @@ h2.title {
     font-size: 20px;
     margin-bottom: 35px;
     padding: 10px 25px;
-    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -1379,9 +1389,11 @@ h2.title {
 **************************/
 /*.choice > div input{ только первый уровень вложенности, для каждого div input внутри .choice*/
 .price input{ /*только первый уровень вложенности, для каждого div input внутри .choice*/
-  width: 80px;
+  /*width: 80px;*/
+  width: 60px;
   margin-left: 10px;
   padding-left: 5px;
+  color: #727272;
 }
 
 .options_num > div input{ /*для каждого div input внутри .options_num*/
@@ -1404,6 +1416,7 @@ h2.title {
 .choice label{
     font-weight: 500;
     font-size: 18px;
+    color: #212121;
 }
 
 .choice p{
@@ -1411,7 +1424,7 @@ h2.title {
 }
 
 .choice-btn input{
-    width: 100px;
+    /*width: 100px;*/
     margin-top: 15px;
     margin-left: 10px;
     padding-left: 5px;
@@ -1431,9 +1444,9 @@ input[type="checkbox"] {
 }
 input[type="checkbox"] + label {
   font: 18px bold;
+   font-family: 'Roboto', sans-serif;
   color: #444;
   cursor: pointer;
-  font-family: 'Roboto', sans-serif;
 }
 input[type="checkbox"] + label::before {
     content: "";
@@ -1441,7 +1454,7 @@ input[type="checkbox"] + label::before {
     height: 18px;
     width: 18px;
     margin: 0 5px 0 0;
-    background-image: url(/template/images/home/sprite.png);
+    /*background-image: url(/template/images/home/sprite.png);*/
     background-repeat: no-repeat;
 }
 input[type="checkbox"] + label::before {

@@ -2,14 +2,12 @@
 </div>
 
 <footer id="footer" class="page-footer"><!--Footer-->
-    <div class="footer-bottom">
         <div class="container">
             <div class="row">
                 <p class="pull-left">Copyright © Nadezhda Dyakova 2016</p>
                 <p class="pull-right"></p>
             </div>
         </div>
-    </div>
 </footer><!--/Footer-->
 
 

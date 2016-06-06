@@ -10,6 +10,18 @@
         <link href="/template/css/font-awesome.min.css" rel="stylesheet">
         <link href="/template/css/prettyPhoto.css" rel="stylesheet">
         <link href="/template/css/animate.css" rel="stylesheet">
+        
+                <!--for Materialize-->
+            <!--Import Google Icon Font-->
+            <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <!--Import materialize.css-->
+            <link type="text/css" rel="stylesheet" href="/template/css/materialize.css"  media="screen,projection"/>
+
+            <!--Let browser know website is optimized for mobile-->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--/for Materialize-->
+        
+        
         <link href="/template/css/main.css" rel="stylesheet">
         <link href="/template/css/responsive.css" rel="stylesheet">
         <link href="/template/images/home/favicon.ico" rel="icon" type="image/x-icon" />
@@ -19,22 +31,26 @@
         <script src="js/respond.min.js"></script>
         <![endif]-->       
         <link rel="shortcut icon" href="/template/images/ico/favicon.ico">
+        
+
     </head><!--/head-->
 
     <body>
+      <!--for Materialize--> 
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="/template/js/materialize.min.js"></script>
+      <!--/for Materialize-->
+        
         <div class="page-wrapper">
  
             <header id="header"><!--header-->
-                <div class="header_top"><!--header_top-->      
-                </div><!--/header_top-->
-
                 <div class="header-middle"><!--header-middle-->
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-4">
-                                <div class="logo pull-left">
+<!--                                <div class="logo pull-left">
                                     <a href="/"><img src="/template/images/home/logo.png" alt="" /></a>
-                                </div>
+                                </div>-->
                             </div>
                             <div class="col-sm-8">
                                 <div class="shop-menu pull-right">
@@ -54,7 +70,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <hr>
+                            <!--<hr>-->
                         </div>
                     </div>
                 </div><!--/header-middle-->
@@ -63,15 +79,31 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12">
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
+                              
+                                <!-- Dropdown Structure -->
+                                <ul id="dropdown1" class="dropdown-content">
+                                  <li><a href="/catalog/">Каталог товаров</a></li>
+                                  <li><a href="/cart/">Корзина</a></li> 
+                                </ul>
+                                <nav>
+                                  <div class="nav-wrapper">
+                                    <!--<a href="/" class="brand-logo">Logo</a>-->
+                                                                    <div class="logo pull-left">
+                                    <a href="/"><img src="/template/images/home/logo.png" alt="" /></a>
                                 </div>
-                                <div class="mainmenu pull-left">
+                                    <ul class="right hide-on-med-and-down">
+                                        <!-- Dropdown Trigger -->
+                                      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Магазин<i class="material-icons right">arrow_drop_down</i></a></li>
+                                        <li><a href="/about/">О магазине</a></li>
+                                        <li><a href="/contacts/">Контакты</a></li>
+                                        <li><a href="/search/">Поиск</a></li> 
+                                        <li><a href="/choice/">Подбор ноутбука</a></li>
+                                      
+                                    </ul>
+                                  </div>
+                                </nav>
+                                
+<!--                                <div class="mainmenu pull-left">
                                     <ul class="nav navbar-nav collapse navbar-collapse">
                                         <li><a href="/">Главная</a></li>
                                         <li class="dropdown"><a href="#">Магазин<i class="fa fa-angle-down"></i></a>
@@ -85,11 +117,11 @@
                                         <li><a href="/search/">Поиск</a></li> 
                                         <li><a href="/choice/">Подбор ноутбука</a></li>
                                     </ul>                                     
-                                </div>
+                                </div>-->
                             </div>
                             
                         </div>
-                        <hr>
+                        <!--<hr>-->
                     </div>
                                     
                 </div><!--/header-bottom-->
