@@ -48,30 +48,40 @@
                             </div>
                         </div>
                         <div class="col-sm-7">
+
                             <div class="product-information"><!--/product-information-->
 
                                 <?php if ($product['is_new']): ?>
                                     <img src="/template/images/product-details/new.jpg" class="newarrival" alt="" />
                                 <?php endif; ?>
-
-                                <h2><?php echo $product['name']; ?></h2>
-                                <p>Код товара: <?php echo $product['code']; ?></p>
-                                <span>
-                                    <span><?php echo $product['price']; ?> &#8381;</span>
-                                    <a href="#" data-id="<?php echo $product['id']; ?>"
-                                       class="btn btn-default add-to-cart">
-                                        <i class="fa fa-shopping-cart"></i>В корзину
-                                    </a>
-                                </span>
-                                <p><b>Наличие:</b> <?php echo Product::getAvailabilityText($product['availability']); ?></p>
-                                <p><b>Производитель:</b> <?php echo Product::getBrand($product['brand_id']); ?></p>
-                                <p><b>Размер экрана:</b> <?php echo $product['screen_size']; ?>"</p>
-                                <p><b>Частота процессора:</b> <?php echo $product['CPU']; ?> МГц</p>
-                                <p><b>Объем ОП:</b> <?php echo $product['RAM']; ?> Гб</p>
-                                <p><b>Объем жесткого диска:</b> <?php echo $product['hard_disk']; ?> Гб</p>
-                                <p><b>Оптический привод:</b> <?php echo Product::getOpticalDrive($product['drive']); ?></p>
-                                <p><b>Время автономной работы:</b> <?php echo $product['battery_life']; ?> ч</p>
-                                <p><b>Вес:</b> <?php echo $product['weight']; ?> кг</p>
+ 
+                                    <h2><?php echo $product['name']; ?></h2>
+                                    <p class="date-last-up">
+                                        <?php
+                                           $dLastUp = date("d")-3;
+                                           echo "Дата последнего обновления: ";
+                                           echo $dLastUp;
+                                           $dateLastUp = date(".m.Y, g:i");                                
+                                           echo $dateLastUp;
+                                        ?>
+                                    </p> 
+                                    <p>Код товара: <?php echo $product['code']; ?></p>
+                                    <span>
+                                        <span><?php echo $product['price']; ?> &#8381;</span>
+                                        <a href="#" data-id="<?php echo $product['id']; ?>"
+                                           class="btn btn-default add-to-cart">
+                                            <i class="fa fa-shopping-cart"></i>В корзину
+                                        </a>
+                                    </span>
+                                    <p><b>Наличие:</b> <?php echo Product::getAvailabilityText($product['availability']); ?></p>
+                                    <p><b>Производитель:</b> <?php echo Product::getBrand($product['brand_id']); ?></p>
+                                    <p><b>Размер экрана:</b> <?php echo $product['screen_size']; ?>"</p>
+                                    <p><b>Частота процессора:</b> <?php echo $product['CPU']; ?> МГц</p>
+                                    <p><b>Объем ОП:</b> <?php echo $product['RAM']; ?> Гб</p>
+                                    <p><b>Объем жесткого диска:</b> <?php echo $product['hard_disk']; ?> Гб</p>
+                                    <p><b>Оптический привод:</b> <?php echo Product::getOpticalDrive($product['drive']); ?></p>
+                                    <p><b>Время автономной работы:</b> <?php echo $product['battery_life']; ?> ч</p>
+                                    <p><b>Вес:</b> <?php echo $product['weight']; ?> кг</p>
                             </div><!--/product-information-->
                         </div>
                     </div>

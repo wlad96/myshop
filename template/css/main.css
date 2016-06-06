@@ -929,6 +929,7 @@ h2.title {
 .view-product img {
     border: 1px solid #F7F7F0;
     width: 100%;
+    padding-top: 10px;
 }
 
 .view-product h3 {
@@ -971,9 +972,9 @@ h2.title {
 .product-information {
     border: 1px solid #F7F7F0;
     overflow: hidden;
-    padding-bottom: 30px;
+    padding-bottom: 5px;
     padding-left: 60px;
-    padding-top: 15px;
+    padding-top: 5px;
     position: relative;
 }
 
@@ -1058,6 +1059,13 @@ h2.title {
     padding-left: 0;
     padding-right: 0;
 }
+
+.date-last-up {
+    font-style: italic;
+    margin-left: auto;
+    color: #777;
+}
+
 
 /*************************
 *******404 CSS******

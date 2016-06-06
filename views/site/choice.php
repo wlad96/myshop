@@ -147,7 +147,7 @@
 
               if ($where) $sql .= " WHERE $where";
               if ($sql) $sql .= " ORDER BY `price`, `weight`";
-              echo $sql; //показ sql-запроса
+              //echo $sql; //показ sql-запроса
 
                 $result = $conn->query($sql); 
                 if (!$result) echo '<span class="red-msg">Ни один ноутбук не удовлетворяет условиям. Измените параметры подбора </span>';
