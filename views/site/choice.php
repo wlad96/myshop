@@ -32,7 +32,7 @@
                                    <div class="category">
                                     <h4>Категория:</h4>
                                         <ul>
-                                            <li><input id="c1" type="checkbox" name="categories[]" value="1" hidden /> <label for="c1">Недорогие</label></li>
+                                            <li><input id="c1" type="checkbox" name="categories[]" value="1" hidden /> <label for="c1">Начальный уровень</label></li>
                                             <li><input id="c2" type="checkbox" name="categories[]" value="2" hidden /> <label for="c2">Для работы</label></li>
                                             <li><input id="c3" type="checkbox" name="categories[]" value="3" hidden /> <label for="c3">Всегда с собой</label></li>
                                             <li><input id="c4" type="checkbox" name="categories[]" value="4" hidden /> <label for="c4">Ультрабуки</label></li>
@@ -43,7 +43,7 @@
 
 
                                     <div class="col-sm-10 choice-btn left">   
-                                    <!--<div class="space"></div>-->
+                                    <div class="space"></div>
                                         <input type="submit" name="filter" value="Подобрать" class="btn btn-default" />
                                     </div>
                                 </div>
@@ -59,6 +59,14 @@
                                             <li><input id="b6" type="checkbox" name="brands[]" value="6" hidden /> <label for="b6">Lenovo</label></li>
                                             <li><input id="b7" type="checkbox" name="brands[]" value="7" hidden /> <label for="b7">MSI</label></li>
                                         </ul>	
+                                    </div>
+                                    
+                                    <div class="drive">
+                                        <h4>DVD-привод:</h4>
+                                        <ul>
+                                            <li><input id="d1" type="checkbox" name="drives[]" value="1" hidden /> <label for="d1">Да</label></li>
+                                            <li><input id="d2" type="checkbox" name="drives[]" value="0" hidden /> <label for="d2">Нет</label></li>
+                                        </ul>
                                     </div>
                                 </div>
                                 <div class="col-sm-3 choice options_num">
@@ -94,6 +102,7 @@
                                             <label>От: </label><input type="text" name="hard_start" placeholder="32">
                                             <label>До: </label><input type="text" name="hard_end" placeholder="2000"> 
                                     </div>
+
                                 </div>
                             </div><!--/row-->
                         </form>
@@ -127,6 +136,8 @@
               
               if ($_POST["categories"]) $where = addWhere($where, "`category_id` IN (".htmlspecialchars(implode(",", $_POST["categories"])).")");
               
+              if ($_POST["drives"]) $where = addWhere($where, "`drive` IN (".htmlspecialchars(implode(",", $_POST["drives"])).")");
+              
               if ($_POST["screen_start"]) $where = addWhere($where, "`screen_size` >= '".htmlspecialchars($_POST["screen_start"]))."'";
               if ($_POST["screen_end"]) $where = addWhere($where, "`screen_size` <= '".htmlspecialchars($_POST["screen_end"]))."'";
               if ($_POST["weight_start"]) $where = addWhere($where, "`weight` >= '".htmlspecialchars($_POST["weight_start"]))."'";
@@ -147,7 +158,7 @@
 
               if ($where) $sql .= " WHERE $where";
               if ($sql) $sql .= " ORDER BY `price`, `weight`";
-              //echo $sql; //показ sql-запроса
+              echo $sql; //показ sql-запроса
 
                 $result = $conn->query($sql); 
                 if (!$result) echo '<span class="red-msg">Ни один ноутбук не удовлетворяет условиям. Измените параметры подбора </span>';
@@ -163,6 +174,7 @@
                 echo '<th>Частота процессора, Мгц</th>';
                 echo '<th>Объем ОП, Гб</th>';
                 echo '<th>Объем жесткого диска, Гб</th>';
+                echo '<th>DVD-привод</th>';
                 echo '<th>Цена, руб</th>';
                 echo '</tr>';
 
@@ -176,6 +188,10 @@
                         echo '<td>' . $data['CPU'] . '</td>';
                         echo '<td>' . $data['RAM'] . '</td>';
                         echo '<td>' . $data['hard_disk'] . '</td>';
+                        echo '<td>';
+                            if ($data['drive'] == 1) { echo 'Да';}
+                            else  if ($data['drive'] == 0) { echo 'Нет';}
+                        echo '</td>';
                         echo '<td>' . $data['price'] . '</td>';
                   echo '</tr>';
                 }
